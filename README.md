@@ -1,6 +1,8 @@
 # Before you start!
 
-Complete this [quiz](https://wdidc6.typeform.com/to/aaABVz). It should take you no more than 30 minutes.
+Complete this quiz. It should take you no more than 30 minutes.  
+
+[https://wdidc6.typeform.com/to/aaABVz](https://wdidc6.typeform.com/to/aaABVz)  
 
 # Week 1 Project - Tic Tac Toe
 
