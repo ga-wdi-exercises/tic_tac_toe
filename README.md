@@ -1,3 +1,7 @@
+# Before you start!
+
+Complete this [quiz](https://wdidc6.typeform.com/to/aaABVz). It should take you no more than 30 minutes.
+
 # Week 1 Project - Tic Tac Toe
 
 **Objective:** Build a tic tac toe game in HTML and pure JavaScript.
@@ -47,4 +51,3 @@ Today we will be making a Tic Tac Toe game using all of this.
   opponent. If you really need a challenge, write some code that will
   play a game of Tic Tac Toe against you. (Hint: look into the minimax
   algorithm).
-
