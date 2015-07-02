@@ -2,7 +2,7 @@
 
 Complete this quiz. It should take you no more than 30 minutes.  
 
-[https://wdidc6.typeform.com/to/aaABVz](https://wdidc6.typeform.com/to/aaABVz)  
+[https://wdidc6.typeform.com/to/tu0ulB](https://wdidc6.typeform.com/to/tu0ulB)  
 
 # Week 1 Project - Tic Tac Toe
 
