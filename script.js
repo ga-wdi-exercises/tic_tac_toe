@@ -25,6 +25,7 @@ function markSquare(){
       document.getElementById("whoseTurn").innerHTML = "Player 1's turn to place an X";
     }
     counter ++; /*increment counter to alternate marks*/
+    getClassNames();
   } else {
     return; /*don't do anything if square has already been clicked and marked*/
   }
@@ -38,5 +39,28 @@ function resetBoard(){
     gameBoard[i].innerHTML = "";
     document.getElementById("whoseTurn").innerHTML = "Player 1's turn to place an X";
     counter = 0;
+  }
+}
+ /* put class names for all squares into an array
+    compare that array to winning combinations to determine winner*/
+  var classNameArray = [];
+function getClassNames(){
+
+  for (var i = 0; i < gameBoard.length; i++) {
+    classNameArray.push(gameBoard[i].className)
+  }
+  console.log(classNameArray);
+  getWinner();
+  classNameArray = [];
+}
+
+function getWinner(){
+  if (classNameArray[0] === classNameArray[1] && classNameArray[0] === classNameArray[2]){
+    console.log("we have a winner");
+    /* tried to add code to remove event listener from gameboard when a winner is declared
+       but I would then have to add the event listener to the reset board code
+    for (var i = 0; i < gameBoard.length; i++) {
+      gameBoard[i].removeEventListener("click", markSquare);
+    }*/
   }
 }
