@@ -57,6 +57,8 @@ function getClassNames(){
 function getWinner(){
   if (classNameArray[0] === classNameArray[1] && classNameArray[0] === classNameArray[2]){
     console.log("we have a winner");
+    alert("We have a winner! Congrats to Player " + (counter % 2) + "!");
+    resetBoard();
     /* tried to add code to remove event listener from gameboard when a winner is declared
        but I would then have to add the event listener to the reset board code
     for (var i = 0; i < gameBoard.length; i++) {
