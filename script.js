@@ -36,5 +36,7 @@ function resetBoard(){
   for (var i = 0; i < gameBoard.length; i++){
     gameBoard[i].className = "emptySquare";
     gameBoard[i].innerHTML = "";
+    document.getElementById("whoseTurn").innerHTML = "Player 1's turn to place an X";
+    counter = 0;
   }
 }
