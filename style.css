@@ -1,6 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 table {
-    height: 600px;
+    height: 500px;
     width: 60%;
+    padding-bottom: 10%;
     margin: 0 auto;
 
 }
@@ -13,7 +18,7 @@ td {
 }
 
 button {
-    height: 100px;
-    
+    height: 50px;
+
 
 }
