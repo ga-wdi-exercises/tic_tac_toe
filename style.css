@@ -22,12 +22,15 @@ ul li {
   background: white;
 }
 
-.clickedOnce{
+.emptySquare{
+  background: white;
+}
+.markX{
   color: white;
   background: red;
 }
 
-.clickedTwice{
+.markO{
   color: lemonchiffon;
   background: blue;
 }
