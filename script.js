@@ -17,10 +17,12 @@ function markSquare(){
       /*console.log("mark this X");*/
       clickedSquare.innerHTML = "X";
       clickedSquare.className = "markX";
+      document.getElementById("whoseTurn").innerHTML = "Player 2's turn to place an O";
     } else {
       /*console.log("mark this O");*/
       clickedSquare.innerHTML = "O";
       clickedSquare.className = "markO";
+      document.getElementById("whoseTurn").innerHTML = "Player 1's turn to place an X";
     }
     counter ++; /*increment counter to alternate marks*/
   } else {
