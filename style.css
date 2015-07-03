@@ -16,3 +16,21 @@ ul li {
   margin: 0;
   border: 3px solid black;
 }
+
+.boardRow{
+  color: black;
+  background: white;
+}
+
+.clickedOnce{
+  color: white;
+  background: red;
+}
+
+.clickedTwice{
+  color: lemonchiffon;
+  background: blue;
+}
+/*#rowOneLeft {
+  color: black;
+}*/
