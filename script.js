@@ -11,16 +11,21 @@ for (var i = 0; i < gameBoard.length; i++) {
 
 /*function to change square based on element id*/
 function markSquare(){
-  if (counter % 2 === 0){
-    /*console.log("mark this X");*/
-    document.getElementById(event.target.id).innerHTML = "X";
-    document.getElementById(event.target.id).className = "markX";
+  var clickedSquare = document.getElementById(event.target.id);
+  if (clickedSquare.className == "emptySquare"){
+    if (counter % 2 === 0){
+      /*console.log("mark this X");*/
+      clickedSquare.innerHTML = "X";
+      clickedSquare.className = "markX";
+    } else {
+      /*console.log("mark this O");*/
+      clickedSquare.innerHTML = "O";
+      clickedSquare.className = "markO";
+    }
+    counter ++; /*increment counter to alternate marks*/
   } else {
-    /*console.log("mark this O");*/
-    document.getElementById(event.target.id).innerHTML = "O";
-    document.getElementById(event.target.id).className = "markO";
+    return; /*don't do anything if square has already been clicked and marked*/
   }
-  counter ++; /*increment counter to alternate marks*/
 }
 
 document.getElementById("resetButton").addEventListener("click", resetBoard);
