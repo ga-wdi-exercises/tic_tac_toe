@@ -1,7 +1,9 @@
-document.getElementById("rowOneLeft").addEventListener("click", changeMarker);
+/*document.getElementById("rowOneLeft").addEventListener("click", changeMarker);
+document.getElementById("rowOneMiddle").addEventListener("click", changeMarker);
+document.getElementById("rowOneRight").addEventListener("click", changeMarker);*/
 
 var numberOfClicks = 0;
- function changeMarker() {
+ function changeMarker(clickedSquare) {
    numberOfClicks = numberOfClicks + 1;
    if (numberOfClicks % 3 === 1){
      document.getElementById("rowOneLeft").innerHTML = "X";
@@ -12,3 +14,9 @@ var numberOfClicks = 0;
    }
    return false;
  }
+
+document.addEventListener("click", determineClickedSquare);
+function determineClickedSquare(){
+  var clickedSquare = event.target.id;
+  console.log(clickedSquare);
+}
