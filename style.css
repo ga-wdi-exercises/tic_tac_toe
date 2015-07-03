@@ -1,0 +1,19 @@
+table {
+    height: 600px;
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+td {
+    border: 5px solid black;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+button {
+    height: 100px;
+    
+
+}
