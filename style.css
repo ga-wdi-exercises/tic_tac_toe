@@ -1,0 +1,65 @@
+@import url(http://fonts.googleapis.com/css?family=Special+Elite);
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+body{
+  justify-content: center;
+}
+
+/*****************************
+          HEADER
+*****************************/
+
+h1 {
+  font-family: 'Special Elite', cursive;
+  font-size: 2.5em;
+
+  margin: 1em 10em;
+}
+
+/*****************************
+          MAIN
+*****************************/
+
+#board {
+
+  justify-content: space-between;
+
+  background: #ddd;
+
+  height: 500px;
+  width: 500px;
+
+}
+
+.cell {
+  border: 2px solid #bbb;
+
+  height: 32%;
+  width: 32%;
+}
+
+.cellX {
+  background-image: url(https://yt3.ggpht.com/-Yn_PpHByTN8/AAAAAAAAAAI/AAAAAAAAAAA/p7Om3nMN3Bk/s900-c-k-no/photo.jpg);
+  background-position: center);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.cellO {
+  background-image: url(http://wttg.images.worldnow.com/images/18985708_SA.jpg);
+  background-position: center);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+/*****************************
+          FOOTER
+*****************************/
