@@ -1,4 +1,8 @@
-document.getElementById("gameBoard").addEventListener("click", markSquare);
+var gameBoard = document.getElementsByTagName("li");
+
+for (var i = 0; i < gameBoard.length; i++) {
+  gameBoard[i].addEventListener("click", markSquare);
+}
 var counter = 0;
 function markSquare(){
   if (counter % 2 === 0){
@@ -11,11 +15,14 @@ function markSquare(){
     document.getElementById(event.target.id).className = "markO";
   }
   counter ++;
+
 }
 
 document.getElementById("resetButton").addEventListener("click", resetBoard);
 function resetBoard(){
   console.log("clicked reset");
-  document.getElementsByClassName("mark0").className = "emptySquare";
-  document.getElementsByClassName("markX").className = "emptySquare";
+  for (var i = 0; i < gameBoard.length; i++){
+    gameBoard[i].className = "emptySquare";
+    gameBoard[i].innerHTML = "";
+  }
 }
