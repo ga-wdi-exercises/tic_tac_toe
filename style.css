@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin-top: 3em;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 34px;
+  font-size: 46px;
+}
+div {
+  margin: 0;
+}
+
+div .cell {
+  width: 5em;
+  background-color: #fafafa;
+  /*margin: 2px;*/
+  display: block;
+  float: left;
+  padding: 2em 0;
+}
+
+.row{
+  clear:left;
+  float: left;
+}
+
+.cell p {
+  margin: 0;
+  text-align: center;
+}
+
+form {
+  width: 16em;
+  margin: 0 auto;
+}
+
+.column-2 {
+  border: 2px solid black;
+  border-width: 0 2px;
+}
+
+.mid-row {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
