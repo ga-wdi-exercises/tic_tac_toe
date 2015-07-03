@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+.tictactitle {
+  font-family: "Lucida Console";
+  color: #4D4D4D;
+  font-size: 16pt;
+
+}
+
+.space {
+  height: 70px;
+}
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF THREE  */
+.column_middle {
+  width: 45%;
+  border: 5px dashed #CCFFCC;
+  height: 690px;
+  padding-left: 15px;
+}
+
+.column_side{
+  width: 23%;
+}
+
+.column_ttt{
+  width: 32%;
+  height: 210px;
+  /*border: 3px solid black;*/
+}
+
+#top_left {
+  border-right: 5px dotted #CC33FF;
+  border-bottom: 5px dotted #CC33FF;
+}
+
+#top_center {
+  border-left: 5px dotted #CC33FF;
+  border-right: 5px dotted #CC33FF;
+  border-bottom: 5px dotted #CC33FF;
+}
+
+#top_right {
+  border-left: 5px dotted #CC33FF;
+  border-bottom: 5px dotted #CC33FF;
+}
+
+#middle_left {
+  border-right: 5px dotted #CC33FF;
+  border-bottom: 5px dotted #CC33FF;
+  border-top: 5px dotted #CC33FF;
+  margin-top: 2px;
+  height: 215px;
+}
+
+#middle_center {
+  border-right: 5px dotted #CC33FF;
+  border-left: 5px dotted #CC33FF;
+  border-bottom: 5px dotted #CC33FF;
+  border-top: 5px dotted #CC33FF;
+  margin-top: 2px;
+  height: 215px;
+
+}
+
+#middle_right {
+  border-left: 5px dotted #CC33FF;
+  border-bottom: 5px dotted #CC33FF;
+  border-top: 5px dotted #CC33FF;
+  margin-top: 2px;
+  height: 215px;
+}
+
+#bottom_left {
+  border-right: 5px dotted #CC33FF;
+  border-top: 5px dotted #CC33FF;
+  margin-top: 2px;
+  height: 215px;
+}
+
+#bottom_center {
+  border-right: 5px dotted #CC33FF;
+  border-left: 5px dotted #CC33FF;
+  border-top: 5px dotted #CC33FF;
+  margin-top: 2px;
+  height: 215px;
+}
+
+#bottom_right {
+  border-left: 5px dotted #CC33FF;
+  border-top: 5px dotted #CC33FF;
+  margin-top: 2px;
+  height: 215px;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
