@@ -18,11 +18,6 @@ ul li {
   text-align: center;
 }
 
-.boardRow{
-  color: black;
-  background: white;
-}
-
 .emptySquare{
   background: white;
 }
@@ -35,6 +30,3 @@ ul li {
   color: lemonchiffon;
   background: blue;
 }
-/*#rowOneLeft {
-  color: black;
-}*/
