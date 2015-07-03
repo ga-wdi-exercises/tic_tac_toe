@@ -1,4 +1,4 @@
-document.addEventListener("click", markSquare);
+document.getElementById("gameBoard").addEventListener("click", markSquare);
 var counter = 0;
 function markSquare(){
   if (counter % 2 === 0){
@@ -15,6 +15,7 @@ function markSquare(){
 
 document.getElementById("resetButton").addEventListener("click", resetBoard);
 function resetBoard(){
+  console.log("clicked reset");
   document.getElementsByClassName("mark0").className = "emptySquare";
   document.getElementsByClassName("markX").className = "emptySquare";
 }
