@@ -2,13 +2,12 @@
 
 .container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: stretch;
+  flex-flow: row wrap;
 }
 
 body{
   justify-content: center;
+  margin: 0px;
 }
 
 /*****************************
@@ -26,6 +25,11 @@ h1 {
           MAIN
 *****************************/
 
+main {
+    flex: 1 100%;
+    justify-content: center;
+}
+
 #board {
 
   justify-content: space-between;
@@ -37,6 +41,7 @@ h1 {
 
 }
 
+/* Default styling for cells on the board */
 .cell {
   border: 2px solid #bbb;
 
@@ -44,6 +49,7 @@ h1 {
   width: 32%;
 }
 
+/* When a cell on the board is changed to an X, this class will be added */
 .cellX {
   background-image: url(https://yt3.ggpht.com/-Yn_PpHByTN8/AAAAAAAAAAI/AAAAAAAAAAA/p7Om3nMN3Bk/s900-c-k-no/photo.jpg);
   background-position: center);
@@ -52,6 +58,7 @@ h1 {
 
 }
 
+/* When a cell on the board is changed to a O, this class will be added */
 .cellO {
   background-image: url(http://wttg.images.worldnow.com/images/18985708_SA.jpg);
   background-position: center);
@@ -63,3 +70,17 @@ h1 {
 /*****************************
           FOOTER
 *****************************/
+
+footer {
+  background-color: #222;
+  flex: 1 100%;
+  margin-top: 20px;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: .5em;
+  color: #eee;
+  text-align: center;
+  margin: 10px;
+}
