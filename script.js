@@ -25,7 +25,7 @@ function markSquare(){
       document.getElementById("whoseTurn").innerHTML = "Player 1's turn to place an X";
     }
     counter ++; /*increment counter to alternate marks*/
-    getClassNames();
+/*    getClassNames(); removed until all winner combinations are entered*/
   } else {
     return; /*don't do anything if square has already been clicked and marked*/
   }
@@ -43,7 +43,7 @@ function resetBoard(){
 }
  /* put class names for all squares into an array
     compare that array to winning combinations to determine winner*/
-  var classNameArray = [];
+/*  var classNameArray = [];
 function getClassNames(){
 
   for (var i = 0; i < gameBoard.length; i++) {
@@ -63,6 +63,6 @@ function getWinner(){
        but I would then have to add the event listener to the reset board code
     for (var i = 0; i < gameBoard.length; i++) {
       gameBoard[i].removeEventListener("click", markSquare);
-    }*/
+    }
   }
-}
+} */
