@@ -1,5 +1,40 @@
-input {
-  width:40px;
-  height:40px;
-  background: grey;
+body{
+  background: #BDBDBD;
 }
+/******  Game Board *********/
+#button {
+  width:5em;
+  height:5em;
+  border-style: solid;
+  background: white;
+  border-color: black;
+  margin:1px;
+  float:left;
+}
+
+.divClear{
+  clear:both;
+}
+
+input{
+  clear:both;
+  display:inline-block;
+}
+
+
+.main-wrapper{
+width:300px;
+height:300px;
+margin:auto;
+background: white;
+}
+
+
+.clearfix:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+/******   *********/
