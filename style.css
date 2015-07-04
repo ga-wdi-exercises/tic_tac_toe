@@ -1,0 +1,55 @@
+body{
+  background: #BDBDBD;
+}
+footer{
+  text-align: center;
+}
+/******  Game Board *********/
+#button {
+  width:80px;
+  height:80px;
+  border-style: solid;
+
+  border-color: black;
+  margin:1px;
+  float:left;
+}
+
+.divClear{
+  clear:both;
+}
+
+input{
+  clear:both;
+  display:inline-block;
+}
+
+
+.main-wrapper{
+width:300px;
+height:300px;
+margin:auto;
+background: white;
+}
+
+
+.clearfix:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+/****** gameboard  *********/
+.X {
+  background:red;
+  font-size: 70px;
+  text-align: center;
+  /** note to self trouble horz align of text so just made bloody big so it doesn't matter**/
+}
+
+.O{
+  background:blue;
+  font-size: 70px;
+  text-align:center;
+}
