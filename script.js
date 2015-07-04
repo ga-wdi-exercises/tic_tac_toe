@@ -8,7 +8,8 @@ var resetBoard = document.getElementById("clear");
 
 function clearBoard(){
   for (i=block.length -1 ; i >= 0 ; i--){
-    block[i].target.innerHTML = "";
+    block[i].innerHTML = "";
+    block[i].setAttribute("class","");
   }
 
 }
