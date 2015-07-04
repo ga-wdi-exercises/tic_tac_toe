@@ -8,25 +8,22 @@
   <body>
     <h1>Tic-Tac-Toe</h1>
     <form class="gameBoard">
-      <div class="row top-row">
-        <div class="cell 1 column-1"><p>1</p></div>
-        <div class="cell 2 column-2"><p>2</p></div>
-        <div class="cell 3 column-3"><p>3</p></div>
-      </div>
-      <div class="row mid-row">
-        <div class="cell 4 column-1"><p>4</p></div>
-        <div class="cell 5 column-2"><p>5</p></div>
-        <div class="cell 6 column-3"><p>6</p></div>
-      </div>
-      <div class="row bot-row">
-        <div class="cell 7 column-1"><p>7</p></div>
-        <div class="cell 8 column-2"><p>8</p></div>
-        <div class="cell 9 column-3"><p>9</p></div>
-      </div>
+      <section class="row top-row">
+        <div class="cell" id="cell1"></div>
+        <div class="cell" id="cell2"></div>
+        <div class="cell" id="cell3"></div>
+      </section>
+      <section class="row mid-row">
+        <div class="cell" id="cell4"></div>
+        <div class="cell" id="cell5"></div>
+        <div class="cell" id="cell6"></div>
+      </section>
+      <section class="row bot-row">
+        <div class="cell" id="cell7"></div>
+        <div class="cell" id="cell8"></div>
+        <div class="cell" id="cell9"></div>
+      </section>
     </form>
-    <button>
-      <p class="turnSwitchBtn">Turn X</p>
-    </button>
     <script src="script.js"></script>
   </body>
 </html>

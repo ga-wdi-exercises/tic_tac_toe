@@ -13,13 +13,21 @@ div {
   margin: 0;
 }
 
-div .cell {
+section .cell {
   width: 5em;
   background-color: #fafafa;
   /*margin: 2px;*/
   display: block;
   float: left;
-  padding: 2em 0;
+  height: 5em;
+}
+
+section .cell:first-child {
+  border-right: 1px solid black;
+}
+
+section .cell:last-child {
+  border-left: 1px solid black;
 }
 
 .row{
@@ -28,7 +36,7 @@ div .cell {
 }
 
 .cell p {
-  margin: 0;
+  margin: 2em 0;
   text-align: center;
 }
 
