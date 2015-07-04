@@ -12,8 +12,32 @@ function Player (name, turn, token){
 
 function initPlayers(event){
   event.preventDefault();
-  player1 = new Player(document.getElementById("player1").value, true, "animals_walrus.gif");
-  player2 = new Player(document.getElementById("player2").value, false, "animals_octop.gif");
+  player1Name = document.getElementById("player1").value || "Harry";
+  player2Name = document.getElementById("player2").value || "Voldemort";
+  player1 = new Player(player1Name, true, "animals_walrus.gif");
+  player2 = new Player(player2Name, false, "animals_octop.gif");
+  document.getElementById("space").removeChild(document.getElementById("player_names"));
+
+  var topLeft = document.getElementById("top_left");
+  topLeft.addEventListener("click", addImage);
+  var topCenter = document.getElementById("top_center");
+  topCenter.addEventListener("click", addImage);
+  var topRight = document.getElementById("top_right");
+  topRight.addEventListener("click", addImage);
+  var middleLeft = document.getElementById("middle_left");
+  middleLeft.addEventListener("click", addImage);
+  var middleCenter = document.getElementById("middle_center");
+  middleCenter.addEventListener("click", addImage);
+  var middleRight = document.getElementById("middle_right");
+  middleRight.addEventListener("click", addImage);
+  var bottomLeft = document.getElementById("bottom_left");
+  bottomLeft.addEventListener("click", addImage);
+  var bottomCenter = document.getElementById("bottom_center");
+  bottomCenter.addEventListener("click", addImage);
+  var bottomRight = document.getElementById("bottom_right");
+  bottomRight.addEventListener("click", addImage);
+  var playAgain = document.getElementById("play_again");
+  playAgain.addEventListener("click", reset);
 }
 
 function updateTurn(player_current, player_other){
@@ -84,7 +108,6 @@ function lineNotNull(val1, val2, val3){
 
 function displayWinner(id1, id2, id3, player){
   var invert_string = "invert_" + player.token;
-  document.getElementById("space").removeChild(document.getElementById("player_names"));
   document.getElementById("winner_banner").innerText = player.name + " wins!";
   document.getElementById(id1).childNodes[0].src = invert_string;
   document.getElementById(id2).childNodes[0].src = invert_string;
@@ -135,24 +158,10 @@ function checkForWinner(){
 
 }
 
+function reset(){
+  location.reload();
+}
+
 //---------------------------------------------------------
 var start = document.getElementById("start");
 start.addEventListener("click", initPlayers);
-var topLeft = document.getElementById("top_left");
-topLeft.addEventListener("click", addImage);
-var topCenter = document.getElementById("top_center");
-topCenter.addEventListener("click", addImage);
-var topRight = document.getElementById("top_right");
-topRight.addEventListener("click", addImage);
-var middleLeft = document.getElementById("middle_left");
-middleLeft.addEventListener("click", addImage);
-var middleCenter = document.getElementById("middle_center");
-middleCenter.addEventListener("click", addImage);
-var middleRight = document.getElementById("middle_right");
-middleRight.addEventListener("click", addImage);
-var bottomLeft = document.getElementById("bottom_left");
-bottomLeft.addEventListener("click", addImage);
-var bottomCenter = document.getElementById("bottom_center");
-bottomCenter.addEventListener("click", addImage);
-var bottomRight = document.getElementById("bottom_right");
-bottomRight.addEventListener("click", addImage);

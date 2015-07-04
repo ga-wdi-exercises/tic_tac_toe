@@ -2,15 +2,26 @@
   box-sizing: border-box;
 }
 
-.tictactitle {
+.tictactitle h1 {
   font-family: "Lucida Console";
   color: #4D4D4D;
-  font-size: 16pt;
+  font-size: 30pt;
+  margin-left: 20px;
+  margin-bottom: 5px;
 
 }
 
+.tictactitle p {
+  font-family: "Lucida Console";
+  color: #4D4D4D;
+  font-size: 16pt;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  margin-top: 5px;
+}
+
 .space {
-  height: 70px;
+  height: 60px;
 }
 
 /*  SECTIONS  */
@@ -126,13 +137,12 @@
   margin-left: 450px;
   font-family: "Lucida Console";
   color: #4D4D4D;
-  font-size: 30pt;
+  font-size: 25pt;
 }
 
 #player_names input {
   display: inline-block;
   height: 30px;
-
 }
 
 img {
@@ -140,6 +150,11 @@ img {
   width: 150px;
   margin-top: 25px;
   margin-left: 42px;
+}
+
+#play_again {
+  display: block;
+  margin-left: 820px;
 }
 
 
