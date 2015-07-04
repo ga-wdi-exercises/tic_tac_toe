@@ -6,8 +6,10 @@ var resetBoard = document.getElementById("clear");
 //and approp. methods and avail attr you can use!
 
 
-function clearBoard(event){
-  
+function clearBoard(){
+  for (i=block.length -1 ; i >= 0 ; i--){
+    block[i].target.innerHTML = "";
+  }
 
 }
 //as a user I want to click on the box and have it alernate between X and o
