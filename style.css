@@ -40,6 +40,10 @@ section .cell:last-child {
   text-align: center;
 }
 
+.cell:hover {
+  background-color: #ccc;
+}
+
 form {
   width: 16em;
   margin: 0 auto;
