@@ -33,6 +33,7 @@ function checkWinners(movesArray, name){
   }
 }
 
+
 // call function addPlayerMark takes event as an argument. event in this case = click
 function addPlayerMark(event) {
 
@@ -65,14 +66,14 @@ function addPlayerMark(event) {
     checkWinners(oMarks, "O");
     if (turnCounter === 10) {
         alert("It's a draw! Reset the board to play again.");
+    }
     // } else if (turnCounter % 2 === 0){
     //     alert("It's X's turn!");
     // } else{
     //     alert("It's O's turn!");
     // }
 
-};
-
+}
 
 // add event listener for click on the game reset button
 document.getElementById('boardResetButton').addEventListener("click", playNewGame);
