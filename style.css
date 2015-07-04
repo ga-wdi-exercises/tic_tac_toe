@@ -115,6 +115,26 @@
   height: 215px;
 }
 
+#winner_banner{
+  margin-left: 750px;
+  font-family: "Lucida Console";
+  color: #4D4D4D;
+  font-size: 30pt;
+}
+
+#player_names{
+  margin-left: 450px;
+  font-family: "Lucida Console";
+  color: #4D4D4D;
+  font-size: 30pt;
+}
+
+#player_names input {
+  display: inline-block;
+  height: 30px;
+
+}
+
 img {
   height: 150px;
   width: 150px;
