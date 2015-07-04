@@ -52,67 +52,74 @@
 }
 
 #top_left {
-  border-right: 5px dotted #CC33FF;
-  border-bottom: 5px dotted #CC33FF;
+  border-right: 3px dashed #CC33FF;
+  border-bottom: 3px dashed #CC33FF;
 }
 
 #top_center {
-  border-left: 5px dotted #CC33FF;
-  border-right: 5px dotted #CC33FF;
-  border-bottom: 5px dotted #CC33FF;
+  border-left: 3px dashed #CC33FF;
+  border-right: 3px dashed #CC33FF;
+  border-bottom: 3px dashed #CC33FF;
 }
 
 #top_right {
-  border-left: 5px dotted #CC33FF;
-  border-bottom: 5px dotted #CC33FF;
+  border-left: 3px dashed #CC33FF;
+  border-bottom: 3px dashed #CC33FF;
 }
 
 #middle_left {
-  border-right: 5px dotted #CC33FF;
-  border-bottom: 5px dotted #CC33FF;
-  border-top: 5px dotted #CC33FF;
+  border-right: 3px dashed #CC33FF;
+  border-bottom: 3px dashed #CC33FF;
+  border-top: 3px dashed #CC33FF;
   margin-top: 2px;
   height: 215px;
 }
 
 #middle_center {
-  border-right: 5px dotted #CC33FF;
-  border-left: 5px dotted #CC33FF;
-  border-bottom: 5px dotted #CC33FF;
-  border-top: 5px dotted #CC33FF;
+  border-right: 3px dashed #CC33FF;
+  border-left: 3px dashed #CC33FF;
+  border-bottom: 3px dashed #CC33FF;
+  border-top: 3px dashed #CC33FF;
   margin-top: 2px;
   height: 215px;
 
 }
 
 #middle_right {
-  border-left: 5px dotted #CC33FF;
-  border-bottom: 5px dotted #CC33FF;
-  border-top: 5px dotted #CC33FF;
+  border-left: 3px dashed #CC33FF;
+  border-bottom: 3px dashed #CC33FF;
+  border-top: 3px dashed #CC33FF;
   margin-top: 2px;
   height: 215px;
 }
 
 #bottom_left {
-  border-right: 5px dotted #CC33FF;
-  border-top: 5px dotted #CC33FF;
+  border-right: 3px dashed #CC33FF;
+  border-top: 3px dashed #CC33FF;
   margin-top: 2px;
   height: 215px;
 }
 
 #bottom_center {
-  border-right: 5px dotted #CC33FF;
-  border-left: 5px dotted #CC33FF;
-  border-top: 5px dotted #CC33FF;
+  border-right: 3px dashed #CC33FF;
+  border-left: 3px dashed #CC33FF;
+  border-top: 3px dashed #CC33FF;
   margin-top: 2px;
   height: 215px;
 }
 
 #bottom_right {
-  border-left: 5px dotted #CC33FF;
-  border-top: 5px dotted #CC33FF;
+  border-left: 3px dashed #CC33FF;
+  border-top: 3px dashed #CC33FF;
   margin-top: 2px;
   height: 215px;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  margin-top: 25px;
+  margin-left: 42px;
 }
 
 
