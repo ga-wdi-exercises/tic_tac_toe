@@ -3,9 +3,9 @@
 }
 
 table {
-    height: 500px;
-    width: 60%;
-    padding-bottom: 10%;
+    /*height: 600px;
+    width: 60%;*/
+    padding-bottom: 5%;
     margin: 0 auto;
 
 }
@@ -14,11 +14,15 @@ td {
     border: 5px solid black;
     border-radius: 10px;
     text-align: center;
+    width: 200px;
+    height: 200px;
 
 }
 
 button {
     height: 50px;
+    margin: 0 0% 30px 45%;
+
 
 
 }
