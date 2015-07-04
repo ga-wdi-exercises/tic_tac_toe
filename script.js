@@ -6,7 +6,16 @@ var block = document.body.getElementsByTagName("span");
 //as a user I want to reset the gameboard
 function playerMove(event){
   if (event.target.innerHTML.length === 0){
-  
+    if (counter % 2 === 0){
+      event.target.setAttribute("class","X fin");
+      event.target.innerHTML = "X";
+    } else {
+      event.target.setAttribute("class","O fin");
+      event.target.innerHTML = "O";
+    }
+
+    counter++;
+  }
 }
 
 
