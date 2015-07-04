@@ -9,19 +9,19 @@ for(var i=0;i<littleBoxes.length;i++){
 var turnCounter = 1;
 var xMarks = [];
 var oMarks = [];
-var winningCombos = [["1","2","3"],["4","5","6"],["7","8","9"],["1","4","7"],["2","5","8"],["3","6","9"]];
+var winningCombos = [["1","2","3"],["4","5","6"],["7","8","9"],["1","4","7"],["2","5","8"],["3","6","9"],["1","5","9"],["3","5","7"]];
 
 
-function checkWinners(movesArray, name){
+function checkWinners(marksArray, name){
 
 // for loop to get first array from possible combos
   for (i = 0; i < winningCombos.length; i++) {
 // set up a var to count number of wins
     var numWins = 0;
 // for loop to go over each value in each array
-    for (var j = 0; j < winningCombos[i].length; j++) {
+    for (var p = 0; p < winningCombos[i].length; p++) {
 // if statement to match number in winning combo array to number in marksArray
-      if(movesArray.indexOf(winningCombos[i][j]) !== -1){
+      if(marksArray.indexOf(winningCombos[i][p]) !== -1){
         numWins++;
       }
 // when numWins hits 3, that means some combo of moves has matched to a complete array in winningCombos
