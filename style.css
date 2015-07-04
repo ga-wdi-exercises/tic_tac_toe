@@ -6,7 +6,7 @@ body{
   width:5em;
   height:5em;
   border-style: solid;
-  background: white;
+  
   border-color: black;
   margin:1px;
   float:left;
@@ -37,4 +37,11 @@ background: white;
    height: 0;
    clear: both;
 }
-/******   *********/
+/****** gameboard  *********/
+.X {
+  background:red;
+}
+
+.O{
+  background:blue;
+}
