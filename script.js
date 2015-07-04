@@ -23,7 +23,7 @@ function clearBoard(){
     block[i].innerHTML = "";
     block[i].setAttribute("class","");
   }
-
+  counter = 1;
 }
 //as a user I want to click on the box and have it alernate between X and o
 //as a user I want to click all the boxes and have it say draw

@@ -1,6 +1,9 @@
 body{
   background: #BDBDBD;
 }
+footer{
+  text-align: center;
+}
 /******  Game Board *********/
 #button {
   width:80px;
