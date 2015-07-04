@@ -3,10 +3,10 @@ body{
 }
 /******  Game Board *********/
 #button {
-  width:5em;
-  height:5em;
+  width:80px;
+  height:80px;
   border-style: solid;
-  
+
   border-color: black;
   margin:1px;
   float:left;
@@ -16,7 +16,7 @@ body{
   clear:both;
 }
 
-input{
+button{
   clear:both;
   display:inline-block;
 }
@@ -40,8 +40,13 @@ background: white;
 /****** gameboard  *********/
 .X {
   background:red;
+  font-size: 70px;
+  text-align: center;
+  /** note to self trouble horz align of text so just made bloody big so it doesn't matter**/
 }
 
 .O{
   background:blue;
+  font-size: 70px;
+  text-align:center;
 }
