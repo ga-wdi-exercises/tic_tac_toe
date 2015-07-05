@@ -3,6 +3,7 @@ var ttt_array = [ [],[],[] ];
 var play = true;
 var player1;
 var player2;
+var turnCounter = 0;
 
 function Player (name, turn, token){
   this.name = name;
@@ -107,15 +108,22 @@ function lineNotNull(val1, val2, val3){
 }
 
 function displayWinner(id1, id2, id3, player){
-  var invert_string = "invert_" + player.token;
-  document.getElementById("winner_banner").innerText = player.name + " wins!";
-  document.getElementById(id1).childNodes[0].src = invert_string;
-  document.getElementById(id2).childNodes[0].src = invert_string;
-  document.getElementById(id3).childNodes[0].src = invert_string;
+  if(id1 === "draw"){
+      document.getElementById("winner_banner").innerText = "it's a draw";
+  }
+  else {
+    var invert_string = "invert_" + player.token;
+    document.getElementById("winner_banner").innerText = player.name + " wins!";
+    document.getElementById(id1).childNodes[0].src = invert_string;
+    document.getElementById(id2).childNodes[0].src = invert_string;
+    document.getElementById(id3).childNodes[0].src = invert_string;
+  }
 
 }
 
 function checkForWinner(){
+
+  turnCounter++;
   //check rows for win - can use the equality operator on object because the reference to the object is the same - not placing two distinct objects in ttt_array
   if((ttt_array[0][0] === ttt_array[1][0]) && (ttt_array[0][0] === ttt_array[2][0]) && lineNotNull(ttt_array[0][0], ttt_array[1][0], ttt_array[2][0])){
     displayWinner("top_left", "top_center", "top_right", ttt_array[0][0]);
@@ -152,6 +160,10 @@ function checkForWinner(){
   if((ttt_array[2][0] === ttt_array[1][1]) && (ttt_array[2][0] === ttt_array[0][2]) && lineNotNull(ttt_array[2][0], ttt_array[1][1], ttt_array[0][2])){
     displayWinner("top_right", "middle_center", "bottom_left", ttt_array[2][0]);
     return false;
+  }
+
+  if(turnCounter === 9){
+    displayWinner("draw");
   }
 
   return true;
