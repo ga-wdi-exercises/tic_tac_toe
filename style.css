@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    background: black;
+    text-align: center;
+    font-family: helvetica;
+    margin: 0;
+    padding: 0;
+}
+
+.board {
+    width: 600px;
+    margin: auto;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+}
+
+.v {
+    border-left: 10px solid blue;
+    border-right: 10px solid blue;
+}
+
+.h {
+    border-top: 10px solid blue;
+    border-bottom: 10px solid blue;
+}
+
+.square {
+    font-size: 100px;
+}
+
+input[type="button"]{
+    font-family: helvetica;
+    font-size: 2em;
+    border: 1;
+    border-color: white;
+    color: white;
+    padding: 8px;
+    margin: 40px 0 70px 0;
+}
