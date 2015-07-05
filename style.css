@@ -1,0 +1,101 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #A4CE8A;
+}
+
+h1 {
+  font-family: fantasy;
+}
+
+
+.rules {
+  text-align: center;
+  font-size: 90%;
+  line-height: 1.5em;
+  background-color: #fff;
+  width: 300px;
+  padding: 50px;
+  border: 20px dotted #000;
+  margin: 10px auto 10px auto;
+  /*use margin to center the text box on the page.  at first thought i needed to make a first text box and make this one sit next to it, but that's too much and it didn't work for me anyways. i deleted that css code.*/
+}
+
+table {
+  width: 300px;
+  border: 20px solid #fff;
+  margin: 10px auto 10px auto;
+}
+
+td {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #48A1CC;
+  margin: auto #fff;
+}
+
+
+
+
+/*#topleft {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #48A1CC;
+  margin: auto;
+}*/
+
+/*#topmid {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #48A1CC;
+  margin: auto;
+}
+
+#topright {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #48A1CC;
+  margin: auto;
+}
+
+#midleft {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #48A1CC;
+  margin: auto;
+}
+
+#midmid {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #48A1CC;
+  margin: auto;
+}
+
+#midright {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #48A1CC;
+  margin: auto;
+}
+
+#bottomleft {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #48A1CC;
+  margin: auto;
+}
+
+#bottommid {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #48A1CC;
+  margin: auto;
+}
+
+#bottomright {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #48A1CC;
+  margin: auto;
+}*/
