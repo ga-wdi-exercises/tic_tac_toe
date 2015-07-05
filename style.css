@@ -2,9 +2,10 @@
 
 
 /* Base Format */
+
 html {
     box-sizing: border-box;
-    height: 100%
+    height: 100%;
 }
 
 *, *:before, *:after {
@@ -20,88 +21,84 @@ body {
 
 
 /* Font Treatments */
-a {
-	color: #000;
-	text-decoration: none;
-}
 
-img {
-	height: 100%;
-	width: 100%;
+a {
+    color: #000;
+    text-decoration: none;
 }
 
 ul {
-	list-style: none;
+    list-style: none;
+}
+
+
+/* Site Container */
+
+.site-container {
+    align-items: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
 }
 
 
 /* Site Header */
+
+.site-header,
+.grid-cell {
+    display: flex;
+}
+
 .site-header {
-	background-color: #FFF;
-	box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+    border-bottom: 4px solid #000;
+    flex: 0 0 0;
+}
+
+.site-nav {
+    padding: 0 2px 2px 0;
     width: 100%;
 }
 
 .nav-list {
-	border-bottom: 3px solid #000;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	font-size: .6em;
-	font-weight: 400;
-	justify-content: space-between;
-	line-height: 5em;
-	width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: .6em;
+    font-weight: 400;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .nav-item-text,
 .nav-item-title {
-	text-align: left;
+    text-align: left;
 }
-
-
-/* Site Content */
-.site-content {
-	align-items: stretch;
-	display: flex;
-	flex-flow: column nowrap;
-
-}
-
-
-
 
 .grid-cell {
-            flex: 30px 1 0;
-    border-bottom: 1px solid #ccc;    
+    flex: 30px 1 0;
 }
 
-/* Calendar rows */
-.th, .grid-cell { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
-.th>span {
-    border-bottom: 4px solid rgba(255,0,0,0.3);
-    padding: 0 2px 2px 0;
-    text-align: right;
-}
-.grid-cell>div {
-    border-top: 1px solid #eee;
-    padding: 20px 2px 2px;
+.grid-cell > div {
+    border-right: 2px solid #000;
     min-height: 50px;
-    position: relative; /* allow ::after psuedo element absolute positioning */
-}
-.grid-cell>div {
+    position: relative;
     width: 100%;
-    margin-right: 5px;
-    color: #333;
 }
-/* Dates */
-.grid-cell>div:after {
-    content: attr(data-date);
-    display: block;
-    position: absolute;
-    top: 0; right: 2px;
-    color: #999;
+
+.grid-cell > div:last-child {
+    border-right: none;
 }
-/* grid-cellends */
-.th>span:first-child, .th>span:last-child, .grid-cell>div:first-child, .grid-cell>div:last-child {background:#f3f3f3}
-.th>span:last-child, .grid-cell>div:last-child {margin-right:0}
+
+.row-one,
+.row-two {
+    border-bottom: 2px solid #000;
+}
+
+
+/* Site Footer */
+
+.site-footer {
+    border-top: 4px solid #000;
+    text-align: center;
+}
