@@ -1,0 +1,39 @@
+
+h1, h2 {
+  text-align: center;
+}
+
+div.contain {
+  margin: 100px auto 0 auto;
+  width: 50%;
+  height: 400px
+}
+
+div.contain div {
+  width: 30%;
+  height: 3em;
+  float:left;
+  margin-left: 2%;
+  margin-top: 15px;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 2em;
+  cursor: grab;
+}
+
+.x_color {
+  color: royalblue;
+}
+
+.o_color {
+  color: magenta;
+}
+
+button {
+  display: block;
+  clear: both;
+  margin: 0 auto;
+  padding: 10px 30px;
+  border: 1px solid inherit;
+  border-radius: 10px;
+}
