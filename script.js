@@ -1,30 +1,16 @@
-var freeSpace = document.body.querySelector(".free_space")
-var markedSpace = document.body.querySelector(".marked_space")
-var allFreeSpaces = document.body.querySelectorAll(".free_space")
-var allMarkedSpaces = document.body.querySelectorAll(".marked_space")
-
-var text_one = document.getElementById("marker_one")
-var text_two = document.getElementById("marker_two")
-var text_three = document.getElementById("marker_three")
-var text_four = document.getElementById("marker_four")
-var text_five = document.getElementById("marker_five")
-var text_six = document.getElementById("marker_six")
-var text_seven = document.getElementById("marker_seven")
-var text_eight = document.getElementById("marker_eight")
-var text_nine = document.getElementById("marker_nine")
+var markers = document.body.querySelectorAll(".marker")
+var freeSpaces = document.body.querySelectorAll(".free")
+var markedSpaces = document.body.querySelectorAll(".marked")
 
 function reset(){
-  text_one.innerHTML = ""
-  text_two.innerHTML = ""
-  text_three.innerHTML = ""
-  text_four.innerHTML = ""
-  text_five.innerHTML = ""
-  text_six.innerHTML = ""
-  text_seven.innerHTML = ""
-  text_eight.innerHTML = ""
-  text_nine.innerHTML = ""
-  //When #reset_button is clicked, set the class of all marked_space divs to free_space and set innerHTML of all marker spans to "&nsbp;"
+  for (i = 0; i < markedSpaces.length; i ++) {
+    markedSpaces[i].className = "free"
+  }
+  for (i = 0; i < (markers.length - 1); i ++) {
+    markers[i].innerHTML = "&nbsp;"
+  }
 }
+
 document.getElementById("reset_button").addEventListener("click",reset)
 
 //function playAnX() {
@@ -52,4 +38,35 @@ document.getElementById("reset_button").addEventListener("click",reset)
 //}
 
 
-document.body.querySelectorAll(".free_space").addEventListener("click", playTicTacToe())
+document.body.querySelector(".free_space").addEventListener("click", function)
+
+
+//var squareOne = document.getElementById("square_one")
+//var squareTwo = document.getElementById("square_two")
+//var squareThree = document.getElementById("square_three")
+//var squareFour = document.getElementById("square_four")
+//var squareFive = document.getElementById("square_five")
+//var squareSix = document.getElementById("square_six")
+//var squareSeven = document.getElementById("square_seven")
+//var squareEight = document.getElementById("square_eight")
+//var squareNine = document.getElementById("square_nine")
+
+//markerOne.innerHTML = "&nbsp;"
+//markerTwo.innerHTML = "&nbsp;"
+//markerThree.innerHTML = "&nbsp;"
+//markerFour.innerHTML = "&nbsp;"
+//markerFive.innerHTML = "&nbsp;"
+//markerSix.innerHTML = "&nbsp;"
+//markerSeven.innerHTML = "&nbsp;"
+//markerEight.innerHTML = "&nbsp;"
+//markerNine.innerHTML = "&nbsp;"
+
+//var markerOne = document.getElementById("marker_one")
+//var markerTwo = document.getElementById("marker_two")
+//var markerThree = document.getElementById("marker_three")
+//var markerFour = document.getElementById("marker_four")
+//var markerFive = document.getElementById("marker_five")
+//var markerSix = document.getElementById("marker_six")
+//var markerSeven = document.getElementById("marker_seven")
+//var markerEight = document.getElementById("marker_eight")
+//var markerNine = document.getElementById("marker_nine")

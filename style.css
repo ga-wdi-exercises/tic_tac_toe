@@ -29,9 +29,10 @@ p {
   width: 99%;
 }
 
-.free_space {
+.free {
   border: solid black;
   background-color: white;
+  color: black;
   width: 10em;
   max-width: 10em;
   height: 10em;
@@ -39,7 +40,7 @@ p {
   padding: 0;
 }
 
-.marked_space {
+.marked {
   border: solid black;
   background-color: #FF008C;
   color: white;
@@ -50,6 +51,13 @@ p {
   padding: 0;
 }
 
+.marker {
+  font-size: 9em;
+  font-family: sans-serif;<!--find a handwriting font?-->
+  padding: 0;
+  margin: 0;
+}
+
 #board {
   width: 30em;
   max-width: 30em;
@@ -57,68 +65,6 @@ p {
   max-height: 30em;
   margin: 0 auto;
   background: black;
-}
-
-#marker_one {
-  font-size: 9em;
-  font-family: sans-serif;<!--find a handwriting font?-->
-  padding: 0;
-  margin: 0;
-}
-
-#marker_two {
-  font-size: 9em;
-  font-family: sans-serif;<!--find a handwriting font?-->
-  padding: 0;
-  margin: 0;
-}
-
-#marker_three {
-  font-size: 9em;
-  font-family: sans-serif;<!--find a handwriting font?-->
-  padding: 0;
-  margin: 0;
-}
-
-#marker_four {
-  font-size: 9em;
-  font-family: sans-serif;<!--find a handwriting font?-->
-  padding: 0;
-  margin: 0;
-}
-
-#marker_five {
-  font-size: 9em;
-  font-family: sans-serif;<!--find a handwriting font?-->
-  padding: 0;
-  margin: 0;
-}
-
-#marker_six {
-  font-size: 9em;
-  font-family: sans-serif;<!--find a handwriting font?-->
-  padding: 0;
-  margin: 0;
-}
-#marker_seven {
-  font-size: 9em;
-  font-family: sans-serif;<!--find a handwriting font?-->
-  padding: 0;
-  margin: 0;
-}
-
-#marker_eight {
-  font-size: 9em;
-  font-family: sans-serif;<!--find a handwriting font?-->
-  padding: 0;
-  margin: 0;
-}
-
-#marker_nine {
-  font-size: 9em;
-  font-family: sans-serif;<!--find a handwriting font?-->
-  padding: 0;
-  margin: 0;
 }
 
 #winner_popup {
