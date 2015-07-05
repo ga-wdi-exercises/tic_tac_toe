@@ -143,5 +143,3 @@ middleRow[2].addEventListener("click", playMiddleRight);
 bottomRow[0].addEventListener("click", playBottomLeft);
 bottomRow[1].addEventListener("click", playBottomMiddle);
 bottomRow[2].addEventListener("click", playBottomRight);
-
-//At a later date: make played squares unclickable; limit to 9 moves; make it baseball themed,
