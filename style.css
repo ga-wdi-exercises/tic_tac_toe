@@ -1,0 +1,27 @@
+*{
+  border-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0 auto;
+}
+h1 {
+  width: 300px;
+  text-align: center;
+}
+.wrapper {
+  width: 300px;
+  margin: 0 auto;
+}
+.square {
+  box-sizing: border-box;
+  float: left;
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  padding: 20px;
+}
+.green {
+  background-color: mediumaquamarine;
+}
+.blue {
+  background-color: lightskyblue;
+}
