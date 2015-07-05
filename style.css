@@ -50,7 +50,7 @@ ul {
 /* Site Header */
 
 .site-header,
-.grid-cell {
+.grid {
     display: flex;
 }
 
@@ -79,19 +79,24 @@ ul {
     text-align: left;
 }
 
-.grid-cell {
+.grid {
     flex: 30px 1 0;
 }
 
-.grid-cell > div {
+.grid > div {
     border-right: 1px solid #000;
     min-height: 50px;
     position: relative;
     width: 100%;
 }
 
-.grid-cell > div:last-child {
+.grid > div:last-child {
     border-right: none;
+}
+
+.grid-cell:hover {
+    background-color: #D3D3D3;
+    transition:.5s;
 }
 
 .row-one,
