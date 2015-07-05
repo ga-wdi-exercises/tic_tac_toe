@@ -1,0 +1,25 @@
+table td {
+  border: 2px solid black;
+  width: 130px;
+  height: 130px;
+}
+
+button {
+  background-color: #ff9933;
+  display: inline-block;
+  color: #fff;
+  font-family: arial;
+  font-size: 20px;
+  padding: 16px 50px;
+  text-decoration: none;
+  border: 5px solid #995c1f;
+  align-content: center;
+  border-radius: 20px;
+
+}
+
+div {
+  padding-top: 3em;
+  
+
+}
