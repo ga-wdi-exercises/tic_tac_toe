@@ -1,9 +1,15 @@
+h1 {
+    text-align: center;
+}
+
 table {
 	background: gray;
 	width:302px;
 	height:302px;
-	position:fixed;
-    left: 40%;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 td {
@@ -101,4 +107,8 @@ td {
     color: rgba(0, 0, 0, 0.55);
     text-align: center;
     font: bold 3.2em/100px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
