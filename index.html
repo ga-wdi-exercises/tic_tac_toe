@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Robert's Tic Tac Toe</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Robert's Tic Tac Toe</h1>
+		<div class="grid">
+		<table>
+			<tr>
+				<td id="1" onclick="makeMove(1)"></td>
+				<td id="2" onclick="makeMove(2)"></td>
+				<td id="3" onclick="makeMove(3)"></td>
+			</tr>
+			<tr>
+				<td id="4" onclick="makeMove(4)"></td>
+				<td id="5" onclick="makeMove(5)"></td>
+				<td id="6" onclick="makeMove(6)"></td>
+			</tr>
+			<tr>
+				<td id="7" onclick="makeMove(7)"></td>
+				<td id="8" onclick="makeMove(8)"></td>
+				<td id="9" onclick="makeMove(9)"></td>
+			</tr>
+		</table>
+		</div>
+	<div class="player-turn"></div>
+	<div class="reset"><a href="#">Reset Game</a>></div>
+	<!-- Load Javascript -->
+	<script src="script.js"></script>
+</body>
+</html>

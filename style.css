@@ -1,0 +1,63 @@
+* {
+	font-family: Open Sans;
+}
+
+h1 {
+	margin: 30px auto 40px auto;
+	max-width: 500px;
+	font-size: 50px;
+	text-align: center;
+	background-color: #3B8686;
+	color: white;
+	padding: 15px;
+}
+
+.grid {
+	text-align: center;
+	margin: auto;
+}
+
+table {
+	display: inline-block;
+	text-align: center;
+	border: 5px solid #79BD9A;
+	border-collapse: collapse;
+}
+
+th, td {
+	display: table-cell;
+	height: 130px;
+	width: 130px;
+	border: 3px solid #79BD9A;
+	vertical-align: middle;
+	font-size: 80px;
+}
+
+/* Change color on hover*/
+td:hover {
+	background-color: #CFF09E;
+}
+
+.player-turn {
+	max-width: 200px;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 15px auto -20px auto;
+	text-align: center;
+	padding: 10px;
+	background-color: #A8DBA8;
+}
+
+.reset {
+	margin: 50px auto 0 auto;
+	text-align: center;
+	color: white;
+}
+
+a {
+	font-size: 17px;
+	text-decoration: none;
+	background-color: #0B486B;
+	color: white;
+	padding: 15px;
+}
