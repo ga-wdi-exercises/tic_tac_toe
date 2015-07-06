@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+h1{
+  font-style: Arial;
+  text-align: center;
+  margin-top: 50px;
+}
+
+table {
+  border-width: thin;
+  border-style: solid;
+  width: 500px;
+  height: 500px;
+  margin-left: 400px;
+}
+
+
+td {
+	border-width: thin;
+	border-style: solid;
+    width:100px;
+    height:100px;
+    text-align: center;
+}
+
+button {
+  width: 100px;
+  height:50px;
+  color:red;
+  font-size: 18px;
+  font-style: Arial;
+  background-color: white;
+  border-color: red;
+  border-width: thick;
+  margin-left: 400px;
+  margin-bottom: 50px;
+}
