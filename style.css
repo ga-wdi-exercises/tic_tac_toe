@@ -1,0 +1,49 @@
+.clear{
+             clear:both;
+         }
+
+         #grid{
+             width: 800px;
+             height: 800px;
+         }
+
+         .grid-element{
+             width:200px;
+             height: 200px;
+             float:left;
+             margin: .5px;
+             border : 5px solid black;
+         }
+div{
+  color: white;
+}
+
+header{
+  font-size: 45px;
+  font-family: sans-serif;
+  color: green;
+  text-align:  left;
+  padding-bottom: 16px;
+  margin-left: 200px;
+}
+
+button-play{
+  font-size: 18px;
+  color: green;
+}
+
+#white{
+  background: #FFFFFF;
+}
+
+#yellow{
+  background: #FFFF00;
+}
+
+#xbox{
+  background: ##0080FF;
+}
+
+#obox{
+  background: #82FA58;
+}
