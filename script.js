@@ -18,10 +18,27 @@ no 2 squares clicked
 reset button
 */
 
-var array
-var newArray
 
-function onClick(){
+var x = document.getElementsByClassName("square");
+var i;
+var nSquare= 9;
+var counter=0;
+var winningCombinations=  [A1,B1,C1],
+                          [A2,B2,C2],
+                          [A3,B3,C3],
+                          [A1,A2,A3],
+                          [B1,B2,B3],
+                          [C1,C2,C3],
+                          [A1,B2,C3],
+                          [C1,B2,A3];
+
+
+for (i = 0; i < nSquare.length; i++) {
+    x[i].style.backgroundColor = "blue";
+}
+
+
+/*function onClick(){
   if (getElementByID.A1.value= "x" || "o"){ //check for move
     alert("Please make a different move");
   }
@@ -35,3 +52,4 @@ else {
     document.getElementID ("A1") .addEventListener("click", "x");
   getElementbyID.A1[i].mover.value = "x"
  }
+*/
