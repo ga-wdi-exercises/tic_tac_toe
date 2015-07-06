@@ -38,4 +38,6 @@ function resetCells(){
     allCells[j].innerHTML = "";
     allCells[j].setAttribute("class", "cell")
   }
+  counter = 0;
+  whoseturn.innerHTML = "Place an X"
 }
