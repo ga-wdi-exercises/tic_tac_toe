@@ -1,0 +1,114 @@
+h1 {
+    text-align: center;
+}
+
+table {
+	background: gray;
+	width:302px;
+	height:302px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+td {
+    width:100px;
+    height:100px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#box1 {
+	border-bottom:1px solid #000;
+    border-right:1px solid #000;
+}
+
+#box2 {
+	border-bottom:1px solid #000;
+	border-right: 1px solid #000;
+}
+
+#box3 {
+    border-bottom:1px solid #000;
+}
+
+#box4 {
+	border-bottom:1px solid #000;
+    border-right:1px solid #000;
+}
+
+#box5 {
+	border-bottom:1px solid #000;
+    border-right:1px solid #000;
+}
+
+#box6 {
+	border-bottom:1px solid #000;
+}
+
+#box7 {
+    border-right:1px solid #000;
+}
+
+#box8 {
+    border-right:1px solid #000;
+}
+
+#box9 {
+}  
+
+.blue {
+	background: blue;
+}
+
+.green {
+    background: green;
+}
+
+.red {
+    background: red;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.orange {
+    background: orange;
+}
+
+.violet {
+    background: violet;
+}
+
+.white {
+    background: white;
+}
+
+.brown {
+    background: brown;
+}
+
+.indigo {
+    background: indigo;
+}
+
+.gray {
+    background; gray; 
+}
+
+#reset {
+	display: block;
+    height: 100px;
+    width: 300px;
+    background: #34696f;
+    border: 2px solid rgba(33, 68, 72, 0.59);
+    color: rgba(0, 0, 0, 0.55);
+    text-align: center;
+    font: bold 3.2em/100px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
