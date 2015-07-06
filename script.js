@@ -1,6 +1,9 @@
+/* Abstraction of game board for bonus features (i.e. checking if player won the game.)
 var board = [[null, null, null],[null, null, null],[null, null, null]];
-var turnCounter = 0;
 console.log(board);
+*/
+
+var turnCounter = 0;
 
 // Select the board, as the parent element of the cells that will be changed, and add event listener
 var gameboard = document.getElementById("board");
