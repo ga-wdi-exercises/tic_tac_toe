@@ -19,7 +19,7 @@ reset button
 */
 
 var array
-
+var newArray
 
 function onClick(){
   if (getElementByID.A1.value= "x" || "o"){ //check for move
