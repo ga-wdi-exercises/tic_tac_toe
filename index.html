@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="description" content="">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+		<!-- ======= ======= ======= gameBoard ======= ======= ======= -->
+		<div id="gameBoard">
+			<div id="R1C1" class="box R1 C1"></div>
+			<div id="R1C2" class="box R1 C2"></div>
+			<div id="R1C3" class="box R1 C3"></div>
+			<div id="R2C1" class="box R2 C1"></div>
+			<div id="R2C2" class="box R2 C2"></div>
+			<div id="R2C3" class="box R2 C3"></div>
+			<div id="R3C1" class="box R3 C1"></div>
+			<div id="R3C2" class="box R3 C2"></div>
+			<div id="R3C3" class="box R3 C3"></div>
+		</div>
+
+		<!-- ======= ======= ======= players ======= ======= ======= -->
+		<div>
+			<div id="nowPlaying" class="players"></div>
+			<div id="playerX" class="players">player1<input id="playerXname" label="playerX" type="text" value=" "></div>
+			<div id="playerO" class="players">player2<input id="playerOname" label="playerO" type="text" value=" "></div>
+			<div id="buttonDiv" class="players">Start Game!!!<input id="startGame" label="start game!" type="button" value="START!"></div>
+		</div>
+
+		<!-- ======= ======= ======= scripts ======= ======= ======= -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="script.js"></script>
+		<script type="text/javascript">
+			$( document ).ready( function() {
+			    console.log( "document ready" );
+				init();
+			});
+		</script>
+
+	</body>
+</html>
