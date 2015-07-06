@@ -2,6 +2,16 @@
 	font-family: Open Sans;
 }
 
+h1 {
+	margin: 30px auto 40px auto;
+	max-width: 500px;
+	font-size: 50px;
+	text-align: center;
+	background-color: #3B8686;
+	color: white;
+	padding: 15px;
+}
+
 .grid {
 	text-align: center;
 	margin: auto;
@@ -23,26 +33,9 @@ th, td {
 	font-size: 80px;
 }
 
-/*td:hover {
+/* Change color on hover*/
+td:hover {
 	background-color: #CFF09E;
-}*/
-
-h1 {
-	margin: 30px auto 40px auto;
-	max-width: 500px;
-	font-size: 50px;
-	text-align: center;
-	background-color: #3B8686;
-	color: white;
-	padding: 15px;
-}
-
-a {
-	font-size: 17px;
-	text-decoration: none;
-	background-color: #0B486B;
-	color: white;
-	padding: 15px;
 }
 
 .reset {
@@ -51,6 +44,10 @@ a {
 	color: white;
 }
 
-td:hover {
-	background-color: #CFF09E;
+a {
+	font-size: 17px;
+	text-decoration: none;
+	background-color: #0B486B;
+	color: white;
+	padding: 15px;
 }

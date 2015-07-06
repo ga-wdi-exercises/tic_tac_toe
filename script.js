@@ -1,35 +1,41 @@
 // Set variables for each respective move
 var x = "X"
 var o = "O"
-var boxNumber;
 // Create functions to place X or O, taking in boxNumber to choose where to place
 function placeX(boxNumber) {
 	document.getElementById(boxNumber).innerHTML = x;
 }
-
 function placeO(boxNumber) {
 	document.getElementById(boxNumber).innerHTML = o;
 }
 
-// placeX("box3");
-// Setting up the move counter to decide whose turn it is
-// var moveCounter = 1;
-// for(i = 0; ) {
+// placeX(1);
+// placeO("2");
 
-// }
+var cells = document.getElementsByTagName("TD");
 
-var move = document.getElementById(boxNumber);
+var moveCounter = 1;
+function makeMove(boxNumber) {
+	moveCounter++;
+	if (moveCounter % 2 === 0) {
+		placeO(boxNumber);
+	} else {
+		placeX(boxNumber);
+	}
+}
 
-document.getElementById("box1").addEventListener("click", function() { document.getElementById("box1").innerHTML = x;});
+// cells[0].addEventListener("click", makeMove(1));
 
-// document.onclick = myFunction;
 
-// function myFunction() {
-// 	document.getElementById("box1").style.backgroundColor = "#CFF09E";
-// }
+// move.addEventListener("click", function() { document.getElementById(boxNumber).innerHTML = x;});
 
-// document.getElementById("box1").addEventListener("onclick", function(){
-//     document.getElementById("box2").firstChild.innerHTML = "Hello World";
-// });
 
-// document.getElementById("box1").onmouseover
+// Reset board
+var reset = document.getElementsByTagName("A");
+// reset.addEventListener("click", resetBoard);
+
+function resetBoard() {
+for(i = 0; i < reset.length; i++) {
+	document.getElementsByTagName("TD")[i].innerHTML = "";
+	}
+}
