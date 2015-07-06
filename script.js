@@ -23,7 +23,7 @@ var iValue = 0;
 //array for values
 var valueArray = [aValue, bValue, cValue, dValue, eValue, fValue, gValue, hValue, iValue];
 //winning combinations
-var winningCombination = [aValue, bValue, cValue], [dValue, eValue, fValue], [gValue,hValue,iValue],
+var winningCombination = [aValue, bValue, cValue], [dValue, eValue, fValue], [gValue, hValue, iValue],
 [aValue, dValue, gValue], [bValue, eValue, hValue], [cValue, fValue, iValue],
 [aValue, eValue, iValue], [gValue, eValue, cValue];
 //reset button
