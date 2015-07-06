@@ -1,0 +1,117 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900);
+
+
+/* Base Format */
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    height: 100%;
+}
+
+
+/* Font Treatments */
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+h1, h2, p {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Site Container */
+
+.site-container,
+.game {
+    align-items: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+
+
+/* Site Header */
+
+.site-header,
+.game-board {
+    display: flex;
+}
+
+.site-header {
+    background-color: #FFF;
+    border-bottom: 3px solid #000;
+}
+
+.site-nav {
+    line-height: 3em;
+    padding: 0 2px 2px 0;
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-item-text,
+.nav-item-title {
+    text-align: left;
+}
+
+
+/* Site Content */
+
+.game-board {
+    flex: 30px 1 0;
+}
+
+.game-board > div {
+    border-right: 1px solid #000;
+    min-height: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.game-board > div:last-child { /* Removes the right border on the last column. */
+    border-right: none;
+}
+
+.board-cell:hover {
+    background-color: #D3D3D3;
+    transition:.5s;
+}
+
+.row-one,
+.row-two {
+    border-bottom: 1px solid #000;
+}
+
+
+/* Site Footer */
+
+.site-footer {
+    border-top: 3px solid #000;
+    line-height: 3em;
+    text-align: center;
+}
