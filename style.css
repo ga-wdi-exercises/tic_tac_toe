@@ -9,6 +9,10 @@ h1 {
   margin-bottom: 34px;
   font-size: 46px;
 }
+.midtitle {
+  color: #9191FF;
+}
+
 div {
   margin: 0;
 }
@@ -23,11 +27,11 @@ section .cell {
 }
 
 section .cell:first-child {
-  border-right: 1px solid black;
+  border-right: 2px solid black;
 }
 
 section .cell:last-child {
-  border-left: 1px solid black;
+  border-left: 2px solid black;
 }
 
 .row{
@@ -71,4 +75,11 @@ button {
 button p {
   padding: 0;
   margin: 0;
+}
+section .ex {
+  background-color: #9191FF;
+}
+
+section .O {
+  background-color: #FFC2E0;
 }

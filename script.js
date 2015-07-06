@@ -15,12 +15,24 @@ function changeValue(event){
   if (activeSquare.className == "cell") {
     if(counter % 2 === 0){
       activeSquare.innerHTML = "<p>X</p>";
+      activeSquare.classList.add("ex")
     } else {
       activeSquare.innerHTML = "<p>O</p>";
+      activeSquare.classList.add("O")
     }
 
     counter ++;
   } else {
     return;
+  }
+}
+
+var button = document.getElementsByClassName("reset")[0];
+button.addEventListener("click",resetCells);
+
+function resetCells(){
+  for (var j = 0; j < allCells.length; j++){
+    allCells[j].innerHTML = "";
+    allCells[j].setAttribute("class", "cell")
   }
 }
