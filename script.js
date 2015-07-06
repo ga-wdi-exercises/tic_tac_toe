@@ -13,11 +13,12 @@ function Player (name, turn, token){
 
 function initPlayers(event){
   event.preventDefault();
-  player1Name = document.getElementById("player1").value || "Harry";
-  player2Name = document.getElementById("player2").value || "Voldemort";
+  player1Name = document.getElementById("player1").value || "harry";
+  player2Name = document.getElementById("player2").value || "voldemort";
   player1 = new Player(player1Name, true, "animals_walrus.gif");
   player2 = new Player(player2Name, false, "animals_octop.gif");
   document.getElementById("space").removeChild(document.getElementById("player_names"));
+  document.getElementById("winner_banner").innerText = player1.name + "\'s turn";
 
   var topLeft = document.getElementById("top_left");
   topLeft.addEventListener("click", addImage);
@@ -44,27 +45,27 @@ function initPlayers(event){
 function updateTurn(player_current, player_other){
   player_current.turn = false;
   player_other.turn = true;
+  document.getElementById("winner_banner").innerText = player_other.name + "\'s turn";
 }
 
 function addImage(event) {
   if (play){
     var image = document.createElement("img");
     this.appendChild(image);
+    this.removeEventListener("click", addImage);
     if(player1.turn === true){
       image.src = player1.token;
       updateTttArray(this.id, player1);
-      play = checkForWinner();
       updateTurn(player1, player2);
+      play = checkForWinner();
     }
     else if(player2.turn === true) {
       image.src = player2.token;
       updateTttArray(this.id, player2);
-      play = checkForWinner();
       updateTurn(player2, player1);
+      play = checkForWinner();
     }
-
   }
-
 }
 
 function updateTttArray(id, player){
@@ -118,7 +119,6 @@ function displayWinner(id1, id2, id3, player){
     document.getElementById(id2).childNodes[0].src = invert_string;
     document.getElementById(id3).childNodes[0].src = invert_string;
   }
-
 }
 
 function checkForWinner(){
@@ -167,7 +167,6 @@ function checkForWinner(){
   }
 
   return true;
-
 }
 
 function reset(){
