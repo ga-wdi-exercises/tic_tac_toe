@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+.tictactitle h1 {
+  font-family: "Lucida Console";
+  color: #4D4D4D;
+  font-size: 30pt;
+  margin-left: 20px;
+  margin-bottom: 5px;
+
+}
+
+.tictactitle p {
+  font-family: "Lucida Console";
+  color: #4D4D4D;
+  font-size: 16pt;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  margin-top: 5px;
+}
+
+.space {
+  height: 60px;
+}
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF THREE  */
+.column_middle {
+  width: 45%;
+  border: 5px dashed #CCFFCC;
+  height: 690px;
+  padding-left: 15px;
+}
+
+.column_side{
+  width: 23%;
+}
+
+.column_ttt{
+  width: 32%;
+  height: 210px;
+  /*border: 3px solid black;*/
+}
+
+#top_left {
+  border-right: 3px dashed #CC33FF;
+  border-bottom: 3px dashed #CC33FF;
+}
+
+#top_center {
+  border-left: 3px dashed #CC33FF;
+  border-right: 3px dashed #CC33FF;
+  border-bottom: 3px dashed #CC33FF;
+}
+
+#top_right {
+  border-left: 3px dashed #CC33FF;
+  border-bottom: 3px dashed #CC33FF;
+}
+
+#middle_left {
+  border-right: 3px dashed #CC33FF;
+  border-bottom: 3px dashed #CC33FF;
+  border-top: 3px dashed #CC33FF;
+  margin-top: 2px;
+  height: 215px;
+}
+
+#middle_center {
+  border-right: 3px dashed #CC33FF;
+  border-left: 3px dashed #CC33FF;
+  border-bottom: 3px dashed #CC33FF;
+  border-top: 3px dashed #CC33FF;
+  margin-top: 2px;
+  height: 215px;
+
+}
+
+#middle_right {
+  border-left: 3px dashed #CC33FF;
+  border-bottom: 3px dashed #CC33FF;
+  border-top: 3px dashed #CC33FF;
+  margin-top: 2px;
+  height: 215px;
+}
+
+#bottom_left {
+  border-right: 3px dashed #CC33FF;
+  border-top: 3px dashed #CC33FF;
+  margin-top: 2px;
+  height: 215px;
+}
+
+#bottom_center {
+  border-right: 3px dashed #CC33FF;
+  border-left: 3px dashed #CC33FF;
+  border-top: 3px dashed #CC33FF;
+  margin-top: 2px;
+  height: 215px;
+}
+
+#bottom_right {
+  border-left: 3px dashed #CC33FF;
+  border-top: 3px dashed #CC33FF;
+  margin-top: 2px;
+  height: 215px;
+}
+
+#winner_banner{
+  margin-left: 750px;
+  font-family: "Lucida Console";
+  color: #4D4D4D;
+  font-size: 30pt;
+}
+
+#player_names{
+  margin-left: 450px;
+  font-family: "Lucida Console";
+  color: #4D4D4D;
+  font-size: 25pt;
+}
+
+#player_names input {
+  display: inline-block;
+  height: 30px;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  margin-top: 25px;
+  margin-left: 42px;
+}
+
+#play_again {
+  display: block;
+  margin-left: 820px;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}

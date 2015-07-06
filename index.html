@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>tic-tac-toe</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+</head>
+<body>
+  <div class=tictactitle>
+    <h1>tic tac toe</h1>
+    <p>press start to play</p>
+  </div>
+
+  <div class="space" id="space">
+    <form id="player_names">
+        <input id="player1" type="text" name="player1name"> vs
+        <input id="player2" type="text" name="player2name">
+        <input id="start" type="submit" value="start">
+    </form>
+    <h1 id="winner_banner"></h1>
+  </div>
+
+  <div class="section group">
+    <div class="col column_side"></div>
+
+    <div class="col column_middle">
+      <div class="col column_ttt" id="top_left"></div>
+      <div class="col column_ttt" id="top_center"></div>
+      <div class="col column_ttt" id="top_right"></div>
+
+      <div class="col column_ttt" style="margin-left: 0px" id="middle_left"></div>
+      <div class="col column_ttt" id="middle_center"></div>
+      <div class="col column_ttt" id="middle_right"></div>
+
+      <div class="col column_ttt" style="margin-left: 0px" id="bottom_left"></div>
+      <div class="col column_ttt" id="bottom_center"></div>
+      <div class="col column_ttt" id="bottom_right"></div>
+
+    </div>
+
+    <div class="col column_side"></div>
+
+  </div>
+
+  <div><button id="play_again" type="button">play again</button></div>
+
+  <script src="script.js"></script>
+<body>
+</html>
