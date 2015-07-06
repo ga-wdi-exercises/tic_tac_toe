@@ -1,0 +1,26 @@
+body {
+text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+    border-style:hidden;
+    margin-left: auto;
+    margin-right:auto;
+}
+td{
+    border: 1px solid black;
+    width: 200px; height: 200px;
+}
+div{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+
+input {
+	border: solid black;
+	border-radius: 50px;
+}
