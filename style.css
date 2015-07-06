@@ -1,0 +1,23 @@
+input.text {
+  input {
+      resize: horizontal;
+      width: 200px;
+  }
+
+  input:active {
+      width: auto;
+  }
+
+  input:focus {
+      min-width: 200px;
+  }
+}
+
+/**.grey{
+  background-color: grey;
+}**/
+
+input.grey{
+  background-color: grey;
+  border: 0;
+}
