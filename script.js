@@ -5,8 +5,8 @@ grid.addEventListener("click", markSquare);
 function markSquare(square) {
   if (square.target != square.currentTarget) {
     var clicked = square.target.id;
+    playerMove(clicked);
   }
-  playerMove(clicked);
 }
 
 function playerMove(clicked) {
