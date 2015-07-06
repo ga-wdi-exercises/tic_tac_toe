@@ -39,7 +39,8 @@ ul {
 
 /* Site Container */
 
-.site-container {
+.site-container,
+.game {
     align-items: stretch;
     display: flex;
     flex-flow: column nowrap;
@@ -50,14 +51,13 @@ ul {
 /* Site Header */
 
 .site-header,
-.grid {
+.game-board {
     display: flex;
 }
 
 .site-header {
     background-color: #FFF;
     border-bottom: 3px solid #000;
-    flex: 0 0 0;
 }
 
 .site-nav {
@@ -79,22 +79,25 @@ ul {
     text-align: left;
 }
 
-.grid {
+
+/* Site Content */
+
+.game-board {
     flex: 30px 1 0;
 }
 
-.grid > div {
+.game-board > div {
     border-right: 1px solid #000;
     min-height: 50px;
     position: relative;
     width: 100%;
 }
 
-.grid > div:last-child {
+.game-board > div:last-child { /* Removes the right border on the last column. */
     border-right: none;
 }
 
-.grid-cell:hover {
+.board-cell:hover {
     background-color: #D3D3D3;
     transition:.5s;
 }
