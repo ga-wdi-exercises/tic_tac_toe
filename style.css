@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  text-align: center;
+  font-family: 'Slabo 27px', serif;
+  color: black;
+}
+
+h1 {
+  font-size: 5em;
+  margin-bottom: 0;
+}
+
+.instructions {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.row{
+  display: flex;
+  margin: 0 auto;
+  width: 99%;
+}
+
+.playable_square {
+  border: solid black;
+  background-color: white;
+  width: 10em;
+  max-width: 10em;
+  height: 10em;
+  max-height: 10em;
+  padding: 0;
+}
+
+.markedX {
+  border: solid black;
+  background-color: #1A136A;
+  color: white;
+  width: 10em;
+  max-width: 10em;
+  height: 10em;
+  max-height: 10em;
+  padding: 0;
+  pointer-events: none
+}
+
+.markedO {
+  border: solid black;
+  background-color: #DF4601;
+  color: white;
+  width: 10em;
+  max-width: 10em;
+  height: 10em;
+  max-height: 10em;
+  padding: 0;
+  pointer-events: none
+}
+
+.marker {
+  font-size: 9em;
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+#board {
+  width: 30em;
+  max-width: 30em;
+  height: 30em;
+  max-height: 30em;
+  margin: 0 auto;
+  background: black;
+}
+
+#winner_popup {
+  color: red;
+  margin: 1em;
+  visibility: hidden;
+}
+
+#reset_button {
+  width: 6em;
+  border: solid black 2px;
+  border-radius: 0.5em;
+  background-color: white;
+  margin: 0 auto;
+}
