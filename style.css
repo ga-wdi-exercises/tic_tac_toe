@@ -2,6 +2,7 @@ table td {
   border: 2px solid black;
   width: 130px;
   height: 130px;
+  text-align: center;
 }
 
 button {
@@ -20,6 +21,4 @@ button {
 
 div {
   padding-top: 3em;
-  
-
 }
