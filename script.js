@@ -9,8 +9,7 @@ function placeO(boxNumber) {
 	document.getElementById(boxNumber).innerHTML = o;
 }
 
-// placeX(1);
-// placeO("2");
+// Set variables to easily select individual cells and determine which player's turn it is
 
 var cells = document.getElementsByTagName("TD");
 var playerTurn = document.getElementsByClassName("player-turn")[0];
@@ -32,11 +31,6 @@ function makeMove(boxNumber) {
 		console.log("Place somewhere else.");
 	}
 }
-
-// cells[0].addEventListener("click", makeMove(1));
-
-
-// move.addEventListener("click", function() { document.getElementById(boxNumber).innerHTML = x;});
 
 
 // Reset board
