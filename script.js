@@ -13,14 +13,23 @@ function placeO(boxNumber) {
 // placeO("2");
 
 var cells = document.getElementsByTagName("TD");
+var playerTurn = document.getElementsByClassName("player-turn")[0];
+
 
 var moveCounter = 1;
+playerTurn.innerHTML = "X's turn!"
 function makeMove(boxNumber) {
 	moveCounter++;
-	if (moveCounter % 2 === 0) {
-		placeO(boxNumber);
+	if(cells[boxNumber-1].innerHTML != "X" || "O") {
+		if (moveCounter % 2 === 0) {
+			placeO(boxNumber);
+			playerTurn.innerHTML = "X's turn!"
+		} else {
+			placeX(boxNumber);
+			playerTurn.innerHTML = "O's turn!"
+		}
 	} else {
-		placeX(boxNumber);
+		console.log("Place somewhere else.");
 	}
 }
 
@@ -31,11 +40,12 @@ function makeMove(boxNumber) {
 
 
 // Reset board
-var reset = document.getElementsByTagName("A");
-// reset.addEventListener("click", resetBoard);
+var reset = document.getElementsByTagName("A")[0];
+
+reset.addEventListener("click", resetBoard);
 
 function resetBoard() {
-for(i = 0; i < reset.length; i++) {
+for(i = 0; i <= 8; i++) {
 	document.getElementsByTagName("TD")[i].innerHTML = "";
 	}
 }

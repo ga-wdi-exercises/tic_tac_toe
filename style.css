@@ -38,6 +38,16 @@ td:hover {
 	background-color: #CFF09E;
 }
 
+.player-turn {
+	max-width: 200px;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 15px auto -20px auto;
+	text-align: center;
+	padding: 10px;
+	background-color: #A8DBA8;
+}
+
 .reset {
 	margin: 50px auto 0 auto;
 	text-align: center;
