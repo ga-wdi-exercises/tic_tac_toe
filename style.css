@@ -1,0 +1,40 @@
+*{
+  box-sizing: border-box;
+}
+
+header{
+  text-align: center;
+}
+
+.board{
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.space{
+  width: 30%;
+  padding: 2em;
+  background: gray;
+  color: gray;
+  margin: .2em;
+  text-align: center;
+  font-size: 200%;
+}
+
+.x {
+  background: blue;
+}
+
+.o {
+  background: red;
+}
+
+#restart {
+  background: grey;
+  margin-top: 2em;
+  padding: 1em;
+  border-radius: 10%;
+}
