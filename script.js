@@ -52,14 +52,13 @@ function makingMoves(locationArray){
     valueArray === 1;
     playerOne === 0;
   }
-}
+
   //Allow player Two to move, set move back to Player One
   else if (playerOne === 0) {
-    locationArray[i] === "O";
-    valueArray[i] === 1;
+    locationArray === "O";
+    valueArray=== .2;
     playerOne === 1;
   }
-}
 //Check if move as already been made in square
 for (i = 0; i < valueArray.length; i ++){
   if (valueArray[i] = 1){
@@ -69,7 +68,12 @@ for (i = 0; i < valueArray.length; i ++){
 //choosing winner
 for (var i = 0; i < winningCombination.length; i ++){
   if (winningCombination[i] === 3) {
-    console.log("There has been a winner!");
+    console.log("Player One has won!");
+}
+}
+for (var i = 0; i < winningCombination.length; i ++){
+  if (winningCombination[i] === .6) {
+    console.log("Player Two has won!");
 }
 }
 }
