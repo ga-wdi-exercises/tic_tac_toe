@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.square {
+  width: 175px;
+  height: 175px;
+  text-align: center;
+  font-size: 50pt;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: orange;
+  background-color: #282C34;
+}
+
+td:hover {
+  background-color: #6DC990;
+   cursor:pointer;
+}
+td:active {
+  color: red;
+}
+td.on {
+    background-color: red;
+}
