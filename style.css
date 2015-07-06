@@ -1,0 +1,30 @@
+body {
+  font-family: "Jura";
+}
+
+h1 {
+  text-align: center;
+}
+
+#grid {
+  margin: auto;
+  width: 30em;
+}
+
+.gridSquare {
+  width: 10em;
+  height: 10em;
+  float: left;
+  background-color: grey;
+  outline-color: black;
+  outline-width: thin;
+  outline-style: groove;
+}
+
+.o {
+
+}
+
+.x {
+
+}
