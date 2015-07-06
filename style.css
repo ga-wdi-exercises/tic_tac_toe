@@ -1,0 +1,33 @@
+h1{
+  text-align: center;
+}
+
+#reset {
+  margin: 0 auto;
+}
+
+.game {
+  width: 20em;
+  height: 20em;
+  background-color: #eee;
+  margin: 5em auto;
+  padding: 5em;
+  overflow: auto;
+}
+
+.game div{
+  margin: 0 auto;
+  clear: both;
+}
+
+.game button{
+  display: block;
+  float: left;
+  margin: 1em;
+  width: 7em;
+  height: 7em;
+}
+
+.messages {
+  text-align: center;
+}
