@@ -18,6 +18,8 @@ no 2 squares clicked
 reset button
 */
 
+var array
+
 
 function onClick(){
   if (getElementByID.A1.value= "x" || "o"){ //check for move
