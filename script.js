@@ -34,7 +34,11 @@ function reset(){
   for (var i = 0; i < locationArray.length; i++){
     locationArray[i].innerHTML === "";
   }
-}
+  for (var x = 0; x < valueArray.length; x++){
+    valueArray[x] = 0;
+  }
+  }
+
 // call reset
 reset.addEventListeners("click",reset);
 
@@ -62,10 +66,10 @@ for (i = 0; i < valueArray.length; i ++){
     alert("Space occupied");
   }
 }
-}
 //choosing winner
 for (var i = 0; i < winningCombination.length; i ++){
   if (winningCombination[i] === 3) {
     console.log("There has been a winner!");
+}
 }
 }
