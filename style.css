@@ -1,0 +1,61 @@
+body {
+  text-align: center;
+  background-color: skyblue;
+  color: maroon;
+}
+
+header {
+  border-bottom:
+}
+
+#table {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30em;
+  border-collapse: collapse;
+}
+
+.board:hover {
+  background-color: white;
+}
+
+td {
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+#reset {
+  text-align: center;
+  font-family: helvetica;
+  height: 4em;
+  width: 10em;
+  background-color: lightgray;
+}
+
+tr {
+  height: 10em;
+}
+
+#LT, #LM {
+  width: 10em;
+  border-right: .3em solid black;
+  border-bottom: .3em solid black;
+}
+
+#MT, #MM {
+  width: 10em;
+  border-bottom: .3em solid black;
+}
+
+#RT, #RM {
+  width: 10em;
+  border-left: .3em solid black;
+  border-bottom: .3em solid black;
+  }
+
+#MB {
+  width: 10em;
+  border-left: .3em solid black;
+  border-right: .3em solid black;
+}
