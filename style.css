@@ -1,0 +1,16 @@
+li{
+	display: inline-block;
+	padding: 0;
+}
+
+
+.square{
+	text-align: center;
+	font-size: 150px;
+	color: white;
+	border: 5px white solid;
+	background-color: blue;
+	height: 150px;
+	width: 150px;
+
+}
