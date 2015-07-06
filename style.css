@@ -23,6 +23,10 @@ th, td {
 	font-size: 80px;
 }
 
+/*td:hover {
+	background-color: #CFF09E;
+}*/
+
 h1 {
 	margin: 30px auto 40px auto;
 	max-width: 500px;
@@ -45,4 +49,8 @@ a {
 	margin: 50px auto 0 auto;
 	text-align: center;
 	color: white;
+}
+
+td:hover {
+	background-color: #CFF09E;
 }
