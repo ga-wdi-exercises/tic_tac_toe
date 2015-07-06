@@ -4,6 +4,7 @@
 
 var allCells = document.getElementsByTagName("div");
 var counter = 0;
+var whoseturn = document.getElementsByClassName("whoseturn")[0]
 
 //Add click event listener to all cells
 for (var i = 0; i < allCells.length; i++){
@@ -16,9 +17,11 @@ function changeValue(event){
     if(counter % 2 === 0){
       activeSquare.innerHTML = "<p>X</p>";
       activeSquare.classList.add("ex")
+      whoseturn.innerHTML = "Place an O"
     } else {
       activeSquare.innerHTML = "<p>O</p>";
       activeSquare.classList.add("O")
+      whoseturn.innerHTML = "Place an X"
     }
 
     counter ++;
