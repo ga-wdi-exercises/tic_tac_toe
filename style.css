@@ -1,0 +1,15 @@
+.square {
+    width: 85px;
+    height: 85px;
+    text-align: center;
+    font-size: 35pt;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #FD9802;
+    background-color: #282C34;
+
+}
+
+td:hover {
+    background-color: #6DC990;
+}
