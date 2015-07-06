@@ -1,0 +1,19 @@
+*{
+  box-sizing: border-box;
+  font-family: fantasy, Harrington;
+  text-align: center;
+  background-color: yellow;
+
+}
+
+table {
+  padding: 15%;
+  margin: 0 auto;
+}
+
+td {
+  border: 10px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+}
