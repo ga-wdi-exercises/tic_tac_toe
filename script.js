@@ -1,16 +1,20 @@
 function begin() {
   document.turn = "X";
 
-  (document.turn + " gets first move.");
+  xOrO(document.turn + " gets first move.");
 }
 
-function alertContent(alrt) {
-  document.getElementById("alert").innerText = alrt;
+function xOrO(xo) {
+  document.getElementById("message").innerText = xo;
 }
 
 function nextTurn(square) {
+  if (square.innerText == "") {
   square.innerText = document.turn;
   nextMove();
+} else {
+    xOrO("Choose another square, jerk!");
+  }
 }
 
 function nextMove() {
@@ -19,5 +23,9 @@ function nextMove() {
   } else {
     document.turn = "X";
   }
+    xOrO(document.turn + " goes now!");
+}
 
+function changeColor(square) {
+  square.style.backgroundColor = "blue";
 }
