@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+  <title>Tic Tac Toe</title>
+</head>
+
+<body>
+<header>
+  <h1>Tic Tac Toe</h1>
+</header>
+<main>
+  <!-- <h2 class="alignhelp"></h2> thought i needed this to help center the class.rules text box but figured out how to do it. -->
+  <h2 class="rules"><em>Object of the game: </em>Taking turns, mark three square spots with either an "X" or an "O" to complete a row, column, or diagonal. Simply click on a square to claim it.  X begins. Good luck!</h2>
+  <p>
+  <div>
+    <table class="gameboard">
+      <tbody>
+        <tr>
+          <!-- <td class="gameBoard" id="topleft" onclick="xOrO()">-</td>
+          <td class="gameBoard" id="topmid" onclick="xOrO()"></td>
+          <td class="gameBoard" id="topright" onclick="xOrO()"></td> -->
+          <td class="gameBoard" id="topleft"></td>
+          <td class="gameBoard" id="topmid"></td>
+          <td class="gameBoard" id="topright"></td>
+        </tr>
+        <tr>
+          <td class="gameBoard" id="midleft"></td>
+          <td class="gameBoard" id="midmid"></td>
+          <td class="gameBoard" id="midright"></td>
+        </tr>
+        <tr>
+          <td class="gameBoard" id="botleft"></td>
+          <td class="gameBoard" id="botmid"></td>
+          <td class="gameBoard" id="botright"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<footer></footer>
+
+</body>
+  <script src="script.js"></script>
+</html>
