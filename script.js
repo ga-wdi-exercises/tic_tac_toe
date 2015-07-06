@@ -126,7 +126,7 @@ function reset(){
   for (i = 0; i < playableSpaces.length; i ++) {
     playableSpaces[i].className = "playable_square"
   }
-  for (i = 0; i < (markers.length - 1); i ++) {
+  for (i = 0; i < (markers.length); i ++) {
     markers[i].innerHTML = "&nbsp;"
   }
   counter = []
