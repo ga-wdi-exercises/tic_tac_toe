@@ -47,12 +47,12 @@ locationArray.addEventListeners("Click", makingMoves);
 
 //Let player one make a move, assign value to
 function makingMoves(locationArray){
-  for (var i = 0; i < locationArray.length; i++){
    if (playerOne === 1){
-    locationArray[i] === "X";
-    valueArray[i] === 1;
+    locationArray === "X";
+    valueArray === 1;
     playerOne === 0;
   }
+}
   //Allow player Two to move, set move back to Player One
   else if (playerOne === 0) {
     locationArray[i] === "O";
