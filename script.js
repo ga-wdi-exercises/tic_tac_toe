@@ -4,6 +4,7 @@ function turnPageRed() {
 }
 reset.addEventListener("click", turnPageRed);*/
 var submitTally = 0;
+var userWonGameReset = 0;
 
 function xAndBlank(temporaryPlaceholderVariable, quadrant, actualTextSpace) {
   var temporaryPlaceholderVariable = document.getElementById(quadrant);
@@ -78,7 +79,12 @@ function resetBoard() {
   resetEveryQuadrant("bottom_middle", "8");
   resetEveryQuadrant("bottom_right", "9");
   submitTally = 0;
-  whoseTurn();
+  if(userWonGameReset !== 1) {
+    whoseTurn();
+  }
+  else {
+    userWonGameReset = 0;
+  }
 }
 var reset = document.getElementById("reset");
 reset.addEventListener("click", resetBoard);
@@ -106,8 +112,49 @@ function submitMove() {
   inspectEveryQuadrant("bottom_middle", "8");
   inspectEveryQuadrant("bottom_right", "9");
   submitTally++;
+  checkWinner();
   whoseTurn();
+  //userWonGameReset = 1; pretty sure I need to remove
 }
+var winnerTotal = 0;
+function methodToCheckWinner(divID) {
+  if(document.getElementById(divID).children[0].innerHTML === "X") {
+    winnerTotal++;
+  }
+  if(document.getElementById(divID).children[0].innerHTML === "O") {
+    winnerTotal = winnerTotal - 1;
+  }
+}
+function checkEachPossibleWinner(squareOne, squareTwo, squareThree) {
+  winnerTotal = 0;
+  methodToCheckWinner(squareOne);
+  methodToCheckWinner(squareTwo);
+  methodToCheckWinner(squareThree);
+  if(winnerTotal === 3) {
+    alert("X wins! Resetting Board...");
+    userWonGameReset = 1;
+    resetBoard();
+  }
+  else if(winnerTotal === -3) {
+    alert("O wins! Resetting Board...");
+    userWonGameReset = 1;
+    resetBoard();
+  }
+}
+function checkWinner() {
+  ///////////////////diagonals////////////////////
+  checkEachPossibleWinner("top_left", "middle_middle", "bottom_right");
+  checkEachPossibleWinner("top_right", "middle_middle", "bottom_left");
+  //////////////////horizontal rows///////////////
+  checkEachPossibleWinner("top_left", "top_middle", "top_right");
+  checkEachPossibleWinner("middle_left", "middle_middle", "middle_right");
+  checkEachPossibleWinner("bottom_left", "bottom_middle", "bottom_right");
+  /////////////////vertical rows////////////////
+  checkEachPossibleWinner("top_left", "middle_left", "bottom_left");
+  checkEachPossibleWinner("top_middle", "middle_middle", "bottom_middle");
+  checkEachPossibleWinner("top_right", "middle_right", "bottom_right");
+}
+
   /*
   document.getElementById("2").id = "locked";
   document.getElementById("3").id = "locked";
