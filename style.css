@@ -21,6 +21,39 @@ h1 {
   margin: 1em 10em;
 }
 
+header p {
+  text-align: center;
+  margin: .25em 10em 2em;
+}
+
+.reset {
+  background: #636363;
+  background-image: -webkit-linear-gradient(top, #636363, #878787);
+  background-image: -moz-linear-gradient(top, #636363, #878787);
+  background-image: -ms-linear-gradient(top, #636363, #878787);
+  background-image: -o-linear-gradient(top, #636363, #878787);
+  background-image: linear-gradient(to bottom, #636363, #878787);
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+
+}
+
+.reset:hover {
+  background: #454545;
+  background-image: -webkit-linear-gradient(top, #454545, #636363);
+  background-image: -moz-linear-gradient(top, #454545, #636363);
+  background-image: -ms-linear-gradient(top, #454545, #636363);
+  background-image: -o-linear-gradient(top, #454545, #636363);
+  background-image: linear-gradient(to bottom, #454545, #636363);
+  text-decoration: none;
+}
+
 /*****************************
           MAIN
 *****************************/
@@ -83,4 +116,75 @@ h2 {
   color: #eee;
   text-align: center;
   margin: 10px;
+}
+
+
+/*
+==============================================
+CSS3 ANIMATION CHEAT SHEET
+==============================================
+
+Made by Justin Aguilar
+
+www.justinaguilar.com/animations/
+
+Questions, comments, concerns, love letters:
+justin@justinaguilar.com
+==============================================
+*/
+
+
+/*
+==============================================
+fadeIn
+==============================================
+*/
+
+.fadeIn{
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+
+	visibility: visible !important;
+}
+
+@keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(0.9);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 0.0;
+	}
+	60% {
+		-webkit-transform: scale(1.1);
+	}
+	80% {
+		-webkit-transform: scale(0.9);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
 }
