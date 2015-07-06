@@ -28,15 +28,6 @@ padding: 20px;
 td {
 height: 50px;
 width: 50px;
--webkit-border-radius: 0;
--moz-border-radius: 0;
-border-radius: 0px;
-font-family: Arial;
-color: #000000;
-font-size: 42px;
-background: #ffffff;
-padding: 10px 20px 10px 20px;
-text-decoration: none;
 }
 h1 {
   color: blue;
@@ -45,47 +36,51 @@ h1 {
 .TicTacToeBoard {
   color: rgba(255, 0, 0, 1);
 }
-.A {
+
+#A {
   border-right-style: solid;
   border-right-color: black;
   border-bottom-style: solid;
   border-bottom-color: black;
 }
-.D {
+
+#D{
   border-right-style: solid;
   border-right-color: black;
   border-bottom-style: solid;
   border-bottom-color: black;
   }
-.G{
+
+#G{
   border-right-style: solid;
   border-right-color: black;
 }
-.B {
-  border-right-style: solid;
-  border-right-color: black;
-  border-bottom-style: solid;
-  border-bottom-color: black;
-}
-.E {
+
+#B{
   border-right-style: solid;
   border-right-color: black;
   border-bottom-style: solid;
   border-bottom-color: black;
 }
-.H {
+#E {
+  border-right-style: solid;
+  border-right-color: black;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+#H{
   border-right-style: solid;
   border-right-color: black;
 }
-.C {
+#C {
   border-bottom-style: solid;
   border-bottom-color: black;
 }
-.F {
+#F {
   border-bottom-style: solid;
   border-bottom-color: black;
 }
-.I {
+#I {
 
 }
 TicTacToeBoard.button {
