@@ -32,7 +32,7 @@ function trackClicks() {
 }
 
 function changeButtonDesign() {
-    if (numberOfClicks === 1 || numberOfClicks === 3 || numberOfClicks === 5 || numberOfClicks === 7) {
+    if (numberOfClicks === 1 || numberOfClicks === 3 || numberOfClicks === 5 || numberOfClicks === 7 || numberOfClicks === 9) {
       this.style.backgroundColor = "mediumaquamarine";
       this.innerHTML = "x";
       this.disabled = true;
@@ -40,11 +40,6 @@ function changeButtonDesign() {
       this.style.backgroundColor = "skyblue";
       this.innerHTML = "o";
       this.disabled = true;
-  } else if (numberOfClicks === 9) {
-      this.style.backgroundColor = "mediumaquamarine";
-      this.style.color = "gray";
-      this.innerHTML = "x";
-      this.disabled = false;
   }
 }
 
