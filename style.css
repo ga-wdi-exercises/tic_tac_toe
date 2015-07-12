@@ -1,0 +1,41 @@
+*{
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0 auto;
+}
+h1 {
+  width: 300px;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.wrapper1 {
+  width: 300px;
+  margin: 0 auto;
+}
+.square {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border: 1px solid gainsboro;
+  padding: 20px;
+  border-radius: 2px;
+  background-color: whitesmoke;
+  outline: none;
+  font-size: 2em;
+}
+.wrapper2 {
+  margin-top: 350px;
+  width: 100px;
+  height: 100px;
+}
+#clearboard {
+  width: 100px;
+  height: 30px;
+  padding: 0px;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+  background-color: whitesmoke;
+  outline: none;
+}
