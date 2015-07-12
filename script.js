@@ -1,35 +1,27 @@
 // Requirements:
 // 1. user should click on different elements to create a move
 // 2. every click alternates between x and o
-// 3. when a cell is marked, display a corresponding color
-// 4. marked cell can't be undone
-// 5. add reset button will clear contents
+// 3. when a cell is marked, add a class to display a color
+// 4. a move can't be undone
+// 5. add reset button to clear board
 
 // Outline:
 // 1. listen for a click event on a box
 // 2. when click on a box is executed, toggle between marking x and o
 
-
-var playerMoves = [];
-var storePlayerMoves = playerMoves.push();
+var numberOfClicks = 0;
 var getMoves = document.getElementsByClassName('square');
 
-for (var i=0; i<playerMoves.length; i++) {
-  square[i].addEventListener('click');
-  playerMoves.onclick = function toggleButtonDesign() {
-   if (square.className === "square") {
-     square.className == "green";
-   } else if (square.className === "square") {
-     square.className === "blue";
-   }
+for (var i = 0; i < getMoves.length; i++) {
+  (function(i){
+  getMoves[i].addEventListener("click", toggleButtonDesign);
+  })(i);
 }
-//
-// if (i % 2 === 0) {
-//   square.className == "green";
-// } else if (i % 2 !==0) {
-//   square.className === "blue";
-// }
-// }
-// square[i].addEventListener('click');
-// playerMoves.onclick = function (
-//   playerMoves.push
+  function toggleButtonDesign() {
+    numberOfClicks++;
+    if (numberOfClicks % 2 === 0) {
+    document.getElementById("box1").classList.toggle("green");
+  } else if (numberOfClicks % 2 !==0) {
+    document.getElementById("box1").classList.toggle("blue");
+  }
+}
