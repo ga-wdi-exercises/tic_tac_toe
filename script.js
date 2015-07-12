@@ -18,6 +18,8 @@ var b7 = document.getElementById("box7").addEventListener("click", changeButtonD
 var b8 = document.getElementById("box8").addEventListener("click", changeButtonDesign);
 var b9 = document.getElementById("box9").addEventListener("click", changeButtonDesign);
 
+var playAgain = document.getElementById("clearboard").addEventListener("click", anotherRound);
+
 for (var i = 0; i < getMoves.length; i++) {
   (function(i){
   getMoves[i].addEventListener("click", trackClicks);
@@ -30,13 +32,22 @@ function trackClicks() {
 }
 
 function changeButtonDesign() {
-    if (numberOfClicks % 2 === 0) {
+    if (numberOfClicks === 1 || numberOfClicks === 3 || numberOfClicks === 5 || numberOfClicks === 7) {
       this.style.backgroundColor = "mediumaquamarine";
       this.innerHTML = "x";
-  } else if (numberOfClicks % 2 !==0) {
+      this.disabled = true;
+  } else if (numberOfClicks === 2 || numberOfClicks === 4 || numberOfClicks === 6 || numberOfClicks === 8) {
       this.style.backgroundColor = "skyblue";
       this.innerHTML = "o";
+      this.disabled = true;
+  } else if (numberOfClicks === 9) {
+      this.style.backgroundColor = "mediumaquamarine";
+      this.style.color = "gray";
+      this.innerHTML = "x";
+      this.disabled = false;
   }
 }
 
-// $.cookie('stored_clicks');
+function anotherRound() {
+  window.location.reload(true);
+}

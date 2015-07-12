@@ -29,7 +29,7 @@ h1 {
   width: 100px;
   height: 100px;
 }
-.clearboard {
+#clearboard {
   width: 100px;
   height: 30px;
   padding: 0px;
