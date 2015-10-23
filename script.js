@@ -1,10 +1,8 @@
 $(document).ready(function(){
 
-  // var colorChoose = "green";
-
   var createBoard = function(){
     for(i=0;i<9;i++){
-      $(".board").append("<div class=\"cell\" id=\""+i+"cell\" style=\"background-color:slategray\"></div>");
+      $(".board").append("<div class=\"cell\" id=\""+i+"cell\" style=\"background-color:lightgray\"></div>");
     }
   };
 
@@ -13,53 +11,41 @@ $(document).ready(function(){
 
   //create a counter that will determine the player
   var playerCounter = 1;
-  $('#turn').html('Turn: Player One');
-
+  $('#turn').text("X");
 
   $(".cell").on("click", function(){
     // sets variables for color and text
     var colorChoose = $(this).css("background-color");
     var playerText;
     var playerStatus;
-    if(colorChoose === "rgb(112, 128, 144)"){
+    if(colorChoose === "rgb(211, 211, 211)"){
       if (playerCounter%2===0){
         //evens, first player
-        colorChoose = "blue";
+        colorChoose = "pink";
         playerText = "x";
         playerCounter++;
-        playerStatus = "Turn: Player One";
+        playerStatus = "O";
       }
       else{
         //odds, second player
-        colorChoose = "red";
+        colorChoose = "powderblue";
         playerText = "o";
         playerCounter++;
-        playerStatus = "Turn: Player Two";
+        playerStatus = "X";
       }
       if(playerCounter>=10){
         playerStatus ="Deep down, we're all winners";
       }
     }
     else {
-      //Reset white blocks to default green when clicked // now we're using slategray
-      // colorChoose = "green";
       //shame cheaters and not allow players to change blocks
       alert("CHEATER NO CHEATING.");
     }
+
     $(this).css("background-color", colorChoose);
     $(this).text(playerText);
-    var checkWinner = function () {
-      // // Check winners on background-color
-      // var cellVal0 = $('#0cell').css("background-color");
-      // var cellVal1 = $('#1cell').css("background-color");
-      // var cellVal2 = $('#2cell').css("background-color");
-      // var cellVal3 = $('#3cell').css("background-color");
-      // var cellVal4 = $('#4cell').css("background-color");
-      // var cellVal5 = $('#5cell').css("background-color");
-      // var cellVal6 = $('#6cell').css("background-color");
-      // var cellVal7 = $('#7cell').css("background-color");
-      // var cellVal8 = $('#8cell').css("background-color");
 
+    var checkWinner = function () {
       var cellVal0 = $('#0cell').text();
       var cellVal1 = $('#1cell').text();
       var cellVal2 = $('#2cell').text();
@@ -69,7 +55,6 @@ $(document).ready(function(){
       var cellVal6 = $('#6cell').text();
       var cellVal7 = $('#7cell').text();
       var cellVal8 = $('#8cell').text();
-
 
       if((((cellVal0===cellVal3)&&(cellVal0===cellVal6))&&(cellVal0 !== ""))||
       (((cellVal1===cellVal4)&&(cellVal1===cellVal7))&&(cellVal7 !== ""))||
@@ -81,43 +66,25 @@ $(document).ready(function(){
       (((cellVal2===cellVal4)&&(cellVal2===cellVal6))&&(cellVal8 !== ""))){
         playerCounter = playerCounter - 1;
         if (playerCounter%2===0){
-          playerStatus = "Player RED wins!";
+          playerStatus = "X wins!";
         }
         else{
-          playerStatus = "Player BLUE wins!";
+          playerStatus = "O wins!";
         }
         alert("OH MY STARS");
       }
     };
     checkWinner();
-
-    $('#turn').html(playerStatus);
-
-
+    $('#turn').text(playerStatus);
   });
 
-
-  //this resets the colors to the "neutral" slategray
+  //this resets the colors to the "neutral" lightgray
   $("#resetButton").on("click", function(){
-    var resetColor = "slategray";
+    var resetColor = "lightgray";
     $(".cell").css("background-color", resetColor);
     $(".cell").text("");
     playerCounter = 1;
-    $('#turn').html("Turn: Player One");
+    $('#turn').text("X");
     event.preventDefault();
   });
-
-
-  // previous code before implementing colorChoose as the if else conditional
-  //   if ($(this).css("background-color", "green")){
-  //       colorChoose = "white";
-  //   }
-  //   else {
-  //       colorChoose = "green";
-  //   }
-  //   $(this).css("background-color", colorChoose);
-  // });
-
-  // if ($(this).css("background", "white")===true)
-
 });
