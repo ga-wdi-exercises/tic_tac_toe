@@ -10,6 +10,7 @@ $(".column").css("float", "left");
 var squaresChanged = 0;
 var lastSquare;
 
+
 $(".square").on("click", function() {
 	if ($(this).html() != "<h1>X</h1>" && $(this).html() != "<h1>O</h1>")  {
 		if (squaresChanged % 2 === 1) {
@@ -24,7 +25,19 @@ $(".square").on("click", function() {
 	if (squaresChanged >= 5) {
 		whoWon();
 	}
-	})
+
+	if (squaresChanged % 2 === 0) {
+		$(".turn").html(
+			"<p>Player X turn</p>"
+		)
+	}
+
+	else {
+		$(".turn").html(
+			"<p>Player O turn</p>"
+		)
+	}
+})
 
 
 $("button").on("click", function() {
@@ -51,6 +64,6 @@ function whoWon() {
 		(s1 === s5 && s5 === s9 && s1 != "") ||
 		(s3 === s5 && s5 === s7 && s3 != "") )
 		{
-		 console.log(lastSquare + " won!");
+			alert(lastSquare + " won!");
 		}
 	}
