@@ -1,0 +1,19 @@
+.board {
+  width: 300px;
+  margin: 0 auto;
+  background-color: navy;
+
+}
+
+.cell {
+  border: 1px solid magenta;
+  height: 94px;
+  width: 94px;
+  float: left;
+  /*background-color: green; */
+}
+
+.resetButton {
+  clear: both;
+  margin: 0 auto;
+}
