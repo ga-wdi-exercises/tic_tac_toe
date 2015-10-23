@@ -8,7 +8,7 @@ $(".play").click(function(evt) {
   if (evt.target.innerHTML.length == 0) {
     event.target.innerHTML = "X";
   } else if (evt.target.innerHTML == "X") {
-    event.target.innerHTML = "O"
+    event.target.innerHTML = "O";
   } else {
     event.target.innerHTML = "";
   }
@@ -18,7 +18,9 @@ $("#reset").click(function() {
   $(".play").html("");
 });
 
-// // Winning combinations
-//   if (pos1.innerHTML == "X" && pos2.innerHTML == "X" && pos3.innerHTML == "X") {
-//     console.log("Winner!");
-//   } else if (pos1.innerHTML = "O")
+// Winning combinations
+// function winner (){
+//   if ($("#pos1").text() == "X"){
+//     alert("You win x!");
+//   }
+// }
