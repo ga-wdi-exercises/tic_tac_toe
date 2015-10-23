@@ -1,0 +1,105 @@
+body {
+  font-family: cursive;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  marign: 0 auto;
+}
+button {
+    background:transparent;
+    font-family: cursive;
+    border:none;
+    outline:none;
+    display:block;
+    height:150px;
+    width:150px;
+    cursor:pointer;
+    font-size: 100px;
+}
+#reset {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 14px;
+  height: 50px;
+  width: 100px;
+  background: gray;
+  border: thick solid;
+}
+div {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+}
+#topleft {
+  border-top: none;
+  border-left: none;
+  border-right: thick solid;
+  border-bottom: thick solid;
+  top: 25%;
+  left: 35%;
+}
+#topmiddle {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: thick solid;
+  top: 25%;
+  left: 45%;
+}
+#topright {
+  border-top: none;
+  border-left: thick solid;
+  border-right: none;
+  border-bottom: thick solid;
+  top: 25%;
+  left: 55%;
+}
+#centerleft {
+  border-top: none;
+  border-left: none;
+  border-right: thick solid;
+  border-bottom: thick solid;
+  top: 45%;
+  left: 35%;
+}
+#centermiddle {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: thick solid;
+  top: 45%;
+  left: 45%;
+}
+#centerright {
+  border-top: none;
+  border-left: thick solid;
+  border-right: none;
+  border-bottom: thick solid;
+  top: 45%;
+  left: 55%;
+}
+#bottomright {
+  border-top: none;
+  border-left: thick solid;
+  border-right: none;
+  border-bottom: none;
+  top: 64%;
+  left: 55%;
+}
+#bottommiddle {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  top: 64%;
+  left: 45%;
+}
+#bottomleft {
+  border-top: none;
+  border-left: none;
+  border-right: thick solid;
+  border-bottom: none;
+  top: 64%;
+  left: 35%;
+}
