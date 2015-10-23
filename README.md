@@ -4,9 +4,21 @@
 
 Henceforth Tic Tac Toe may be referred to as "TTT" (or "Triple T").
 
-## Minimum Requirements
+## Workflow Requirements
+- By Monday at 9:00am
+  - Fork this repository
+  - To your fork, push a "readme" file that contains [5 user stories](https://github.com/ga-dc/curriculum/tree/master/02-intermediate-front-end/process-stories-wireframes)
+  - Make a pull request, the same way you would [regularly submit homework](https://github.com/ga-dc/wdi7/blob/master/homework/submission-process.md)
+- By Wendesday at 12:00pm
+  - To your fork, push all the code you wrote
+  - Make a pull request
+
+## Technical Requirements
 * A user should be able to click on different squares, alternating their appearance between displaying an `X` and displaying an `O`.
 * A user should be able to click a "Reset" button to clear the board.
+
+## Presentations
+These will be "science fair-style" on Wednesday afternoon. This means that part of the class will show off their projects on tables/crates while the other students walk around, observe, and ask questions.
 
 ## How to get started
 1. Construct a `index.html` to be your starting point on this project. Add your necessary HTML tags, including `script` and `link` tags, to link to your JavaScript and CSS respectively.
