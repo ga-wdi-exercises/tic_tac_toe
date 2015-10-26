@@ -4,6 +4,7 @@ var currentPlayer = "X";
 
 function startGame(){
   $(".square").on("click", playSquare);
+  $("#reset").on("click", resetGame);
 }
 
 function playSquare(){
@@ -20,4 +21,9 @@ function togglePlayer(){
   } else {
     currentPlayer = "X";
   }
+}
+
+function resetGame() {
+  $(".square").html("");
+  currentPlayer = "X";
 }
