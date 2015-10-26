@@ -1,22 +1,73 @@
-*{
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+
+* {
   box-sizing: border-box;
   /*includes padding/border not margin, into percentages*/
 }
 
-#square{
-  /*width: 100px;*/
-  /*height: 100px;*/
+
+body {
+  background-color: #065E7F;
+  position: relative;
+  top: 2em;
+  left: 30%;
+}
+
+
+h1 {
+  font-family: 'Special Elite', cursive;
+  font-size: 3em;
+  text-align: left;
+  position: relative;
+  left: 2em;
+  top: -1em;
+  margin-bottom: 3em;
+}
+
+
+button {
+  position: relative;
+  top: 31.2em;
+  right: 39em;
+  background-color: #fff;
+  margin: 2px;
+  padding: 4px;
+  width: 200px;
+  height: 40px;
+  border-radius: 1em;
+  border-style: solid;
+  font-size: 16px;
+}
+
+button:hover {
+    background-color: #aaa;
+    -webkit-box-shadow: 0 0 18px #fff;
+  }
+
+p {
+  font-style: oblique;
+  font-size: 1em;
+  color: #fff;
+}
+
+footer {
+  position: relative;
+  top: 38em;
+  right: 36.5em;
+  margin: 2em;
+
+}
+
+
+#square{        /* .classes and #Id's go at the bottom of the page */
   width: 100%;
   height: 164px;
-  background: #1B4370;
+  background: #fff;
   margin: 0px;
-  /*text-align: center;*/
   border: 5px solid black;
 }
 
-.square{
-  /*width: 100px;*/
-  /*height: 100px;*/
+.square {    /* keep your brackets one space away from the selector*/
   width: 100%;
   height: 164px;
   background: #1B4370;
@@ -27,34 +78,49 @@
   padding-top: 35px
 }
 .board {
-  /*Parent container to columns*/
-  /*position: relative;*/
   width: 500px;
   height: 500px;
   top: 0;
   left: 0;
-  border: 5px solid green;
+  border: 5px solid ;
 }
-/*.clear {
-  clear: both;
-}*/
+
+                                            /*.clear {
+                                            clear: both;
+                                          }*/
+
 div {
   float:left;
 }
+
 .column {
   width:33.33333%
 }
+
 .column.one {
   top: 0%;
   left: 0%;
 }
+
 .column.two {
   top: 0%;
   left: 100px;
-  /*left: 115px;*/
 }
+
 .column.three {
   top: 0%;
   left: 200px;
-  /*left: 115px;*/
+}
+
+
+.screen {
+  position: relative;
+  top:-8.2em;
+  right: 35em;
+  width: 25em;
+  height: 8em;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 1em;
+  border-style: solid;
 }
