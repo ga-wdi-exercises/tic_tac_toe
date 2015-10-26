@@ -1,29 +1,33 @@
-$(document).ready(startGame);
+var game = {
+    currentPlayer: "X",
 
-var currentPlayer = "X";
+    start: function() {
+      $(".square").on("click", this.playSquare.bind(this));
+      $("#reset").on("click",  this.resetGame.bind(this));
+    },
 
-function startGame(){
-  $(".square").on("click", playSquare);
-  $("#reset").on("click", resetGame);
+    playSquare:  function(evt){
+      // this => game
+      var square = evt.target;
+      var squareHasBeenPlayed = $(square).html();
+      if (!squareHasBeenPlayed){
+        $(square).html(this.currentPlayer);
+        this.togglePlayer();
+      }
+    },
+
+    togglePlayer: function(){
+      if (this.currentPlayer === "X"){
+        this.currentPlayer = "O";
+      } else {
+        this.currentPlayer = "X";
+      }
+    },
+
+    resetGame: function() {
+      $(".square").html("");
+      this.currentPlayer = "X";
+    }
 }
 
-function playSquare(){
-  var squareHasBeenPlayed = $(this).html();
-  if (!squareHasBeenPlayed){
-    $(this).html(currentPlayer);
-    togglePlayer();
-  }
-}
-
-function togglePlayer(){
-  if (currentPlayer === "X"){
-    currentPlayer = "O";
-  } else {
-    currentPlayer = "X";
-  }
-}
-
-function resetGame() {
-  $(".square").html("");
-  currentPlayer = "X";
-}
+$(document).ready(game.start.bind(game));
