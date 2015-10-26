@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css?family=Codystar&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext);
+
+@-webkit-keyframes greenPulse {
+  from { background-color: #749a02; -webkit-box-shadow: 0 0 0 #333; }
+  to { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+}
+
+body {
+  background-color: #148899;
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-size: 3.2em;
+  font-family: 'Codystar', cursive;
+  color: #fff;
+}
+
+table {
+  margin: auto;
+  width: 50%;
+  height: 7.5em;
+  padding: 1px;
+  border-radius: 5px;
+  font-size: 50px;
+  font-weight:normal;
+}
+tr {
+  background-color: #C7FF08;
+}
+td {
+  width: 90px;
+  border: 2px solid #0998B2;
+  height: 80px;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1px;
+}
+
+td:hover {
+  background-color: #333;
+  transition: .5s;
+  opacity: .5;
+  color:
+}
+
+button {
+  background-color: #C7FF08;
+  margin: 2px;
+  padding: 4px;
+  width: 200px;
+  height: 40px;
+  border-radius: 2px;
+  border-style: solid;
+  border-color: #ad4;
+  font-size: 16px;
+}
+
+button:hover {
+    background-color: #91bd09;
+    -webkit-animation-name: greenPulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-box-shadow: 0 0 18px #91bd09;
+  }
+
+ p {
+   font-family: 'Josefin Sans', sans-serif;
+   margin-top: 3em;
+   color: #aaa;
+ }
+
+div input {
+  text-align: center;
+  height: 30px;
+  width: 200px;
+
+}
+
+.screen {
+  background-color: #AD4;
+  color: #000;
+}
+
+
+/*this is the PULSE animation for the header not sure if I want to keep  this yet...*/
+
+ @-webkit-keyframes pulse {
+  0% {
+  -webkit-transform: scale(1, 1);
+ }
+  50% {
+  -webkit-transform: scale(1.1, 1.1);
+ }
+  100% {
+  -webkit-transform: scale(1, 1);
+ };
+ }
+
+ @keyframes pulse {
+  0% {
+  transform: scale(1, 1);
+ }
+  50% {
+  transform: scale(1.01, 1.1);
+ }
+  100% {
+ transform: scale(1, 1);
+ };
+ }
+
+ #test {
+ 	-webkit-animation: pulse 2s linear infinite;
+ 	animation: pulse 2s linear infinite;
+ }
+
+ #test:hover {
+ 	-webkit-animation: none;
+ 	animation:none;
+ }
