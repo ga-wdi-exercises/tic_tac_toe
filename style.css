@@ -1,0 +1,19 @@
+* {
+  box-sizing:  border-box;
+}
+
+#board {
+  border: 1px solid black;
+  width: 600px;
+  overflow: auto;
+}
+
+.square {
+  width: 33.33333%;
+  height: 200px;
+  border: 1px solid #777;
+  float: left;
+  text-align: center;
+  font: 40px sans-serif;
+  padding-top: 100px
+}
