@@ -1,0 +1,106 @@
+$board-color: #999;
+$x-color: #12193e;
+$o-color: #67D5B5;
+$button-text: #fff;
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: $x-color;
+  font-family: "arial-black";
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+
+  a {
+    border: 2px solid $o-color;
+    color: $o-color;
+    padding: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    background-color: $o-color;
+    color: $button-text;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+  }
+}
+
+.square {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.inner-content {
+  font-size: 75px;
+  font-weight: bold;
+}
+
+.x {
+  color: $x-color;
+  font-family: "arial-black";
+  font-weight: bold;
+}
+
+.o {
+  color: $o-color;
+}
+
+.top-left {
+  border-right: 2px solid $board-color;
+  border-bottom: 2px solid $board-color;
+}
+
+.top-middle {
+  border-right: 2px solid $board-color;
+  border-bottom: 2px solid $board-color;
+  border-left: 2px solid $board-color;
+}
+
+.top-right {
+  border-left: 2px solid $board-color;
+  border-bottom: 2px solid $board-color;
+}
+
+.middle-left {
+  border-right: 2px solid $board-color;
+  border-bottom: 2px solid $board-color;
+  border-top: 2px solid $board-color;
+}
+
+.middle {
+  border: 2px solid $board-color;
+}
+
+.middle-right {
+  border-top: 2px solid $board-color;
+  border-bottom: 2px solid $board-color;
+  border-left: 2px solid $board-color;
+}
+
+.bottom-left {
+  border-right: 2px solid $board-color;
+  border-top: 2px solid $board-color;
+}
+
+.bottom-middle {
+  border-right: 2px solid $board-color;
+  border-top: 2px solid $board-color;
+  border-left: 2px solid $board-color;
+}
+
+.bottom-right {
+  border-left: 2px solid $board-color;
+  border-top: 2px solid $board-color;
+}
