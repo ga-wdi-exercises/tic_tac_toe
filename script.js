@@ -12,6 +12,7 @@ $(document).ready(function() {
     rowBot: $("#seven, #eight, #nine"),
     diagOne: $("#one, #five, #nine"),
     diagTwo: $("#three, #five, #seven"),
+    winner: "",
     beginGame: function() {
       for (var i= 0; i<this.squares.length; i++) {
         this.squares[i].addEventListener("click", this.nextTurn);
@@ -42,20 +43,32 @@ $(document).ready(function() {
       };
 
       if (self.turns === 9) {
-        self.assessWinner(self.colLeft);
+        var winningCombos = [self.colLeft, self.colMid, self.colRight, self.rowTop, self.rowMid, self.rowBot, self.diagOne, self.diagTwo];
+
+        for (var i= 0; i < winningCombos.length; i++) {
+          self.assessWinner(winningCombos[i]);
+        }
+
+        self.assessTie();
       }
     },
     assessWinner: function(line) {
       var lineOfThree = [];
-      var winner = "";
 
       for (var i= 0; i<line.length; i++) {
         lineOfThree.push(line[i].innerHTML);
       };
 
       if (lineOfThree[0] === lineOfThree[1] && lineOfThree[1] === lineOfThree[2]) {
-        alert("The winner is: " + lineOfThree[0])
+        this.winner = lineOfThree[0];
+
+        alert("The winner is: " + this.winner)
       }
+    },
+    assessTie: function() {
+      if (this.winner === "") {
+        alert("It's a tie!");
+      };
     }
   };
 
