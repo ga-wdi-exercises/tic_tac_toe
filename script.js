@@ -25,7 +25,7 @@
               $(".square").off();
             }
           }
-          if (clicks === 9) {
+          if (clicks === 10) {
             $(".info").html("cat's game");
           }
         } else {
@@ -38,7 +38,7 @@
               $(".square").off();
             }
           }
-          if (clicks === 9) {
+          if (clicks === 10) {
             $(".info").html("cat's game");
           }
         }
