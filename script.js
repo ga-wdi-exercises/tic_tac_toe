@@ -9,11 +9,6 @@ var game = {
   players: [],
   tileGrid: [],
 
-  // create gameboard
-  //create div
-  //give div tile class
-  //append div to play-area
-
   buildGameboard: function() {
     for (var i = 0; i < 9; i++) {
       var newTile = $("<div></div>").addClass("tile");
@@ -62,7 +57,6 @@ var game = {
     game.makeClickable();
   }
 };
-
 
 game.buildGameboard();
 game.makeClickable();
