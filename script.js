@@ -12,24 +12,6 @@ $(document).ready(function() {
 
 // --> code <--
 
-var game = {
-  click: 0,
-  box: {
-    one: $(".box").eq(0),
-    two: $(".box").eq(1)
-  }
-  // threes: {
-  //   topRow: [$(".box").eq(0).css("background-image"), $(".box").eq(1).css("background-image"), $(".box").eq(2).css("background-image")]
-  // }
-}
-
-topRow = [$("#0"), $("#1"), $("#2")]
-
-rowTop = $("#0, #1, #2");
-
-one = $("#0")
-
-
 //builds board
 for (var i = 0; i < 9; i++){
   appendBox()
@@ -40,10 +22,29 @@ for (var i = 0; i < 9; i++){
   })
 }
 
+
 function appendBox() {
   newDiv = document.createElement('div');
   newDiv.className = "box";
   $(".control").append(newDiv)
+}
+
+game = {
+  click: 0,
+  box: {
+    one: $(".box").eq(0),
+    two: $(".box").eq(1)
+  },
+  threes: {
+    topRow: [$("#0"), $("#1"), $("#2")],
+    middleRow: [$("#3"), $("#4"), $("#5")],
+    bottomRow: [$("#6"), $("#7"), $("#8")],
+    leftColumn: [$("#0"), $("#3"), $("#6")],
+    middleColumn: [$("#1"), $("#4"), $("#7")],
+    rightColumn: [$("#3"), $("#5"), $("#8")],
+    diagonal1: [$("#0"), $("#4"), $("#8")],
+    diagonal2: [$("#3"), $("#4"), $("#6")]
+  }
 }
 
 function xo(){
@@ -52,7 +53,13 @@ function xo(){
   } else return "O"
 }
 
-threesCompany = function(three) {
+threesCompany = function(check) {
+  if ((check[0].prop("class") && check[1].prop("class") && check[2].prop("class")) !== "box")  {
+    return checkWinner(check)
+  }
+}
+
+checkWinner = function(three) {
   // var box = $(".box")
     if ((three[0].css("background-image") === three[1].css("background-image")) && (three[0].css("background-image") === three[2].css("background-image"))) {
       alert("Winner")
@@ -61,7 +68,8 @@ threesCompany = function(three) {
 }
 }
 
-// (($(".box").eq(0).css("background-image") ===    $(".box").eq(1).css("background-image")) && ($(".box").eq(0).css("background-image") === $(".box").eq(2).css("background-image")))
 
-// topRow = [$(".box").eq(0), $(".box").eq(1), $(".box").eq(2)]
+// (game.threes.topRow[0].prop("class") && game.threes.topRow[1].prop("class") && game.threes.topRow[2].prop("class")) !== "box"
+
+
 });
