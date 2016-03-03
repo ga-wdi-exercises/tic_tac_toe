@@ -1,5 +1,16 @@
 .box {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   text-align: center;
+}
+
+h1{
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  color: rgb(131, 15, 144);
+}
+
+table, th, td {
+  border: 3px solid rgb(131, 15, 144);
+  margin-top: 50px;
 }

@@ -1,4 +1,4 @@
-var square = document.querySelectorAll(".box");
+var box = document.querySelectorAll(".box");
 
 function startGame(){
   document.turn = "X";
@@ -14,7 +14,7 @@ function displayMessage(msg){
 function userMove(){
   if (this.innerText == ""){
     this.innerText = document.turn;
-   switchPlayer();
+    switchPlayer();
   }
   else {
     displayMessage ("Choose a blank spot.")
@@ -32,6 +32,6 @@ function switchPlayer(){
   displayMessage ("It's " + document.turn + "'s turn!")
 }
 
-for( var i=0; i< square.length; i++){
-  square[i].addEventListener("click", userMove);
+for( var i=0; i< box.length; i++){
+  box[i].addEventListener("click", userMove);
 }
