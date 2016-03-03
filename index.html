@@ -3,6 +3,24 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+    //function runGame
+    document.ready(function(){
+      startGame();
+    })
+    function runGame(){
+
+    giveMessage($(.turn) + " starts the game.");
+    }
+
+    //tell user whose turn it is, winner, etc
+    //function giveMessage
+    function giveMessage(){
+      $(.messages).text('')
+    }
+
+
+    </script>
     <title>Tic-Tac-Toe</title>
   </head>
 
@@ -10,7 +28,7 @@
     <h1>TIC TAC TOE - THREE IN A ROW!</h1>
     <div class="messages"></div>
     <div class="turn"></div>
-    <table>
+    <table class="board">
         <tr class="row">
           <td class="cell" id="one" type="button"></td>
           <td class="cell" id="two" type="button"></td>
