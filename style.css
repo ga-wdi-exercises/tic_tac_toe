@@ -1,27 +1,28 @@
 body {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  background-color: black;
+  color: white;
 }
 
 header {
-  text-align: center
-
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .board {
   width: 500px;
   height: 500px;
+  margin: auto;
 
   display: flex;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   align-content: center;
 }
 
 .square {
-  outline: 5px solid red;
+  outline: 2px solid black;
+  background-color: white;
+  color: black;
   width: 33%;
   height: 33%;
 }
