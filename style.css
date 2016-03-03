@@ -1,0 +1,19 @@
+body {
+  background-color: #3498db;
+}
+
+.control {
+  display:flex;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 80vh;
+  outline: white 1px solid;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.box {
+  width: 33.3333%;
+  background-color: #e74c3c;
+  outline: white 1px solid;
+}
