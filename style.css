@@ -1,0 +1,39 @@
+table {
+  width:500px;
+  margin: auto;
+  border:4px solid #B0E0E6;
+  border-radius:15px;
+  color: #595353;
+  font-weight: bolder;
+  box-shadow: 5px 5px 5px #888;
+  height: 450px;
+  text-align: center;
+  font-size: 50pt;
+  font-weight: bold;
+  font-family: fantasy;
+}
+
+td {
+  border: 2px solid #B0E0E6;
+  width: 10px;
+  border-radius: 15px;
+  background-color: #B0E0E6;
+}
+
+ #header {
+   text-align: center;
+   font-weight: bolder;
+   font-style: oblique;
+   font-size: 75px;
+   color: #595353;
+   padding: 50px;
+   font-family: fantasy;
+ }
+
+ #message {
+   text-align: center;
+   font-size: 25pt;
+   font-weight: bold;
+   font-family: fantasy;
+   color: #595353;
+ }
