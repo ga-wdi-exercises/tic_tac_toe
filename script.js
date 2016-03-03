@@ -23,31 +23,36 @@ function Board(element) {
     // this.numOfBoxes = Object.keys(this.elements).length;
 
 
-    this.elements.box1.on("click", addXorO);
-    this.elements.box2.on("click", addXorO);
-    // var allboxes = this.elements;
+    // self.elements.box1.on("click", addXorO);
+    // self.elements.box2.on("click", addXorO);
+    // var allboxes = self.elements;
     // console.log(allboxes);
-    // for(var boxes in allboxes){
-    //     boxes.on("click", youClickedMe);
-    // }
+
+
+    $(".box").on("click", function(){
+        console.log($(this));
+        addXorO();
+        if(self.numOfMoves % 2 === 0){
+            //get inner html
+            $(this).html("O");
+            //change inner html
+        }else{
+            //enter an X
+            $(this).html("X");
+        }
+    });
 
 
     function addXorO() {
         console.log("You clicked me!");
         self.numOfMoves++;
         console.log(self.numOfMoves);
-        changeLetter();
+        // changeLetter();
     }
 
     //switching between x's and o's
     function changeLetter(){
-        if(self.numOfMoves % 2 === 0){
-            //get inner html
-            console.log(self.elements.box1.text("O"));
-            //change inner html
-        }else{
-            //enter an X
-        }
+
     }
 }
 
