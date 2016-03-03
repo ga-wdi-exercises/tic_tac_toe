@@ -1,0 +1,24 @@
+h1 {
+  color: black;
+  font-size: 36px;
+  padding-bottom: 50px;
+  text-align: center;
+  font-family: Impact;
+}
+
+table {
+    border-collapse: collapse;
+    display: table;
+    width: 100%;
+}
+tr {
+  height: 200px;
+}
+table, tr, td {
+    border: 10px solid black;
+    border-spacing: 10px 50px;
+}
+
+body {
+  background-color: #66CCff;
+}
