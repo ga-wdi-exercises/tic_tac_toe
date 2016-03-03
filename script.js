@@ -1,4 +1,5 @@
 var ttt = {
+  counter: 0,
   createBoard: function() {
                 for (var i=1; i<=9; i++){
                   var newDiv = $('<div '+'id='+i+'></div>').addClass("clickable");
@@ -11,19 +12,17 @@ var ttt = {
   clicks:   function() {
               for (var i = 0; i < $('.clickable').length; i++){
               $('.clickable').eq(i).on("click", function() {
-                 $(this).html("x");
-                console.log(this);
+                if (ttt.counter%2===0){
+                  console.log($(this));
+                 $(this).html("x").off("click");
+               ttt.counter+=1;}
+                 else {$(this).html("o").off("click");
+               ttt.counter+=1;}
               });
               }
-            },
-box1click: function(){
-            $("#1").on("click", function() {
-              console.log('THIS WORKS');
-            })
-          }
+            }
 };
 
 ttt.createBoard();
 ttt.addReset();
 ttt.clicks();
-ttt.box1click();
