@@ -1,5 +1,36 @@
+html, body{
+
+  background-color: #ffd700;
+  height: 100%;
+}
+
+div{
+  color: #b9852d;
+  margin:0 auto;
+
+  width: 500px;
+  height:100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 td{
-  border: thin solid;
-  height:10px;
-  widht:100px;
+  border: thick solid #0000ff;
+
+  margin: 0;
+  width:500px;
+  height:100px;
+
+  text-align: center;
+  font-size: 50px;
+}
+
+h1{
+  margin-top: -50px;
+  
+  text-align: center;
+  font-size: 50px;
 }
