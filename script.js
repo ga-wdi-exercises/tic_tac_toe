@@ -12,14 +12,14 @@
         var square = $('<div class="square"><div class="xo">X</div></div>');
         square.appendTo(this.board);
         square.on('click', function() {
-          ttt.makeAMark();
+          ttt.makeAMark(square);
         });
       }
     }
   }
 
-  TicTacToe.prototype.makeAMark = function () {
-    console.log('you clicked a div!')
+  TicTacToe.prototype.makeAMark = function (square) {
+    $(square).html('O');
   };
 
 var game = new TicTacToe();
