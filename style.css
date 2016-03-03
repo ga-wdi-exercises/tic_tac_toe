@@ -2,7 +2,7 @@
   height: 150px;
   width: 150px;
   border: 1px solid #282c37;
-   margin: 5px;
+  margin: 5px;
   text-align: center;
   font-size: 120px;
   font-family: 'Lato', sans-serif;
@@ -12,7 +12,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .row {
@@ -34,8 +34,14 @@ body {
   background: #d9e1e8
 }
 
-.reset, .info {
+.info {
   text-align: center;
   font-family: 'Lato', sans-serif;
-  font-size: 50px;
+  font-size: 80px;
+}
+
+.reset {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
 }

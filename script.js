@@ -1,12 +1,11 @@
   $(document).ready(function() {
-    addClick();
-    changeTurn();
+    playGame();
+    // changeTurn();
     resetButton();
   });
+    var turn = "X";
     var Xselections = [];
     var Oselections = [];
-    var turn = "X";
-
     var wins = [
       ["1", "2", "3"],
       ["4", "5", "6"],
@@ -18,19 +17,7 @@
       ["7", "5", "3"]
   ];
 
-    function changeTurn() {
-      if (turn == "X") {
-        turn = "O";
-      } else {
-        turn = "X";
-      }
-      $(".info").html(turn + "'s turn");
-      if ($("#1").html() === $("#2").html() === $("#3").html()) {
-          console.log("winner");
-        }
-    }
-
-    function addClick() {
+    function playGame() {
       $(".square").on("click", function() {
         $(this).html(turn);
         changeTurn();
@@ -38,16 +25,18 @@
           $(this).addClass("dark");
           Oselections.push(this.id);
           for (var i = 0; i < wins.length; i++) {
-            if (containsAll(wins[i], Oselections)) {
-              console.log("O wins");
+            if (checkForWin(wins[i], Oselections)) {
+              $(".info").html("O's win!");
+              $(".square").off();
             }
           }
         } else {
           $(this).addClass("light");
           Xselections.push(this.id);
           for (var j = 0; j < wins.length; j++) {
-            if (containsAll(wins[j], Xselections)) {
-              console.log("X wins");
+            if (checkForWin(wins[j], Xselections)) {
+              $(".info").html("X's win!");
+              $(".square").off();
             }
           }
         }
@@ -55,20 +44,30 @@
       });
     }
 
+    function changeTurn() {
+      if (turn == "X") {
+        turn = "O";
+      } else {
+        turn = "X";
+      }
+      $(".info").html(turn + "'s turn");
+    }
+
+    function checkForWin(wins, selections){
+      for(var i = 0; i < wins.length; i++){
+         if($.inArray(wins[i], selections) == -1) return false;
+      }
+      return true;
+    }
+
     function resetButton() {
       $(".reset").on("click", function() {
         $(".square").html("");
+        $(".info").html(turn + "'s turn");
         $(".square").removeClass("light");
         $(".square").removeClass("dark");
         Oselections = [];
         Xselections = [];
-        addClick();
+        playGame();
       });
-    }
-
-    function containsAll(needles, haystack){
-      for(var i = 0 , len = needles.length; i < len; i++){
-         if($.inArray(needles[i], haystack) == -1) return false;
-      }
-      return true;
     }
