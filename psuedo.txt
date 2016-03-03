@@ -1,0 +1,30 @@
+make everything run through a game element
+  use a constructor that takes the clicked element as an argument
+  properties:
+  property to keep track of status / who's turn
+  array for user moves
+  method to loop thru array and see if consecutive moves happened
+  object that holds elements
+  event listener
+    if user1 clicks an element, status = 1
+      then 'x' is the input to a cell
+      put an 'x' into the moves array
+    if user0 clicks an element, status = 0
+      then o is the input to a cell
+      put an 'o' into the moves array
+    use loop method to check for consecutive moves
+      if there are consecutive moves, display the winner with consecutive moves
+
+
+on click, the user inputs an x or o into a cell.
+  //each cell has an event listener that fires off on click
+then the computer, or another user clicks the other letter into another cell.
+  keep track of what letter gets entered with a status variable
+  if user1 clicks an element, status = 1
+    then x is the input to a cell
+  if user0 clicks an element, status = 0
+    then o is the input to a cell
+if one user puts three x's or o's in a row, he wins. game over.
+  keep track of user inputs with an array.
+    on click, loop thru the array
+      if there are three letters in a row, signal that there is a winner

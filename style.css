@@ -1,13 +1,15 @@
 body {
   font-family: 'Didact Gothic', sans-serif;
 }
-
+h1 {
+  font-style: italic;
+}
 table {
   margin: 0 auto;
   height: 400px;
   width: 400px;
 }
-.cell {
+.cells {
   text-align: center;
   width: 200px;
   height: 130px;
