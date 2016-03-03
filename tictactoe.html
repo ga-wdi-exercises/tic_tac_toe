@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+
+ <title>Tic Tac Toe</title>
+ <style>
+
+#board {
+  width: 624px;
+  height: 624px;
+  margin: 0 auto;
+}
+
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: darkblue;
+  color: white;
+  margin: 4px;
+  float: left;
+}
+
+ </style>
+</head>
+<body>
+ <center><header id="header"><h1> Tic Tac Toe</h1></header></center>
+
+<center><div id = "board">
+ <div class = "row1">
+   <div class = "box" id = "box1"> </div>
+   <div class = "box" id = "box2"> </div>
+   <div class = "box" id = "box3"> </div>
+ </div>
+ <div class = "row2">
+   <div class = "box" id = "box4"> </div>
+   <div class = "box" id = "box5"> </div>
+   <div class = "box" id = "box6"> </div>
+ </div>
+ <div class = "row3">
+   <div class = "box" id = "box7"> </div>
+   <div class = "box" id = "box8"> </div>
+   <div class = "box" id = "box9"> </div>
+ </div>
+
+</div></center>
+
+
+<script src = "https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+<script>
+
+var arrayofbox = [] // will finish later
+
+var squarechange = true;
+var box = $(".box");
+
+$(".box").on('click' , changesquare);
+function changesquare(){
+
+  if(squarechange == true){
+
+  this.textContent = "X";
+  arrayofbox.push($(this).index());
+  console.log(Y);
+    squarechange = false;
+
+
+  }
+  else if(squarechange == false){
+
+
+    this.textContent = "O";
+    var Z = arrayofbox.push($(this).index());
+    console.log(Z);
+    squarechange = true;
+
+  }
+}
+// changesquare();
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
