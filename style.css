@@ -1,53 +1,55 @@
 @import url(http://fonts.googleapis.com/css?family=Oleo+Script);
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
 
 * {
   box-sizing: border-box;
+  background-color: #9baec8;
+  font-family: 'Roboto', sans-serif;
 }
 
-.header {
+.header, .button{
   margin: 10px 0 30px 0;
   /*border: 10px solid goldenrod;*/
   text-align: center;
 }
 
 input[type="button"]{
-  font-size: 60px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-size: 20px;
+  background-color: #282c37;
+  color: #d9e1e8;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px
+  20px 0 rgba(0,0,0,0.19);
+  text-align: center;
+  margin-top: 20px;
 }
 
 .title {
-  color: #F52F4F;
+  color: #2b90d9;
+  font-size: 70px;
   font-family: 'Oleo Script', cursive;
-  font-size: 50px;
+  text-shadow:4px 4px 0 rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 .container {
   margin: 0 auto;
   display:flex;
   flex-wrap: wrap;
-  width: 45vw;
-  height: 45vw;
-  background-color: goldenrod;
-  border-radius: 12px;
-  /*justify-content: center;
-  align-items: center;*/
+  width: 40vw;
+  height: 40vw;
   resize: both;
   overflow: auto;
 }
 
 .box {
-  width: 33%;
+  width: 33.3%;
   flex-grow: 1;
   font-size: 40px;
   text-align: center;
   padding-top: 25px;
+  border-radius: 25px;
+  border: 5px solid #9baec8;
+  background-color: #282c37;
+  color: #282c37;
   /*need to revisit vertical centering*/
-}
-
-.box1, .box4, .box7, .box2, .box5, .box8{
-  border-right: 10px solid white;
-}
-
-.box1, .box2, .box3, .box4, .box5, .box6{
-  border-bottom: 10px solid white;
 }
