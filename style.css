@@ -1,0 +1,37 @@
+.box {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+h1{
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  color: rgb(131, 15, 144);
+}
+
+table, th, td {
+  border: 3px solid rgb(131, 15, 144);
+  margin-top: 50px;
+}
+
+#message{
+  font-family: verdana sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+}
+body {
+  background-image: url("white_carbon.png");
+}
+
+.wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.button{
+  background-color: rgb(131, 15, 144);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
