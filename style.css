@@ -14,7 +14,6 @@ header {
 
 h1 {
   font-size: 75px;
-  background: rgba(255 ,255, 255, .8);
   margin-bottom: -5px;
   margin-top: -5px;
 }
@@ -31,9 +30,9 @@ h1 {
 }
 
 .square {
-  outline: 2px solid black;
+  outline: 2px solid white;
   background-color: gold;
-  color: black;
+  color: gold;
   width: 33%;
   height: 33%;
 }
@@ -65,4 +64,10 @@ h1 {
   color: white;
   font-size: 20px;
   border-radius: 8px;
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    background: rgba(255 ,255, 255, .8);
+  }
 }
