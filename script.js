@@ -35,9 +35,6 @@ $(document).ready(function(){
               area.text("o");
               input++;
             }
-
-
-
           }
 
 
@@ -49,5 +46,10 @@ $(document).ready(function(){
 
 
 
+  });
+
+  //reset page
+  $("h3").click(function(){
+    location.reload();
   });
 });
