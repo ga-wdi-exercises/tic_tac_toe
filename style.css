@@ -7,16 +7,16 @@ h1 {
 }
 
 table {
-    border-collapse: collapse;
     display: table;
     width: 100%;
 }
 tr {
   height: 200px;
+  width: 33.3333%;
 }
 table, tr, td {
     border: 10px solid black;
-    border-spacing: 10px 50px;
+    text-align: center;
 }
 
 body {

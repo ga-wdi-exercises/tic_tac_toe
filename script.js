@@ -1,14 +1,38 @@
-$(document).ready(function(){
+  $(document).ready(function(){
 
-// var markerX;
-// var markerO;
-var message= $(".messages");
-var turn = $(".turn");
-var table = $(".table");
+  var message= $(".messages");
+  var turn = $(".turn");
+  var table = $(".table");
+  var cells = $(".cell");
 
-$(".cell").click(function(){
-  //
-  $("td").text("X");
-  playerOne === "X";
-});
-});
+  function eventListener() {
+    cells.click(addLetter);
+  }
+
+  function eventListenerTwo() {
+    cells.click(addLetterTwo);
+  }
+
+function addLetter(){
+  console.log(this);
+  $(this).text("X");
+}
+
+eventListener();
+
+
+function addLetterTwo(){
+  console.log(this);
+  $(this).text("O");
+}
+
+eventListenerTwo();
+  });
+
+
+
+//
+// function Cell(row, boxId) {
+//   var row = row,
+//   var boxid = boxId;
+// }
