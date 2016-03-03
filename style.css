@@ -1,0 +1,28 @@
+body * {
+    font-family: arial, sans-serif;
+    text-align: center;
+}
+
+#play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board {
+    background-color: black;
+    border-spacing: 3px;
+}
+
+#board td {
+    height: 110px;
+    width: 110px;
+    background-color: #A3AEC8;
+    font-size: 3em;
+}
+
+/*#start {
+    height: 40px;
+    width: 100px;
+    margin: 25px auto;
+}*/
