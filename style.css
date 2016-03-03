@@ -37,6 +37,16 @@ h1{
   font-size: 50px;
 }
 
+h2{
+  text-align:center;
+}
+
 h3{
   cursor: pointer;
+  text-align:center;
+}
+
+p{
+  font-size: 20px;
+  text-align: center;
 }
