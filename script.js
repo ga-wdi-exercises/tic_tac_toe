@@ -21,8 +21,6 @@ $(document).ready(function() {
       var self = game;
       var square = this.firstElementChild;
 
-      console.log(self.colLeft);
-
       if (square.innerHTML != "X" && square.innerHTML != "O") {
         if (self.playerTurn === "X") {
           square.innerHTML = "X";
@@ -45,18 +43,19 @@ $(document).ready(function() {
 
       if (self.turns === 9) {
         self.assessWinner(self.colLeft);
-
-        // console.log(self.colLeft);
       }
     },
     assessWinner: function(line) {
       var lineOfThree = [];
+      var winner = "";
 
       for (var i= 0; i<line.length; i++) {
-        lineOfThree.push.line[i].html();
+        lineOfThree.push(line[i].innerHTML);
       };
 
-      console.log(lineOfThree)
+      if (lineOfThree[0] === lineOfThree[1] && lineOfThree[1] === lineOfThree[2]) {
+        alert("The winner is: " + lineOfThree[0])
+      }
     }
   };
 
