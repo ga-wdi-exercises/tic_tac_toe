@@ -32,8 +32,9 @@ d.stroke();
 function test(e){
   var mouse = getDispPos(e);
 
-  updateGameGrid(mouse.x, mouse.y, toggleTurn());
+  updateGameGrid(mouse.x, mouse.y, curPlayer);
   fillTileAt(mouse.x,mouse.y, curColor);
+  toggleTurn();
 }
 
 //  returns coordinates of mouse position relative to canvas
@@ -48,7 +49,7 @@ function getDispPos(e){
 function fillTileAt(x, y, color){
   var t = pixToGrid(x, y);
   d.fillStyle = color;
-  d.fillRect(t.row*TILE_SIZE, t.col*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+  d.fillRect(t.row*TILE_SIZE, t.col*TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1);
 }
 
 // Convert canvas x/y to gameGrid row/col
@@ -64,9 +65,8 @@ function updateGameGrid(x, y, p){
   gameGrid[t.row][t.col] = p;
 }
 
-// Returns current player, then switches turns.
-// Updates current color accordingly.
+// Updates player color and indicators
 function toggleTurn(){
-  if (curPlayer == "X"){ curPlayer = "O"; curColor = "rgba(0,0,255,0.5)"; return "X";}
-  else {curPlayer = "X"; curColor = "rgba(255,0,0,0.5)"; return "O";}
+  if (curPlayer == "X"){ curPlayer = "O"; curColor = "rgba(0,0,255,0.5)";}
+  else {curPlayer = "X"; curColor = "rgba(255,0,0,0.5)";}
 }
