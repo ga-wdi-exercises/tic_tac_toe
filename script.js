@@ -15,9 +15,9 @@ var ttt = {
               $('.clickable').eq(i).on("click", function() {
                 if (ttt.counter%2===0){
                   console.log($(this));
-                 $(this).html("x").off("click");
+                 $(this).html("x").off("click").css("backgroundColor","red");
                ttt.counter+=1;}
-                 else {$(this).html("o").off("click");
+                 else {$(this).html("o").off("click").css("backgroundColor","blue");
                ttt.counter+=1;}
               });
               }
@@ -33,4 +33,3 @@ reset: function() {$('button').on("click", function() {
 ttt.createBoard();
 ttt.clicks();
 ttt.addReset();
-// ttt.reset();

@@ -14,6 +14,7 @@
       font-size: 50px;
       vertical-align: middle;
       line-height: 75px;
+      color: white;
 }
 button {
   display: flex;
