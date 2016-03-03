@@ -44,7 +44,6 @@ function clickSquare(event) {
   getWin(rowBot);
   getWin(diagOne);
   getWin(diagTwo);
-  //noWin();
 }
 
 function clearBoard(event) {
@@ -53,20 +52,13 @@ function clearBoard(event) {
     $("td").html("");
   }
   isO = false;
-  $("h2").html("X's Turn");
+  $("h2").html("X's Turn")
+        .removeClass("winner");
 }
 
 function getWin(squares) {
   if (squares.eq(0).html() !== "" && squares.eq(0).html() == squares.eq(1).html() && squares.eq(0).html() == squares.eq(2).html()) {
-    $("h2").html(squares.eq(0).html() + " is the winner!");
+    $("h2").html(squares.eq(0).html() + " is the winner!")
+          .addClass("winner");
   }
 }
-
-// function noWin() {
-//   //if all nine squares have a value, return no winner
-//   for (i = 0; i < 9; i++) {
-//     if (allSquares.html(i) !== "") {
-//       $("h2").html("No Winner");
-//     }
-//   }
-// }
