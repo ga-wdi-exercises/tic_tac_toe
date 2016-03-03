@@ -12,29 +12,30 @@
 ////////////////
 
 // X will always go first
-// The first player will click on a square in th table
+// The first player will click on a square in the table
   // the square will display an X
   // the turn will switch to the next player
 
-var squareOne = new Square ($("#topRow .left"));
-var squareTwo = new Square ($("#topRow .middle"));
-var squareThree = new Square ($("#topRow .right"));
-var squareFour = new Square ($("#middleRow .left"));
-var squareFive = new Square ($("#middleRow .middle"));
-var squareSix = new Square ($("#middleRow .right"));
-var squareSeven = new Square ($("#bottomRow .left"));
-var squareEight = new Square ($("#bottomRow .middle"));
-var squareNine = new Square ($("#bottomRow .right"));
+$(document).ready(function(){
 
-var playerTwo = false;
+  var squareOne = new Square ($("#topRow .left"));
+  var squareTwo = new Square ($("#topRow .middle"));
+  var squareThree = new Square ($("#topRow .right"));
+  var squareFour = new Square ($("#middleRow .left"));
+  var squareFive = new Square ($("#middleRow .middle"));
+  var squareSix = new Square ($("#middleRow .right"));
+  var squareSeven = new Square ($("#bottomRow .left"));
+  var squareEight = new Square ($("#bottomRow .middle"));
+  var squareNine = new Square ($("#bottomRow .right"));
 
-function Square (element) {
-  var square = this;
-  square.element = element;
-}
+  var playerTwo = false;
 
-Square.prototype.selectSquare = function() {
-  square.click(function(){
+  function Square (element) {
+    this.element = element;
+  }
+
+  Square.prototype.selectSquare = function() {
+    var square = this;
     if (square.contents().length === 0) {
       if (playerTwo === false){
         square.html("X");
@@ -46,9 +47,11 @@ Square.prototype.selectSquare = function() {
         return playerTwo;
       }
     }
-  });
-};
+  };
 
+  squareOne.on("click" , squareOne.selectSquare(event));
+
+});
 
 // squareOne.click(function(){
 //   if (squareOne.contents().length === 0) {
