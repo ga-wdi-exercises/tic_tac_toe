@@ -14,7 +14,6 @@ var ttt = {
               for (var i = 0; i < $('.clickable').length; i++){
               $('.clickable').eq(i).on("click", function() {
                 if (ttt.counter%2===0){
-                  console.log($(this));
                  $(this).html("x").off("click").css("backgroundColor","red");
                ttt.counter+=1;}
                  else {$(this).html("o").off("click").css("backgroundColor","blue");
