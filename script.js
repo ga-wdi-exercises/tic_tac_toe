@@ -16,6 +16,7 @@ var grid = {
   sq33: $("#sq33")
 };
 
+var turn = 0;
 
 //create function to add X and O
 
@@ -28,7 +29,7 @@ var addO = function() {
 };
 
 addLetter = function() {
-  var turn = 0;
+
   //if turn = even
   if (turn % 2 === 0) {
     //click event should append X to appropriate square
@@ -36,12 +37,13 @@ addLetter = function() {
     $(this).text("X");
   }
   //if turn = odd
-  else if (turn % 2 === 1) {
+  else {
     //click event should append O to appropriate square
     $(this).text("O");
   }
+  turn += 1;   //Even though this action is in the function scope, it is updating the value of a global variable.  So even thought turn = 0 in global scope, after you click, it refers to the global variable and updates it by one.
+
   //after click event, turn variable should increase by one while turn < 9 (there will be no more than 9 turns)
-  turn += 1;
 };
 
 //Experiment with for loop to assign eventlistners

@@ -11,49 +11,8 @@
 .O {
   background-color: red;
 }
-
-#sq11 {
+td {
   background-color: #cce6ff;
   border: 5px solid black;
-  color: lime;
-}
-
-#sq12 {
-  background-color: #cce6ff;
-  border: 5px solid black;
-}
-
-#sq13 {
-  background-color: #cce6ff;
-  border: 5px solid black;
-}
-
-#sq21 {
-  background-color: #cce6ff;
-  border: 5px solid black;
-}
-
-#sq22 {
-  background-color: #cce6ff;
-  border: 5px solid black;
-}
-
-#sq23 {
-  background-color: #cce6ff;
-  border: 5px solid black;
-}
-
-#sq31 {
-  background-color: #cce6ff;
-  border: 5px solid black;
-}
-
-#sq32 {
-  background-color: #cce6ff;
-  border: 5px solid black;
-}
-
-#sq33 {
-  background-color: #cce6ff;
-  border: 5px solid black;
+  text-align: center;
 }
