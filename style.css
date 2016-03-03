@@ -1,9 +1,12 @@
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter|Permanent+Marker|Gochi+Hand|Patrick+Hand|Neucha' rel='stylesheet' type='text/css'>
+
 body{
   font: ;
+  font-family: 'Patrick Hand', sans-serif;;
   margin:auto;
   text-align: center;
-  color:;
-  background:
+  color: red;
+  background-image: image("file:///Users/LaFrish/wdi/exercises/tic_tac_toe/seamlesstexture29_1200.jpg");
 }
 
 header{
@@ -16,15 +19,6 @@ h1 {
   font-size: 32px;
 }
 
-.turn{
-
-}
-
-
-#overallgrid{
-  border: black;
-}
-
 table {
   position: relative;
   align-self: center;
@@ -35,9 +29,7 @@ table {
   border:1px solid #555;
   cursor:pointer;
 }
-row-1{
 
-}
 #col-1-row-1{
 
 }
