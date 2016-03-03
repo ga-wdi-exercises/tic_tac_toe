@@ -15,12 +15,13 @@
 //       chooseSign(td, pattern);
 //
 
-//function runGame
-$(document).ready(function(){
-  startGame();
-})
-function runGame(){
 
+$(document).ready(function(){
+//function runGame
+document.onload = runGame();
+
+function runGame(){
+$(.turn) = "X"
 giveMessage($(.turn) + " starts the game.");
 }
 
@@ -28,4 +29,29 @@ giveMessage($(.turn) + " starts the game.");
 //function giveMessage
 function giveMessage(){
   $(.messages).text('')
+}
+//different players start each move
+function switchMove(){
+  $(.cell).click(function(){
+  (.cell).text = $(.turn)
+  //call to switch player
+  nextTurn();
+})
+}
+//switch player each turn
+function nextTurn(){
+  if ($(.turn) == "X") {
+    $(.turn) == "O";
+  } else {
+    $(.turn) == "X";
+  }
+  giveMessage("Now it's your turn " + $(.turn));
+}
+
+
+
+
+}
+
+
 }
