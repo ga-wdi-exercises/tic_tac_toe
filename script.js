@@ -16,95 +16,156 @@
   // the square will display an X
   // the turn will switch to the next player
 
-$(document).ready(function(){
 
-  var squareOne = new Square ($("#topRow .left"));
-  var squareTwo = new Square ($("#topRow .middle"));
-  var squareThree = new Square ($("#topRow .right"));
-  var squareFour = new Square ($("#middleRow .left"));
-  var squareFive = new Square ($("#middleRow .middle"));
-  var squareSix = new Square ($("#middleRow .right"));
-  var squareSeven = new Square ($("#bottomRow .left"));
-  var squareEight = new Square ($("#bottomRow .middle"));
-  var squareNine = new Square ($("#bottomRow .right"));
+
+  var squareOne = $("#topRow .left");
+  var squareTwo = $("#topRow .middle");
+  var squareThree = $("#topRow .right");
+  var squareFour = $("#middleRow .left");
+  var squareFive = $("#middleRow .middle");
+  var squareSix = $("#middleRow .right");
+  var squareSeven = $("#bottomRow .left");
+  var squareEight = $("#bottomRow .middle");
+  var squareNine = $("#bottomRow .right");
 
   var playerTwo = false;
 
-  function Square (element) {
-    this.element = element;
-  }
-
-  Square.prototype.selectSquare = function() {
-    var square = this;
-    if (square.contents().length === 0) {
-      if (playerTwo === false){
-        square.html("X");
-        playerTwo = true;
-        return playerTwo;
-      } else if (playerTwo === true) {
-        square.html("O");
-        playerTwo = false;
-        return playerTwo;
-      }
+squareOne.click(function(){
+  if (squareOne.contents().length === 0) {
+    if (playerTwo === false){
+      squareOne.html("X");
+      playerTwo = true;
+      return playerTwo;
+    } else if (playerTwo === true) {
+      squareOne.html("O");
+      playerTwo = false;
+      return playerTwo;
     }
-  };
-
-  squareOne.on("click" , squareOne.selectSquare(event));
-
+  }
 });
 
-// squareOne.click(function(){
-//   if (squareOne.contents().length === 0) {
-//     if (playerTwo === false){
-//       squareOne.html("X");
-//       playerTwo = true;
-//       return playerTwo;
-//     } else if (playerTwo === true) {
-//       squareOne.html("O");
-//       playerTwo = false;
-//       return playerTwo;
-//     }
-//   }
-// });
-//
-// squareTwo.click(function(){
-//   if (squareTwo.contents().length === 0) {
-//     if (playerTwo === false){
-//       squareTwo.html("X");
-//       playerTwo = true;
-//       return playerTwo;
-//     } else if (playerTwo === true) {
-//       squareTwo.html("O");
-//       playerTwo = false;
-//       return playerTwo;
-//     }
-//   }
-// });
-//
-// squareThree.click(function(){
-//   if (squareThree.contents().length === 0) {
-//     if (playerTwo === false){
-//       squareThree.html("X");
-//       playerTwo = true;
-//       return playerTwo;
-//     } else if (playerTwo === true) {
-//       squareThree.html("O");
-//       playerTwo = false;
-//       return playerTwo;
-//     }
-//   }
-// });
-//
-// squareFour.click(function(){
-//   if (squareFour.contents().length === 0) {
-//     if (playerTwo === false){
-//       squareFour.html("X");
-//       playerTwo = true;
-//       return playerTwo;
-//     } else if (playerTwo === true) {
-//       squareFour.html("O");
-//       playerTwo = false;
-//       return playerTwo;
-//     }
-//   }
-// });
+squareTwo.click(function(){
+  if (squareTwo.contents().length === 0) {
+    if (playerTwo === false){
+      squareTwo.html("X");
+      playerTwo = true;
+      return playerTwo;
+    } else if (playerTwo === true) {
+      squareTwo.html("O");
+      playerTwo = false;
+      return playerTwo;
+    }
+  }
+});
+
+squareThree.click(function(){
+  if (squareThree.contents().length === 0) {
+    if (playerTwo === false){
+      squareThree.html("X");
+      playerTwo = true;
+      return playerTwo;
+    } else if (playerTwo === true) {
+      squareThree.html("O");
+      playerTwo = false;
+      return playerTwo;
+    }
+  }
+});
+
+squareFour.click(function(){
+  if (squareFour.contents().length === 0) {
+    if (playerTwo === false){
+      squareFour.html("X");
+      playerTwo = true;
+      return playerTwo;
+    } else if (playerTwo === true) {
+      squareFour.html("O");
+      playerTwo = false;
+      return playerTwo;
+    }
+  }
+});
+
+squareFive.click(function(){
+  if (squareFive.contents().length === 0) {
+    if (playerTwo === false){
+      squareFive.html("X");
+      playerTwo = true;
+      return playerTwo;
+    } else if (playerTwo === true) {
+      squareFive.html("O");
+      playerTwo = false;
+      return playerTwo;
+    }
+  }
+});
+
+squareSix.click(function(){
+  if (squareSix.contents().length === 0) {
+    if (playerTwo === false){
+      squareSix.html("X");
+      playerTwo = true;
+      return playerTwo;
+    } else if (playerTwo === true) {
+      squareSix.html("O");
+      playerTwo = false;
+      return playerTwo;
+    }
+  }
+});
+
+squareSeven.click(function(){
+  if (squareSeven.contents().length === 0) {
+    if (playerTwo === false){
+      squareSeven.html("X");
+      playerTwo = true;
+      return playerTwo;
+    } else if (playerTwo === true) {
+      squareSeven.html("O");
+      playerTwo = false;
+      return playerTwo;
+    }
+  }
+});
+
+squareSeven.click(function(){
+  if (squareSeven.contents().length === 0) {
+    if (playerTwo === false){
+      squareSeven.html("X");
+      playerTwo = true;
+      return playerTwo;
+    } else if (playerTwo === true) {
+      squareSeven.html("O");
+      playerTwo = false;
+      return playerTwo;
+    }
+  }
+});
+
+squareEight.click(function(){
+  if (squareEight.contents().length === 0) {
+    if (playerTwo === false){
+      squareEight.html("X");
+      playerTwo = true;
+      return playerTwo;
+    } else if (playerTwo === true) {
+      squareEight.html("O");
+      playerTwo = false;
+      return playerTwo;
+    }
+  }
+});
+
+squareNine.click(function(){
+  if (squareNine.contents().length === 0) {
+    if (playerTwo === false){
+      squareNine.html("X");
+      playerTwo = true;
+      return playerTwo;
+    } else if (playerTwo === true) {
+      squareNine.html("O");
+      playerTwo = false;
+      return playerTwo;
+    }
+  }
+});
