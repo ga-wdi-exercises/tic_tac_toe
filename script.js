@@ -8,36 +8,24 @@ function Board(element) {
     var self = this;
     this.element = element;
     this.numOfMoves = 0;
-    this.elements = {
-        //this is saying find .box# in the mainBoard
-        box1: this.element.find(".box1"),
-        box2: this.element.find(".box2"),
-        box3: this.element.find(".box3"),
-        box4: this.element.find(".box4"),
-        box5: this.element.find(".box5"),
-        box6: this.element.find(".box6"),
-        box7: this.element.find(".box7"),
-        box8: this.element.find(".box8"),
-        box9: this.element.find(".box9")
-    };
 
 
     $(".box").on("click", function(){
         //$(this) is referring to .box ie whatever the listener is listening for.
-        console.log($(this));
-        addXorO();
-        changeLetter($(this));
+        // console.log($(this));
+        countMoves();
+        addXorO($(this));
     });
 
 
-    function addXorO() {
+    function countMoves() {
         console.log("You clicked me!");
         //add 1 to moves.
         self.numOfMoves++;
     }
 
     //switching between x's and o's
-    function changeLetter(square){
+    function addXorO(square){
         if(self.numOfMoves % 2 === 0){
             //get inner html and add an O
             square.html("O");
@@ -45,7 +33,52 @@ function Board(element) {
             //enter an X
             square.html("X");
         }
+        declareWinner();
     }
+
+    function declareWinner() {
+        var boxArray = $(".box");
+        //row winner
+        if((boxArray.eq(0).html()=== boxArray.eq(1).html())&&
+        (boxArray.eq(0).html()=== boxArray.eq(2).html())&&
+        (boxArray.eq(1).html()=== boxArray.eq(2).html())){
+            console.log("you won in row 1!");
+        }else if((boxArray.eq(3).html()=== boxArray.eq(4).html())&&
+        (boxArray.eq(3).html()=== boxArray.eq(5).html())&&
+        (boxArray.eq(4).html()=== boxArray.eq(5).html())){
+            console.log("you won in row 2!");
+        }else if((boxArray.eq(6).html()=== boxArray.eq(7).html())&&
+        (boxArray.eq(6).html()=== boxArray.eq(8).html())&&
+        (boxArray.eq(7).html()=== boxArray.eq(8).html())){
+            console.log("you won in row 3!");
+            //column winner
+        }else if((boxArray.eq(0).html()=== boxArray.eq(3).html())&&
+        (boxArray.eq(0).html()=== boxArray.eq(6).html())&&
+        (boxArray.eq(3).html()=== boxArray.eq(6).html())){
+            console.log("you won in column 1!");
+        }else if((boxArray.eq(1).html()=== boxArray.eq(4).html())&&
+        (boxArray.eq(1).html()=== boxArray.eq(7).html())&&
+        (boxArray.eq(4).html()=== boxArray.eq(7).html())){
+            console.log("you won in column 2!");
+        }else if((boxArray.eq(2).html()=== boxArray.eq(5).html())&&
+        (boxArray.eq(2).html()=== boxArray.eq(8).html())&&
+        (boxArray.eq(5).html()=== boxArray.eq(8).html())){
+            console.log("you won in column 3!");
+            //diagonal winner
+        }else if((boxArray.eq(0).html()=== boxArray.eq(4).html())&&
+        (boxArray.eq(0).html()=== boxArray.eq(8).html())&&
+        (boxArray.eq(4).html()=== boxArray.eq(8).html())){
+            console.log("you won diagonally!");
+        }else if((boxArray.eq(2).html()=== boxArray.eq(4).html())&&
+        (boxArray.eq(2).html()=== boxArray.eq(6).html())&&
+        (boxArray.eq(4).html()=== boxArray.eq(6).html())){
+            console.log("you won diagonally!");
+        }
+
+        //diagnol winner
+        //cat: no winner
+    }
+    // declareWinner();
 }
 
 //TODO: when done with js merge branch into anissa_solution
