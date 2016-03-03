@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-//array of board places  
+  //array of board places
   var places =[
     $("#ichi"),
     $("#ni"),
@@ -19,12 +19,19 @@ $(document).ready(function(){
     for( var i = 0; i < places.length; i++ ){
       (function(area) {
         $(area).click(function(){ console.log(area);
+          area.text("x");
         });
       })(places[i]);
     }
+
+    //if the user clicks on a section, a char should appear
+
+    //if we get the element that is clicked by it's #id then we can add text to that spot (td) --> $("#ni").text("x")
+    //so when the element is clicked, add text
+
+
+
+
+
   });
-
-  //if the user clicks on a section, a char should appear
-
-
 });
