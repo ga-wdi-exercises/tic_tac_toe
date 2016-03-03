@@ -21,6 +21,9 @@ $(document).ready(function(){
       (function(area) {
         $(area).click(function(event){
 
+          //gameplay fades out
+          $("p").fadeOut();
+
           //if there is something already there, don't change the text
           if((area.text() == "o") || (area.text() == "x")){
             event.preventDefault();
@@ -58,28 +61,22 @@ $(document).ready(function(){
 
             //winner of diagonal
             var diagXWins = (diag1 == "x" || diag2 == "x");
-            var diagOWins = (diag1 == "o" || diag2 == "o")
+            var diagOWins = (diag1 == "o" || diag2 == "o");
 
             if(rowXWins || colXWins || diagXWins){
               console.log("X wins!");
+              $("h3").append("<h2>X Wins!</h2>");
+
             }else if(rowOWins || colOWins || diagOWins){
-              console.log("O wins!");
+              $("h3").append("<h2>O Wins!</h2>");
             }
-
           }
-
-
         });
       })(places[i]);
     }
-
-
     //reset page
     $("h3").click(function(){
       location.reload();
     });
   });
-
 });
-//no man's land
-//if a row is done then u win!
