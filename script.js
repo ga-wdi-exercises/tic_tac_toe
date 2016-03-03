@@ -1,21 +1,21 @@
 
 var disp = $("#display")[0]; // Needed to return native DOM object.
-$("#display").on("click", test);
 var d = disp.getContext("2d");
 
 var TILE_SIZE = 200;
 
 var curPlayer = "X";
-var curColor = "rgba(255,0,0,0.5)"
-
-d.fillStyle = curColor;
+var curColor = "rgba(255,0,0,0.25)";
 
 var gameGrid = [[null, null, null],
                 [null, null, null],
-                [null, null, null]]
+                [null, null, null]];
+
+d.fillStyle = curColor;
+$("#display").on("click", test);
 
 // Draw Grid
-// TODO: Mathify this.
+// TODO: Math-ify this.
 d.beginPath();
 d.moveTo(0,200);
 d.lineTo(600,200);
@@ -35,6 +35,9 @@ function test(e){
     updateGameGrid(mouse.x, mouse.y, curPlayer);
     fillTileAt(mouse.x,mouse.y, curColor);
     toggleTurn();
+    var winner = checkWin();
+    console.log(winner);
+    if (winner != null){console.log(winner + " is the Winner!")}
   }
 }
 
@@ -47,10 +50,14 @@ function getDispPos(e){
 }
 
 // Fill the tile with color indicated by canvas pos
+// If color = "CLEAR", erase the indicated tile instead.
 function fillTileAt(x, y, color){
   var t = pixToGrid(x, y);
-  d.fillStyle = color;
-  d.fillRect(t.row*TILE_SIZE, t.col*TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1);
+  if(color == "CLEAR"){d.clearRect(t.row*TILE_SIZE, t.col*TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1); return;}
+  else{
+    d.fillStyle = color;
+    d.fillRect(t.row*TILE_SIZE, t.col*TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1);
+  }
 }
 
 // Convert canvas x/y to gameGrid row/col
@@ -68,12 +75,20 @@ function updateGameGrid(x, y, p){
 
 // Updates player color and indicators
 function toggleTurn(){
-  if (curPlayer == "X"){ curPlayer = "O"; curColor = "rgba(0,0,255,0.5)";}
-  else {curPlayer = "X"; curColor = "rgba(255,0,0,0.5)";}
+  if (curPlayer == "X"){ curPlayer = "O"; curColor = "rgba(0,0,255,0.25)";}
+  else {curPlayer = "X"; curColor = "rgba(255,0,0,0.25)";}
 }
 
 // returns true if canvas coordinates translate to empty grid value.
 function isValidMove(x, y){
   var t = pixToGrid(x, y);
   return (gameGrid[t.row][t.col] == null);
+}
+
+// Returns player value if a win is found, otherwise return null
+function checkWin(){
+  if ((gameGrid[0][0] == gameGrid[1][0])&&(gameGrid[1][0] == gameGrid[2][0])){
+    return gameGrid[2][0];
+  }
+  else{return null;}
 }
