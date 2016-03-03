@@ -1,0 +1,29 @@
+/** {
+  outline: 1px solid red;
+}*/
+
+.container{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  height: 500px;
+}
+
+.box {
+  margin: 5px;
+  padding: 50px;
+  width: 50%;
+  background-color: #999;
+  height: auto;
+  display: inline-block;
+}
+
+#btn {
+  display: inline-block;
+  width: 100%;
+  margin: auto 0;
+}
+
+#header {
+ text-align: center;
+}
