@@ -2,10 +2,8 @@
 
 body {
   background-image: url("seamlesstexture29_1200.jpg");
-  background-size: cover;
-  background-position: center;
   font-family: 'Gochi Hand', sans-serif;
-  margin:auto;
+  margin:0 auto;
   text-align: center;
   color: red;
 }
@@ -15,18 +13,31 @@ h1 {
   font-size: 75px;
 }
 
-table {
-  position: relative;
-  align-self: center;
-}
-.grid {
-  width:100px;
-  height:100px;
-  border:1px solid #555;
-  cursor:pointer;
+.table {
+margin: 0 auto;
+border-color: #555;
 }
 
-#col-1-row-1{
+.grid {
+  font-family: 'Gochi Hand', sans-serif;
+  color: green;
+  width:50px;
+  height:50px;
+  border:1px solid #555;
+}
+:before {
+  font-size:28
+  line-height:1;
+}
+.X :before {
+  content: "X";
+  color: blue;
+}
+.O :before {
+  content: "O";
+  color: red;
+}
+/*#col-1-row-1{
 
 }
 #col-2-row-1{
@@ -51,8 +62,8 @@ table {
 
 }
 #col-3-row-3{
-}
-:before{
+}*/
+/*:before{
 
 #x:before {
   content: "X";
@@ -63,13 +74,26 @@ table {
   content: "O";
   color: yellow;
 }
-}
+}*/
 
 #resetButton{
-  border: red;
+  height: 45px;
+  width: auto;
   border-radius: 25px;
+  color: black;
+  font-size: 24px;
+  background-color: yellow;
 }
 
 .reset{
-
+  background:#555;
+  border:1px solid #333;
+  padding:5px 10px;
+  color:#FFF;
+  cursor:pointer;
+  font-family: 'Gochi Hand', Arial, sans-serif;
+  text-transform:uppercase;
+  &:hover {
+      opacity:0.8;
+}
 }

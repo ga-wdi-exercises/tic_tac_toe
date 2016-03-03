@@ -6,6 +6,7 @@ var reset = $('.reset');
 var player = 1;
 var player1 = $('.X');
 var player2 = $('.O');
+var messages = $('.messages');
 
 $('.grid').click(function() {
   grid = $(this);
@@ -27,9 +28,10 @@ $('.grid').click(function() {
   else {
     messages.html('This box is already checked.');
   }
+
   $('.reset').click(function() {
     player = 1;
-    // messages.html('');
+    messages.html('');
     reset(table);
     displayNextPlayer(turn, player);
   });
@@ -70,11 +72,11 @@ function setTurn(){
   var p = Math.floor((Math.random() * 2) + 1);
   hasWinner=0;
   if(p==1){
-    turn = playerName1;
+    turn = player1;
     //boardMsg(playerName1+''s turn now!'');
   }
   else{
-    turn = playerName2;
+    turn = player2;
   //  boardMsg(playerName2+''s turn now!'');
   }
 }
@@ -99,12 +101,12 @@ function checkIfWon(table, pattern) {
   }
   return won;
 }
-
-$('#resetButton').click(function(){
-  player = 1;
-  reset(table);
-  displayNextPlayer(turn, player)
-})
+// 
+// $('#resetButton').click(function(){
+//   player = 1;
+//   reset(table);
+//   displayNextPlayer(turn, player)
+// })
 
 $('#resetButton').click(function (){
   table('grid').each(function() {
