@@ -27,6 +27,8 @@ td {
   padding: 15px;
   width: 150px;
   height: 150px;
+  font-size: 8em;
+  text-align: center;
 }
 
 td:hover {

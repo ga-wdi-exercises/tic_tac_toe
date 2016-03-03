@@ -10,3 +10,98 @@
   ////////////////
  // Pseudocode //
 ////////////////
+
+// X will always go first
+// The first player will click on a square in th table
+  // the square will display an X
+  // the turn will switch to the next player
+
+var squareOne = new Square ($("#topRow .left"));
+var squareTwo = new Square ($("#topRow .middle"));
+var squareThree = new Square ($("#topRow .right"));
+var squareFour = new Square ($("#middleRow .left"));
+var squareFive = new Square ($("#middleRow .middle"));
+var squareSix = new Square ($("#middleRow .right"));
+var squareSeven = new Square ($("#bottomRow .left"));
+var squareEight = new Square ($("#bottomRow .middle"));
+var squareNine = new Square ($("#bottomRow .right"));
+
+var playerTwo = false;
+
+function Square (element) {
+  var square = this;
+  square.element = element;
+}
+
+Square.prototype.selectSquare = function() {
+  square.click(function(){
+    if (square.contents().length === 0) {
+      if (playerTwo === false){
+        square.html("X");
+        playerTwo = true;
+        return playerTwo;
+      } else if (playerTwo === true) {
+        square.html("O");
+        playerTwo = false;
+        return playerTwo;
+      }
+    }
+  });
+};
+
+
+// squareOne.click(function(){
+//   if (squareOne.contents().length === 0) {
+//     if (playerTwo === false){
+//       squareOne.html("X");
+//       playerTwo = true;
+//       return playerTwo;
+//     } else if (playerTwo === true) {
+//       squareOne.html("O");
+//       playerTwo = false;
+//       return playerTwo;
+//     }
+//   }
+// });
+//
+// squareTwo.click(function(){
+//   if (squareTwo.contents().length === 0) {
+//     if (playerTwo === false){
+//       squareTwo.html("X");
+//       playerTwo = true;
+//       return playerTwo;
+//     } else if (playerTwo === true) {
+//       squareTwo.html("O");
+//       playerTwo = false;
+//       return playerTwo;
+//     }
+//   }
+// });
+//
+// squareThree.click(function(){
+//   if (squareThree.contents().length === 0) {
+//     if (playerTwo === false){
+//       squareThree.html("X");
+//       playerTwo = true;
+//       return playerTwo;
+//     } else if (playerTwo === true) {
+//       squareThree.html("O");
+//       playerTwo = false;
+//       return playerTwo;
+//     }
+//   }
+// });
+//
+// squareFour.click(function(){
+//   if (squareFour.contents().length === 0) {
+//     if (playerTwo === false){
+//       squareFour.html("X");
+//       playerTwo = true;
+//       return playerTwo;
+//     } else if (playerTwo === true) {
+//       squareFour.html("O");
+//       playerTwo = false;
+//       return playerTwo;
+//     }
+//   }
+// });
