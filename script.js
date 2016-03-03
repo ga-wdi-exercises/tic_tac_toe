@@ -1,16 +1,9 @@
-//create gameboard
-//create div
-//give div tile class
-//append div to play-area
-//when a user clicks an empty tile
-//change the html content of that tile to display that user's piece ("X" or "O")
-//it is now the next player's turn
-
 
 var game = {
   els: {
     playArea: $(".play-area"),
-    resetButton: $(".reset")
+    resetButton: $(".reset"),
+    nextPlayer: $(".next-player")
   },
   playersTurn: 1,
   players: [],
@@ -26,23 +19,15 @@ var game = {
       var newTile = $("<div></div>").addClass("tile");
       this.els.playArea.append(newTile);
     }
+
     this.els.tiles = $(".tile");
+    this.els.nextPlayer.attr("class", "next-player").addClass("x").html("<span>X</span>");
   },
 
   makeClickable: function() {
     var self = this;
-    for (var i = 0; i < this.els.tiles.length; i++) {
-      this.els.tiles.eq(i).on("click", function() {
-        if (self.playersTurn % 2 !== 0) {
-          $(this).addClass("x").html("<span>X</span>").off("click");
-          self.playersTurn++;
-          self.checkRowsForWinner();
-        } else {
-          $(this).addClass("o").html("<span>O</span>").off("click");
-          self.playersTurn--;
-          self.checkRowsForWinner();
-        }
-      });
+    for (var i = 0; i < self.els.tiles.length; i++) {
+      self.els.tiles.eq(i).on("click", self.displayXO);
     }
   },
 
@@ -54,40 +39,31 @@ var game = {
     console.log(this.tileGrid);
   },
 
-  checkRowsForWinner: function() {
-    for (var i = 0; i < this.tileGrid.length; i++) {
-      var currentRow = this.tileGrid[i];
-      if (currentRow[i])
-      if (currentRow[0].innerText === currentRow[1].innerText && currentRow[1].innerText === currentRow[2].innerText){
-        alert("Winner");
-      }
+  displayXO: function(event) {
+    if (game.playersTurn % 2 !== 0) {
+      $(event.target).addClass("x").html("<span>X</span>").off("click");
+      game.els.nextPlayer.attr("class", "next-player").addClass("o").html("<span>O</span>");
+      game.playersTurn++;
+    } else {
+      $(event.target).addClass("o").html("<span>O</span>").off("click");
+      game.els.nextPlayer.attr("class", "next-player").addClass("x").html("<span>X</span>");
+      game.playersTurn++;
     }
   },
 
-  checkColsForWinner: function() {
-    var self = this;
-    this.tileGrid = this.tileGrid[0].map(function(col, i) {
-      return self.tileGrid.map(function(row) {
-        return row[i];
-      });
-    });
-    this.checkRowsForWinner();
-  },
-  //determine a winner
-  // make play area a grid [[x,x,x],   a thought here...
-  // [x,x,x],    .map(arr[a][b] = arr[b][a])
-  //    [x,x,x]]
-  //check top, middle, and bottm rows for same letter.
-  //.map() (above) check top middle and bottom row again.
   resetGame: function() {
     for (var i = 0; i < game.els.tiles.length; i++) {
       game.els.tiles.removeClass("x o");
       game.els.tiles[i].innerText = "";
-      game.playersTurn = 1;
     }
+    game.playersTurn = 1;
+    game.els.playArea.empty();
+    game.buildGameboard();
     game.makeClickable();
   }
 };
+
+
 game.buildGameboard();
 game.makeClickable();
 
