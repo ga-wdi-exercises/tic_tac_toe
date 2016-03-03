@@ -1,8 +1,14 @@
 //Global variables: change to local later
-var gameBoard = $("#gameBoard");
 var isO = false;
+var colLeft = $("#one, #four, #seven");
+var colMid = $("#two, #five, #eight");
+var colRight = $("#three, #six, #nine");
+var rowTop = $("#one, #two, #three");
+var rowMid = $("#four, #five, #six");
+var rowBot = $("#seven, #eight, #nine");
 
 function playTicTac() {
+  var gameBoard = $("#gameBoard");
   gameBoard.on("click", clickSquare);
   $("button").on("click", clearBoard);
 }
