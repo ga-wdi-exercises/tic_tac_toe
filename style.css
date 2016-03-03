@@ -1,0 +1,26 @@
+#board {
+    display: flex;
+    width: 300px;
+    border: px solid black;
+    height: 300px;
+    margin: auto;
+    /*padding: 5% 12%;*/
+}
+
+.box {
+    flex-wrap: wrap;
+    width: 90px;
+    background-color: grey;
+    height: 90px;
+    /*margin: auto;*/
+    display: inline-block;
+}
+
+#header
+{
+  text-align: center;
+}
+#resetButton {
+display: block;
+margin: 0 auto;
+}
