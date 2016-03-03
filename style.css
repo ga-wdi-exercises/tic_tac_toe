@@ -1,0 +1,47 @@
+.square {
+  height: 150px;
+  width: 150px;
+  border: 1px solid #282c37;
+  margin: 5px;
+  text-align: center;
+  font-size: 120px;
+  font-family: 'Lato', sans-serif;
+  color: #282c37;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.dark {
+  background: #2b90d9;
+}
+
+.light {
+  background: #9baec8;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: #d9e1e8
+}
+
+.info {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 80px;
+}
+
+.reset {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+}
