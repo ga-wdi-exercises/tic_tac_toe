@@ -1,0 +1,54 @@
+.square{
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  margin: 5.5px auto 0px 5.5px;
+  width: 150px;
+  height: 150px;
+  font-size: 90px;
+  font-family: Verdana;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.O{
+  text-align: center;
+  font-size: 40px;
+  margin: 0px auto;
+  height: 30px;
+  width: 150px;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 20px
+
+}
+
+p{
+  text-align: center;
+  font-size: 40px
+}
+
+.X{
+  text-align: center;
+  font-size: 40px;
+  margin: 10px auto;
+  height: 30px;
+  width: 150px;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 20px
+}
+
+
+
+.square:hover{
+  background-color: yellow;
+}
+
+#game_board{
+  margin: 0px auto;
+  border: 1px solid #000;
+  width: 480px;
+  height: 480px;
+}

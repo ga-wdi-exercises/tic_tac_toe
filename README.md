@@ -48,3 +48,16 @@ Today we will be making a Tic Tac Toe game using all of this.
   play a game of Tic Tac Toe against you. (Hint: look into the minimax
   algorithm).
 
+
+
+
+identify who goes first
+x or o
+array holds moves and position
+create board
+playerPick{
+
+}
+play the game{
+
+}
