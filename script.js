@@ -13,22 +13,18 @@
 //     if(!sign) {
 //       var pattern = patternForPlayer(player);
 //       chooseSign(td, pattern);
-//
-
-
-$(document).ready(function(){
-//function runGame
-document.onload = runGame();
+///function runGame
+document.onload(runGame();)
 
 function runGame(){
-$(.turn) = "X"
-giveMessage($(.turn) + " starts the game.");
+  document.turn = "X"
+giveMessage(document.turn + " starts the game.");
 }
 
 //tell user whose turn it is, winner, etc
 //function giveMessage
-function giveMessage(){
-  $(.messages).text('')
+function giveMessage(msg){
+  document.getElementbyClass("messages").innerhtml = msg;
 }
 //different players start each move
 function switchMove(){
@@ -40,12 +36,12 @@ function switchMove(){
 }
 //switch player each turn
 function nextTurn(){
-  if ($(.turn) == "X") {
-    $(.turn) == "O";
+  if (document.turn == "X") {
+    document.turn == "O";
   } else {
-    $(.turn) == "X";
+    document.turn == "X";
   }
-  giveMessage("Now it's your turn " + $(.turn));
+  giveMessage("Now it's your turn " + document.turn);
 }
 
 
