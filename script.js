@@ -1,6 +1,7 @@
 // create a 3x3 grid
   // get board
   // insert divs into board
+  // make grid visible
 
   function TicTacToe() {
     this.board = $('.board');
@@ -9,20 +10,26 @@
     var ttt = this;
     for(var i = 0; i < this.size; i++) {
       var square = $('<div class="square"><div class="xo">X</div></div>');
-      square.attr('id', i);
+      //square.attr('id', i);
       square.appendTo(this.board);
       square.on('click', function() {
-        console.log(square);
-        //ttt.makeAMark();
+        ttt.makeAMark(this);
       });
     }
   }
 
-  TicTacToe.prototype.makeAMark = function (index) {
-    console.log($('#'+index));
+  // on click, add a character to the grid, x or o
+    // click also changes color of cell
+    // click freezes cell so it can't be clicked again
+  TicTacToe.prototype.makeAMark = function (square) {
+    $(square).children().html('O');
 
 
   };
+
+  // after each click, the character switches, x -> o, o -> x
+
+  // reset button to clear board and restart game
 
 var game = new TicTacToe();
 
@@ -30,9 +37,5 @@ var game = new TicTacToe();
 
 
 
-// make grid visible
-// on click, add a character to the grid, x or o
-  // click also changes color of cell
-  // click freezes cell so it can't be clicked again
-// after each click, the character switches, x -> o, o -> x
+
 // reset button to clear board and restart game
