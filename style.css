@@ -1,0 +1,23 @@
+body{
+  width: 100%;
+
+}
+
+.gameboard{
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  border: 2px solid black;
+  border-style: dashed;
+  height: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tile{
+  border: 5px solid black;
+  width: 25%;
+  display: inline-table;
+  height: 200px;
+  margin: 0 auto;
+  vertical-align: top;
+}
