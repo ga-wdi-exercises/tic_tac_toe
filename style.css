@@ -1,0 +1,50 @@
+* {
+  margin: 10px auto;
+  text-align: center;
+  font-family: "myChalk", "Chalkboard", sans-serif;
+  color: #f4f4f0;
+  letter-spacing: 4px;
+}
+
+@font-face {
+  font-family: myChalk;
+  src: url('BlackBoard.ttf');
+}
+
+body {
+  background: url('chalkboard-backgrounds/chalkboard-blue.jpg');
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.winner {
+  color: #bcdf8a;
+}
+
+button {
+  color: #bcdf8a;
+  font-size: 25px;
+  background: url('chalkboard-backgrounds/chalkboard-blue.jpg');
+  border: outset #f4f4f0 3px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+td {
+  border: groove #f4f4f0 3px;
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  font-size: 100px;
+  padding: 0;
+}
+
+.xs {
+  color: #6fe7db;
+}
+
+.os {
+  color: #fad48b;
+}
