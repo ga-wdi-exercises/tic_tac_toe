@@ -22,3 +22,14 @@ table, tr, td {
 body {
   background-color: #66CCff;
 }
+
+.reset {
+  background: white;
+  border:1px solid #333;
+  padding:5px 10px;
+  color: red;
+  cursor:pointer;
+  font-family:Arial;
+  &:hover {
+    opacity:0.8;
+  }

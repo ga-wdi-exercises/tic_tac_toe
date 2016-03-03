@@ -1,35 +1,48 @@
-  $(document).ready(function(){
+    $(document).ready(function(){
 
-  var message= $(".messages");
-  var turn = $(".turn");
-  var table = $(".table");
-  var cells = $(".cell");
+    var message= $(".messages");
+    var turn = $(".turn");
+    var table = $(".table");
+    var cells = $(".cell");
+    var reset = $(".reset");
+    var counter= 0;
 
-  function eventListener() {
-    cells.click(addLetter);
+
+    function playerMoves(){
+     if (counter == 0){
+    $(this).text("X");
+    counter++;
+    } else if (counter == 1){
+    $(this).text("O");
+    counter--;
+  }
+  }
   }
 
-  function eventListenerTwo() {
-    cells.click(addLetterTwo);
-  }
+  // function eventListener(){
+  //     cells.click(addLetter);
+  //   }
 
-function addLetter(){
-  console.log(this);
-  $(this).text("X");
-}
+  // function addLetter(){
+  //   console.log(this);
+  //   $(this).text("X");
+  // }
 
-eventListener();
+  // eventListener();
+  //
+  // function eventListenerTwo() {
+  //   cells.click(addLetterTwo);
+  // }
+
+  // function addLetterTwo(){
+  //   console.log(this);
+  //   $(this).text("O");
+  // }
+
+  eventListenerTwo();
 
 
-function addLetterTwo(){
-  console.log(this);
-  $(this).text("O");
-}
-
-eventListenerTwo();
-  });
-
-
+      });
 
 //
 // function Cell(row, boxId) {
