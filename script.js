@@ -20,39 +20,31 @@ function Board(element) {
         box8: this.element.find(".box8"),
         box9: this.element.find(".box9")
     };
-    // this.numOfBoxes = Object.keys(this.elements).length;
-
-
-    // self.elements.box1.on("click", addXorO);
-    // self.elements.box2.on("click", addXorO);
-    // var allboxes = self.elements;
-    // console.log(allboxes);
 
 
     $(".box").on("click", function(){
+        //$(this) is referring to .box ie whatever the listener is listening for.
         console.log($(this));
         addXorO();
-        if(self.numOfMoves % 2 === 0){
-            //get inner html
-            $(this).html("O");
-            //change inner html
-        }else{
-            //enter an X
-            $(this).html("X");
-        }
+        changeLetter($(this));
     });
 
 
     function addXorO() {
         console.log("You clicked me!");
+        //add 1 to moves.
         self.numOfMoves++;
-        console.log(self.numOfMoves);
-        // changeLetter();
     }
 
     //switching between x's and o's
-    function changeLetter(){
-
+    function changeLetter(square){
+        if(self.numOfMoves % 2 === 0){
+            //get inner html and add an O
+            square.html("O");
+        }else{
+            //enter an X
+            square.html("X");
+        }
     }
 }
 
