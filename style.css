@@ -1,0 +1,22 @@
+.flex-container{
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+width: 500px;
+height: 500px;
+margin:auto;
+}
+.flex-item{
+background-color:blue;
+height:150px;
+width:150px;
+
+}
+  .wrapper{
+   text-align: center;
+ }
+.button{
+  border-color: black;
+  font-size: 30px;
+}
