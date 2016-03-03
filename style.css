@@ -1,16 +1,18 @@
 .square {
-  height: 50px;
-  width: 50px;
-  border: 1px solid black; 
+  height: 150px;
+  width: 150px;
+  border: 1px solid #282c37;
    margin: 5px;
   text-align: center;
-  font-size: 44px;
+  font-size: 120px;
+  font-family: 'Lato', sans-serif;
+  color: #282c37;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  margin-top: 30px;
 }
 
 .row {
@@ -18,10 +20,22 @@
   flex-direction: row;
 }
 
-.X {
-  background: red;
+.dark {
+  background: #2b90d9;
 }
 
-.Y {
-  background: blue;
+.light {
+  background: #9baec8;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: #d9e1e8
+}
+
+.reset, .turn {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 50px;
 }
