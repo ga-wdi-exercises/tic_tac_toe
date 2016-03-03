@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+body {
+  background-color: #add8e6;
+}
+
+h1 {
+  font-size: 48px;
+  color: black;
+  margin: 0;
+  text-align: center;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  margin: 10px;
+  min-width: 1000px;
+}
+
+#reset {
+  position: relative;
+  height: 75px;
+  width: 215px;
+  margin-top: 200px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#board {
+  position: relative;
+  overflow: hidden;
+  width: 530px;
+  height: 530px;
+  margin: auto;
+  margin-top: -275px;
+}
+.square {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  margin: 10px;
+  border: 3px solid crimson;
+}
