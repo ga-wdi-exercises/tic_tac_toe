@@ -50,3 +50,7 @@ button {
   background-color: red;
   color: #ffffff;
 }
+
+.clicked {
+  background-color: #ffffff;
+}

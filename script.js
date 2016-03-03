@@ -31,26 +31,28 @@ if (((squareOne.html() === "X") && (squareTwo.html() === "X") && (squareThree.ht
     ((squareThree.html() === "X") && (squareFive.html() === "X") && (squareSeven.html() === "X"))
 ) { alertify.alert("X has triumped!");
 } else if (((squareOne.html() === "O") && (squareTwo.html() === "O") && (squareThree.html() === "O")) ||
-      ((squareFour.html() === "O") && (squareFive.html() === "O") && (squareSix.html() === "O"))  ||
-      ((squareSeven.html() === "O") && (squareEight.html() === "O") && (squareNine.html() === "O"))  ||
-      ((squareOne.html() === "O") && (squareFour.html() === "O") && (squareSeven.html() === "O"))  ||
-      ((squareTwo.html() === "O") && (squareFive.html() === "O") && (squareEight.html() === "O"))  ||
-      ((squareThree.html() === "O") && (squareSix.html() === "O") && (squareNine.html() === "O"))  ||
-      ((squareOne.html() === "O") && (squareFive.html() === "O") && (squareNine.html() === "O"))  ||
-      ((squareThree.html() === "O") && (squareFive.html() === "O") && (squareSeven.html() === "O"))
+    ((squareFour.html() === "O") && (squareFive.html() === "O") && (squareSix.html() === "O"))  ||
+    ((squareSeven.html() === "O") && (squareEight.html() === "O") && (squareNine.html() === "O"))  ||
+    ((squareOne.html() === "O") && (squareFour.html() === "O") && (squareSeven.html() === "O"))  ||
+    ((squareTwo.html() === "O") && (squareFive.html() === "O") && (squareEight.html() === "O"))  ||
+    ((squareThree.html() === "O") && (squareSix.html() === "O") && (squareNine.html() === "O"))  ||
+    ((squareOne.html() === "O") && (squareFive.html() === "O") && (squareNine.html() === "O"))  ||
+    ((squareThree.html() === "O") && (squareFive.html() === "O") && (squareSeven.html() === "O"))
   ) { alertify.alert("O stands victorious!");
-}
+  }
 }
 
 squareOne.click(function(){
 if (squareOne.contents().length === 0) {
   if (playerTwo === false){
     squareOne.html("X");
+    squareOne.addClass("clicked");
     playerTwo = true;
     getWinner();
     return playerTwo;
   } else if (playerTwo === true) {
     squareOne.html("O");
+    squareOne.addClass("clicked");
     playerTwo = false;
     getWinner();
     return playerTwo;
@@ -62,11 +64,13 @@ squareTwo.click(function(){
 if (squareTwo.contents().length === 0) {
   if (playerTwo === false){
     squareTwo.html("X");
+    squareTwo.addClass("clicked");
     playerTwo = true;
     getWinner();
     return playerTwo;
   } else if (playerTwo === true) {
     squareTwo.html("O");
+    squareTwo.addClass("clicked");
     playerTwo = false;
     getWinner();
     return playerTwo;
@@ -78,11 +82,13 @@ squareThree.click(function(){
 if (squareThree.contents().length === 0) {
   if (playerTwo === false){
     squareThree.html("X");
+    squareThree.addClass("clicked");
     playerTwo = true;
     getWinner();
     return playerTwo;
   } else if (playerTwo === true) {
     squareThree.html("O");
+    squareThree.addClass("clicked");
     playerTwo = false;
     getWinner();
     return playerTwo;
@@ -94,11 +100,13 @@ squareFour.click(function(){
 if (squareFour.contents().length === 0) {
   if (playerTwo === false){
     squareFour.html("X");
+    squareFour.addClass("clicked");
     playerTwo = true;
     getWinner();
     return playerTwo;
   } else if (playerTwo === true) {
     squareFour.html("O");
+    squareFour.addClass("clicked");
     playerTwo = false;
     getWinner();
     return playerTwo;
@@ -110,11 +118,13 @@ squareFive.click(function(){
 if (squareFive.contents().length === 0) {
   if (playerTwo === false){
     squareFive.html("X");
+    squareFive.addClass("clicked");
     playerTwo = true;
     getWinner();
     return playerTwo;
   } else if (playerTwo === true) {
     squareFive.html("O");
+    squareFive.addClass("clicked");
     playerTwo = false;
     getWinner();
     return playerTwo;
@@ -126,11 +136,13 @@ squareSix.click(function(){
 if (squareSix.contents().length === 0) {
   if (playerTwo === false){
     squareSix.html("X");
+    squareSix.addClass("clicked");
     playerTwo = true;
     getWinner();
     return playerTwo;
   } else if (playerTwo === true) {
     squareSix.html("O");
+    squareSix.addClass("clicked");
     playerTwo = false;
     getWinner();
     return playerTwo;
@@ -142,27 +154,13 @@ squareSeven.click(function(){
 if (squareSeven.contents().length === 0) {
   if (playerTwo === false){
     squareSeven.html("X");
+    squareSeven.addClass("clicked");
     playerTwo = true;
     getWinner();
     return playerTwo;
   } else if (playerTwo === true) {
     squareSeven.html("O");
-    playerTwo = false;
-    getWinner();
-    return playerTwo;
-  }
-}
-});
-
-squareSeven.click(function(){
-if (squareSeven.contents().length === 0) {
-  if (playerTwo === false){
-    squareSeven.html("X");
-    playerTwo = true;
-    getWinner();
-    return playerTwo;
-  } else if (playerTwo === true) {
-    squareSeven.html("O");
+    squareSeven.addClass("clicked");
     playerTwo = false;
     getWinner();
     return playerTwo;
@@ -174,11 +172,13 @@ squareEight.click(function(){
 if (squareEight.contents().length === 0) {
   if (playerTwo === false){
     squareEight.html("X");
+    squareEight.addClass("clicked");
     playerTwo = true;
     getWinner();
     return playerTwo;
   } else if (playerTwo === true) {
     squareEight.html("O");
+    squareEight.addClass("clicked");
     playerTwo = false;
     getWinner();
     return playerTwo;
@@ -190,11 +190,13 @@ squareNine.click(function(){
 if (squareNine.contents().length === 0) {
   if (playerTwo === false){
     squareNine.html("X");
+    squareNine.addClass("clicked");
     playerTwo = true;
     getWinner();
     return playerTwo;
   } else if (playerTwo === true) {
     squareNine.html("O");
+    squareNine.addClass("clicked");
     playerTwo = false;
     getWinner();
     return playerTwo;
@@ -205,6 +207,7 @@ if (squareNine.contents().length === 0) {
 // Refactor: include reset as a prototype on the constructor
 
 resetButton.click(function(){
+$("td").removeClass("clicked");
 squareOne.html("");
 squareTwo.html("");
 squareThree.html("");
