@@ -12,12 +12,16 @@ var ttt = {
             },
   clicks:   function() {
               for (var i = 0; i < $('.clickable').length; i++){
-              $('.clickable').eq(i).on("click", function() {
+              $('.clickable').eq(i).on("click", function() { //jshint ignore:line
                 if (ttt.counter%2===0){
-                 $(this).html("x").off("click").css("backgroundColor","red");
-                 ttt.counter+=1;}
-               else {$(this).html("o").off("click").css("backgroundColor","blue");
-                 ttt.counter+=1;}
+                 $(this).html("X").off("click").css("backgroundColor","rgb(17, 188, 17");
+                 ttt.counter+=1;
+                 $('p').html("Next Move: O");
+                }else{
+                 $(this).html("O").off("click").css("backgroundColor","rgb(13, 141, 141)");
+                 ttt.counter+=1;
+                 $('p').html("Next Move: X");
+                }
                });
               }
             },
@@ -26,6 +30,7 @@ reset: function() {$('button').on("click", function() {
         ttt.counter = 0;
         ttt.createBoard();
         ttt.clicks();
+        $('p').html("Next Move: X");
         });
        }
 };
