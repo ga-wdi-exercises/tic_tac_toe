@@ -27,6 +27,7 @@
   var squareSeven = $("#bottomRow .left");
   var squareEight = $("#bottomRow .middle");
   var squareNine = $("#bottomRow .right");
+  var resetButton = $("button");
 
   var playerTwo = false;
 
@@ -168,4 +169,16 @@ squareNine.click(function(){
       return playerTwo;
     }
   }
+});
+
+resetButton.click(function(){
+  squareOne.html("");
+  squareTwo.html("");
+  squareThree.html("");
+  squareFour.html("");
+  squareFive.html("");
+  squareSix.html("");
+  squareSeven.html("");
+  squareEight.html("");
+  squareNine.html("");
 });
