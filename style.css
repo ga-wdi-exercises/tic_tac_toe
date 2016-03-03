@@ -1,0 +1,19 @@
+.board {
+  color: black;
+  height: 35em;
+  width: 35em;
+}
+
+td {
+  background-color: #cce6ff;
+  border: 5px solid black;
+  text-align: center;
+  font-size: 12em;
+  font-family: tahoma;
+  height: 1em;
+  width: 1em;
+}
+
+body {
+  padding: 1px 1px 1px 1px;
+}
