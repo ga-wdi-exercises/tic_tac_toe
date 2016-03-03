@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.play-area {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 400px;
+}
+
+.tile {
+  margin: auto;
+  display: flex;
+  height: 30%;
+  width: 30%;
+  border: 1px solid red;
+  border-radius: 10px;
+  font-size: 2em;
+}
+
+.tile span {
+  margin: auto;
+}
