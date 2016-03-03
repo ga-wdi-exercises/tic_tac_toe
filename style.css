@@ -10,3 +10,11 @@ td {
   font-size: 100px;
   padding: 0;
 }
+
+.xs {
+  color: turquoise;
+}
+
+.os {
+  color: gold;
+}
