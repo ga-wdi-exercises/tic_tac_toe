@@ -1,19 +1,21 @@
-//Global variables: change to local later
+//sets isO to false so first click is an X, next click an O, then an X, etc.
 var isO = false;
 
+//function containing the events to play the game
 function playTicTac() {
   var gameBoard = $("#gameBoard");
   gameBoard.on("click", clickSquare);
   $("button").on("click", clearBoard);
 }
-
-var allSquares = $("#one, #two, #three, #four, #five, #six, #seven, #eight, #nine");
-
 playTicTac();
+
+//variable to gather all of the squares in an array
+var allSquares = $("#one, #two, #three, #four, #five, #six, #seven, #eight, #nine");
 
 function clickSquare(event) {
   event.preventDefault();
-
+  //variables that are arrays of potential winning locations. when all three values in the array 1) have a value and 2) have matching values, then that value is the winner!
+  //with more time, I would like to refactor these variables into an object.
   var colLeft = $("#one, #four, #seven");
   var colMid = $("#two, #five, #eight");
   var colRight = $("#three, #six, #nine");
@@ -23,6 +25,7 @@ function clickSquare(event) {
   var diagOne = $("#one, #five, #nine");
   var diagTwo = $("#three, #five, #seven");
 
+  //when square is clicked, enter an X or O.
   if (isO === false) {
     //add X into square when clicked
     event.target.innerHTML = "X";
@@ -36,6 +39,8 @@ function clickSquare(event) {
     isO = false;
     $("h2").html("X's Turn");
   }
+
+  //Check to see if that X or O has any matches that would declare a winner.
   getWin(colLeft);
   getWin(colMid);
   getWin(colRight);
@@ -46,6 +51,7 @@ function clickSquare(event) {
   getWin(diagTwo);
 }
 
+//when reset game button is clicked, remove all of the values from the squares and reset that state of the game.
 function clearBoard(event) {
   event.preventDefault();
   for (i = 0; i < 9; i++) {
@@ -56,6 +62,7 @@ function clearBoard(event) {
         .removeClass("winner");
 }
 
+//When all three values in the array 1) have a value and 2) have matching values, then that value is the winner!
 function getWin(squares) {
   if (squares.eq(0).html() !== "" && squares.eq(0).html() == squares.eq(1).html() && squares.eq(0).html() == squares.eq(2).html()) {
     $("h2").html(squares.eq(0).html() + " is the winner!")
