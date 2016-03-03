@@ -1,8 +1,14 @@
 * {
   margin: 10px auto;
   text-align: center;
-  font-family: "Chalkboard", sans-serif;
+  font-family: "myChalk", "Chalkboard", sans-serif;
   color: #f4f4f0;
+  letter-spacing: 4px;
+}
+
+@font-face {
+  font-family: myChalk;
+  src: url('BlackBoard.ttf');
 }
 
 body {
@@ -23,6 +29,7 @@ button {
   background: url('chalkboard-backgrounds/chalkboard-blue.jpg');
   border: outset #f4f4f0 3px;
   border-radius: 5px;
+  padding: 10px;
 }
 
 td {
