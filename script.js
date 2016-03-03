@@ -51,6 +51,6 @@ function clearBoard(event) {
 
 function getWin(squares) {
   if (squares.eq(0).html() !== "" && squares.eq(0).html() == squares.eq(1).html() && squares.eq(0).html() == squares.eq(2).html()) {
-    console.log("There was a winner");
+    $("h2").html(squares.eq(0).html() + " is the winner!");
   }
 }
