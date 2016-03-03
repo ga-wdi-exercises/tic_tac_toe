@@ -7,8 +7,8 @@ var turn = $(".turn");
 var table = $(".table");
 
 $(".cell").click(function(){
-  //add class of cross or circle
-  prompt("X or O")
-  $("td").addClass('');
+  //
+  $("td").text("X");
+  playerOne === "X";
 });
 });
