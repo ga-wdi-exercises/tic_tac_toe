@@ -1,9 +1,11 @@
 $(document).ready(function(){
     var mainBoard = new Board($("#board"));
+
 });
 
 function Board(element) {
     //this.element == mainBoard which is my entire container div
+    var self = this;
     this.element = element;
     this.numOfMoves = 0;
     this.elements = {
@@ -18,30 +20,35 @@ function Board(element) {
         box8: this.element.find(".box8"),
         box9: this.element.find(".box9")
     };
-
-    this.elements.box1.on("click", function(){
-        console.log("You clicked me!");
-    });
+    // this.numOfBoxes = Object.keys(this.elements).length;
 
 
-
-    // for(var i=0; i<this.elements.length;i++){
-    //
-    //     console.log(i);
-    //     console.log(this.elements[i]);
-    //
-    //     (this.elements[i]).on("click", function(){
-    //         console.log("You clicked me!");
-    //     });
+    this.elements.box1.on("click", addXorO);
+    this.elements.box2.on("click", addXorO);
+    // var allboxes = this.elements;
+    // console.log(allboxes);
+    // for(var boxes in allboxes){
+    //     boxes.on("click", youClickedMe);
     // }
 
-    //user for later for switching between x's and o's
-    function changeLetter(){
-        if(this.numOfMoves % 2 === 0){
-            //enter an X
-        }else{
-            //enter an O
-        }
+
+    function addXorO() {
+        console.log("You clicked me!");
+        self.numOfMoves++;
+        console.log(self.numOfMoves);
+        changeLetter();
     }
 
+    //switching between x's and o's
+    function changeLetter(){
+        if(self.numOfMoves % 2 === 0){
+            //get inner html
+            console.log(self.elements.box1.text("O"));
+            //change inner html
+        }else{
+            //enter an X
+        }
+    }
 }
+
+//TODO: when done with js merge branch into anissa_solution
