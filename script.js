@@ -80,6 +80,9 @@ function Board(element) {
             alert("you won diagonally!");
         }
         //FIXME: how to add cat
+        //FIXME: code only works if there is innerhtml set in the code. when I try to erase the 0-8 numbers in index.html then declareWinner thinks you won, because it becomes true for all conditions.
+        //FIXME: the third condition in each ifelse statment can be erased. 
+
     }
 }
 
