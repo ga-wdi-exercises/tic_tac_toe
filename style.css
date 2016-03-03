@@ -19,4 +19,5 @@ body{
   display: inline-table;
   height: 200px;
   margin: 0 auto;
+  vertical-align: top;
 }
