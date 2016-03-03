@@ -1,0 +1,29 @@
+A user should be able to click on different squares to make a move.
+
+Every click will alternate between marking an X and O.
+
+Upon marking of an individual cell, use JavaScript to add a class
+to each cell to display separate colors.
+
+A cell should not be able to be replayed once marked.
+
+Add a reset button that will clear the contents of the board.
+
+Make a grid using a form and cells use row and cells
+click events will be the X and Os
+clearinterval button at end
+
+
+
+<div class="table" id="overalltable"></div>
+<table>
+  <td class="grid" id="col-1-row-1"></div>
+  <div class="grid" id="col-1-row-2"></div>
+  <div class="grid" id="col-1-row-3"></div>
+  <div class="grid" id="col-2-row-1"></div>
+  <div class="grid" id="col-2-row-2"></div>
+  <div class="grid" id="col-2-row-3"></div>
+  <div class="grid" id="col-3-row-1"></div>
+  <div class="grid" id="col-3-row-2"></div>
+  <div class="grid" id="col-3-row-3"></div>
+</table>

@@ -1,0 +1,99 @@
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter|Permanent+Marker|Gochi+Hand|Patrick+Hand|Neucha' rel='stylesheet' type='text/css'>
+
+body {
+  background-image: url("seamlesstexture29_1200.jpg");
+  font-family: 'Gochi Hand', sans-serif;
+  margin:0 auto;
+  text-align: center;
+  color: red;
+}
+h1 {
+  font-family: 'Gochi Hand', sans-serif;
+  text-align: center;
+  font-size: 75px;
+}
+
+.table {
+margin: 0 auto;
+border-color: #555;
+}
+
+.grid {
+  font-family: 'Gochi Hand', sans-serif;
+  color: green;
+  width:50px;
+  height:50px;
+  border:1px solid #555;
+}
+:before {
+  font-size:28
+  line-height:1;
+}
+.X :before {
+  content: "X";
+  color: blue;
+}
+.O :before {
+  content: "O";
+  color: red;
+}
+/*#col-1-row-1{
+
+}
+#col-2-row-1{
+
+}
+#col-3-row-1{
+
+}
+#col-1-row-2{
+
+}
+#col-2-row-2{
+
+}
+#col-3-row-2{
+
+}
+#col-1-row-3{
+
+}
+#col-2-row-3{
+
+}
+#col-3-row-3{
+}*/
+/*:before{
+
+#x:before {
+  content: "X";
+  color: red;
+}
+
+#o:before {
+  content: "O";
+  color: yellow;
+}
+}*/
+
+#resetButton{
+  height: 45px;
+  width: auto;
+  border-radius: 25px;
+  color: black;
+  font-size: 24px;
+  background-color: yellow;
+}
+
+.reset{
+  background:#555;
+  border:1px solid #333;
+  padding:5px 10px;
+  color:#FFF;
+  cursor:pointer;
+  font-family: 'Gochi Hand', Arial, sans-serif;
+  text-transform:uppercase;
+  &:hover {
+      opacity:0.8;
+}
+}
