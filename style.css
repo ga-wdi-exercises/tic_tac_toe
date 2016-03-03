@@ -36,7 +36,5 @@ div.wrapper {
 }
 
 canvas {
-   width: 700px;
-   height: 700px;
    border:1px solid #000000;
 }
