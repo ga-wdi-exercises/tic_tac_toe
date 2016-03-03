@@ -2,14 +2,32 @@
   margin: 10px auto;
   text-align: center;
   font-family: "Chalkboard", sans-serif;
+  color: #f4f4f0;
 }
 
 body {
   background: url('chalkboard-backgrounds/chalkboard-blue.jpg');
 }
 
+h2 {
+  font-size: 30px;
+}
+
+.winner {
+  color: #bcdf8a;
+}
+
+button {
+  color: #bcdf8a;
+  font-size: 25px;
+  background: url('chalkboard-backgrounds/chalkboard-blue.jpg');
+  border: outset #f4f4f0 3px;
+  border-radius: 5px;
+}
+
 td {
-  border: solid white 1px;
+  border: groove #f4f4f0 3px;
+  border-radius: 10px;
   width: 150px;
   height: 150px;
   font-size: 100px;
@@ -17,13 +35,9 @@ td {
 }
 
 .xs {
-  color: turquoise;
+  color: #6fe7db;
 }
 
 .os {
-  color: gold;
-}
-
-.winner {
-  color: green;
+  color: #fad48b;
 }
