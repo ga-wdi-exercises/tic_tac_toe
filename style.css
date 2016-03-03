@@ -1,0 +1,56 @@
+h1{
+  text-align: center;
+  font-size: 4em;
+  color: gray;
+  font-family: arial;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  /*text-shadow: -2px 3px #000;*/
+
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+  font-family: arial;
+  /*text-shadow: -2px 3px #000;*/
+  margin-bottom: 10px;
+  margin-top: -15px;
+  background-color: red;
+}
+
+#board{
+  background-color: black;
+  width: 501px;
+  height: 501px;
+  margin: 0px auto;
+  padding: 3px;
+}
+
+.squares {
+  background-color:white;
+  width: 157px;
+  height: 157px;
+  float: left;
+  margin: 5px;
+}
+
+.circle {
+  background-size: 157px 157px;
+  float: left;
+  margin: 5px;
+  background-image: url("images/circle.png");
+}
+
+.x {
+  background-size: 157px 157px;
+  float: left;
+  margin: 5px;
+  background-image: url("images/x.png");
+}
+
+
+.textStyle{
+  opacity: 0;
+}
