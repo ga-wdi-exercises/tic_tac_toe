@@ -29,7 +29,7 @@ if (((squareOne.html() === "X") && (squareTwo.html() === "X") && (squareThree.ht
     ((squareThree.html() === "X") && (squareSix.html() === "X") && (squareNine.html() === "X"))  ||
     ((squareOne.html() === "X") && (squareFive.html() === "X") && (squareNine.html() === "X"))  ||
     ((squareThree.html() === "X") && (squareFive.html() === "X") && (squareSeven.html() === "X"))
-) { alert("X has won!");
+) { alertify.alert("X has triumped!");
 } else if (((squareOne.html() === "O") && (squareTwo.html() === "O") && (squareThree.html() === "O")) ||
       ((squareFour.html() === "O") && (squareFive.html() === "O") && (squareSix.html() === "O"))  ||
       ((squareSeven.html() === "O") && (squareEight.html() === "O") && (squareNine.html() === "O"))  ||
@@ -38,7 +38,7 @@ if (((squareOne.html() === "X") && (squareTwo.html() === "X") && (squareThree.ht
       ((squareThree.html() === "O") && (squareSix.html() === "O") && (squareNine.html() === "O"))  ||
       ((squareOne.html() === "O") && (squareFive.html() === "O") && (squareNine.html() === "O"))  ||
       ((squareThree.html() === "O") && (squareFive.html() === "O") && (squareSeven.html() === "O"))
-  ) { alert("O has won!");
+  ) { alertify.alert("O stands victorious!");
 }
 }
 
@@ -214,4 +214,5 @@ squareSix.html("");
 squareSeven.html("");
 squareEight.html("");
 squareNine.html("");
+alertify.success("Game Board Cleared");
 });

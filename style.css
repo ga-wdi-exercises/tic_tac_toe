@@ -2,6 +2,7 @@ body {
   font-family: Georgia, serif;
   position:relative;
   background-color: #D0D0D0;
+  font-size: 1.25em;
 }
 
 h1 {
@@ -20,13 +21,13 @@ table {
   position: inherit;
   width: 100% auto;
   height: 100% auto;
-  margin: 2em auto;
+  margin: 1em auto;
 }
 
 td {
   padding: 15px;
-  width: 100px;
-  height: 100px;
+  width: 115px;
+  height: 115px;
   font-size: 5em;
   text-align: center;
 }
@@ -42,7 +43,7 @@ td:hover {
 
 button {
   padding: 10px;
-  margin: 2em;
+  margin: 1em auto;
   font-size: 2em;
   position: inherit;
   border-radius: 10px;
