@@ -8,6 +8,7 @@ var ttt = {
               },
   addReset: function(){
             $('body').append("<button>Reset</button>");
+            ttt.reset();
           },
   clicks:   function() {
               for (var i = 0; i < $('.clickable').length; i++){
@@ -20,9 +21,16 @@ var ttt = {
                ttt.counter+=1;}
               });
               }
-            }
+            },
+reset: function() {$('button').on("click", function() {
+        $('.clickable').remove();
+        ttt.counter = 0;
+        ttt.createBoard();
+        ttt.clicks();});
+        }
 };
 
 ttt.createBoard();
-ttt.addReset();
 ttt.clicks();
+ttt.addReset();
+// ttt.reset();
