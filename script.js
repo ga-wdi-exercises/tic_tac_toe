@@ -63,7 +63,7 @@ threesCompany = function(check) {
 
 //if the winning click is the last pick, it is registering as a loser
 checkWinner = function(three) {
-    if ((three[0].css("background-image") === three[1].css("background-image")) && (three[0].css("background-image") === three[2].css("background-image"))) {
+    if ((game.click <= 9) && ((three[0].css("background-image") === three[1].css("background-image")) && (three[0].css("background-image") === three[2].css("background-image")))) {
       alert("Winner")
     } else if ((game.click === 9) && ((three[0].css("background-image") !== three[1].css("background-image")) || (three[0].css("background-image") !== three[2].css("background-image")))) {
         alert("loser")
@@ -77,6 +77,8 @@ clear = function() {
     game.click = 0
   }
 }
+
+$("button").on("click", clear)
 
 
 // $.each(game.threes.topRow, function(){
