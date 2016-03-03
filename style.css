@@ -1,0 +1,73 @@
+body {
+  background-image: url('beads.jpg');
+  /*background image found: http://party.lovetoknow.com/Slideshow:Mardi_Gras_Colors*/
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Henny Penny', cursive;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 75px;
+  margin-bottom: -5px;
+  margin-top: -5px;
+}
+
+.board {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-content: center;
+}
+
+.square {
+  outline: 2px solid white;
+  background-color: gold;
+  color: gold;
+  width: 33%;
+  height: 33%;
+}
+
+.xo {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 30%;
+}
+
+.X {
+  background-color: purple;
+}
+
+.O {
+  background-color: green;
+}
+
+.festive span:nth-of-type(even) {
+  color: purple;
+}
+
+.festive span:nth-of-type(odd) {
+  color: green;
+}
+
+.button {
+  background-color: purple;
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    background: rgba(255 ,255, 255, .8);
+  }
+}
