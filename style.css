@@ -1,0 +1,19 @@
+.square {
+  height: 50px;
+  width: 50px;
+  background: grey;
+  margin: 5px;
+  text-align: center;
+  font-size: 44px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
