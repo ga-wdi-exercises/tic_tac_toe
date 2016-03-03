@@ -32,6 +32,9 @@ h1 {
   height: 75px;
   width: 215px;
   border: 3px solid crimson;
+  font-size: 38px;
+  color: black;
+  text-align: center;
 }
 
 img {
