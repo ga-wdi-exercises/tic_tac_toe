@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <header>
@@ -10,27 +11,39 @@
         </header>
         <main id="game">
             <div id="stats">
-                <div id="wins"></div>
-                <div id="losses"></div>
+                <div id="wins">
+                    <table>
+                        <tr><td class="outcome">Wins</td></tr>
+                        <tr><td class="score"></td>
+                    </table>
+                </div>
+                <div id="losses">
+                    <table>
+                        <tr><td class="outcome">Losses</td></tr>
+                        <tr><td class="score"></td>
+                    </table>
+                </div>
             </div>
-            <table id="board">
-                <tr id="row1">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr id="row2">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr id="row3">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-            <button id="start">Start</button>
+            <div id="play">
+                <table id="board">
+                    <tr id="row1">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="row2">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr id="row3">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <button id="start">Start</button>
+            </div>
         </main>
     </body>
 </html>

@@ -1,0 +1,51 @@
+/*@import url();*/
+
+body * {
+    font-family: arial, sans-serif;
+    text-align: center;
+}
+
+#game, #play {
+    display: flex;
+}
+
+#game {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#play {
+    flex-direction: column;
+}
+
+#board {
+    background-color: black;
+    border-spacing: 3px;
+}
+
+#start {
+    height: 40px;
+    width: 100px;
+    margin: 25px auto;
+}
+
+#stats div {
+    height: 80px;
+    margin-right: 25px;
+}
+
+#stats td {
+    height: 20px;
+    width: 50px;
+}
+
+#stats .outcome {
+    text-decoration: underline;
+}
+
+#board td {
+    height: 110px;
+    width: 110px;
+    background-color: #A3AEC8;
+}
