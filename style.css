@@ -44,4 +44,6 @@ button {
   font-size: 2em;
   position: inherit;
   border-radius: 10px;
+  background-color: red;
+  color: #ffffff;
 }
