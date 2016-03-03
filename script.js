@@ -4,10 +4,11 @@ $(document).ready(function(){
   var messages = $(".messages");
   var turn = $(".turn");
   var table = $("table");
+  getNextPlayer(turn, player);
 
 //click a cell
-$("button").on("click",function(){
-
-  console.log("clicked");
+$(".cell").click(function(){
+  console.log("click");
 })
+
 }
