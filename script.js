@@ -4,22 +4,24 @@
 
   function TicTacToe() {
     this.board = $('.board');
-    this.size = 3;
+    this.size = 9;
 
     var ttt = this;
     for(var i = 0; i < this.size; i++) {
-      for(var j = 0; j < this.size; j++) {
-        var square = $('<div class="square"><div class="xo">X</div></div>');
-        square.appendTo(this.board);
-        square.on('click', function() {
-          ttt.makeAMark(square);
-        });
-      }
+      var square = $('<div class="square"><div class="xo">X</div></div>');
+      square.attr('id', i);
+      square.appendTo(this.board);
+      square.on('click', function() {
+        console.log(square);
+        //ttt.makeAMark();
+      });
     }
   }
 
-  TicTacToe.prototype.makeAMark = function (square) {
-    $(square).html('O');
+  TicTacToe.prototype.makeAMark = function (index) {
+    console.log($('#'+index));
+
+
   };
 
 var game = new TicTacToe();
