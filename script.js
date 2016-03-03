@@ -3,6 +3,7 @@ $(document).ready(function() {
   var square = $(".square");
   var reset = $("#reset");
   var winner = $("#winner");
+  var board = $("#board");
   var clickCounter = 0;
   var xScore = 1;
   var oScore = 1;
@@ -13,7 +14,6 @@ $(document).ready(function() {
       if ((clickCounter % 2 === 0) && ($(this).hasClass("clicked")) === false){
         $(this).html("<img class='o' src='o.png'/>");
         oScore = this.id * 2 * oScore;
-        console.log(oScore);
       }
       else if ((clickCounter % 2 > 0) && ($(this).hasClass("clicked")) === false){
         $(this).html("<img class='x' src='x.png'/>");
@@ -36,14 +36,18 @@ $(document).ready(function() {
         console.log(oScore);
       }
   },
-    //
-    // resetGame: function() {
-    //
-    // }
+
+    resetGame: function() {
+      square.html("");
+      square.removeClass("clicked");
+      xScore = 1;
+      oScore = 1;
+      game.play();
+    }
   };
 
   for (var i = 0; i < 9; i++) {
     square.eq(i).on("click", game.play);
   }
-  // reset("click", game.resetGame);
+  reset.on("click", game.resetGame);
 });
