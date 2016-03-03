@@ -1,0 +1,56 @@
+body {
+  background-image: url("./images/brickWall.jpg");
+}
+
+h1 {
+  text-align: center;
+  font-family: "3Dumb";
+  font-size: 70pt;
+  margin-bottom: 4px;
+  color: white;
+}
+
+#message {
+  text-align: center;
+  font-family: "Open Sans Condensed";
+  font-size: 40pt;
+  color: white;
+}
+
+.play-again-button {
+  text-align: center;
+}
+
+.play-again-text {
+  text-align: center;
+  padding: 10px 20px;
+  width: 658px;
+  font-size: 26px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #a1d3b0;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  text-decoration: none;
+}
+
+table.board {
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  width: 700px;
+  border: white dashed;
+  table-layout: fixed;
+}
+
+.square {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 60pt;
+  font-weight: bold;
+  font-family: "3Dumb";
+  color: white;
+  border: white dashed;
+}
