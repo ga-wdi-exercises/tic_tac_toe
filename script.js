@@ -45,7 +45,8 @@ var counter = 0;
 function sendX() {
 
   for (var i = 0; i < 9; i++) {
-    $(".box").on("click", function(){
+    $(".box").eq(i).on("click", function(){
+      // console.log("hello");
       if (counter%2 === 0) {
         $(this).html("X");
         counter = counter +1;
