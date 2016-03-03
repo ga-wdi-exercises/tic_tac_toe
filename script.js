@@ -40,9 +40,11 @@
   };
 
 
-  // reset button to clear board and restart game
-
-var game = new TicTacToe();
+$('#reset').on('click', function() {
+  $('.square').remove();
+  $(this).html('Restart');
+  var game = new TicTacToe();
+});
 
 
 
