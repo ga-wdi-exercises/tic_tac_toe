@@ -1,9 +1,21 @@
 // create a 3x3 grid
   // get board
   // insert divs into board
-function TicTacToe() {
-  this.board = $('.board');
-}
+
+  function TicTacToe() {
+    this.board = $('.board');
+    this.size = 3;
+
+    for(var i = 0; i < this.size; i++) {
+      for(var j = 0; j < this.size; j++) {
+        var square = $('<div class="square">A square</div>');
+        square.appendTo(this.board);
+      }
+    }
+
+  }
+
+var game = new TicTacToe();
 
 
 
