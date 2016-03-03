@@ -12,8 +12,13 @@ function displayMessage(msg){
 }
 
 function userMove(){
-  this.innerText = document.turn;
- switchPlayer();
+  if (this.innerText == ""){
+    this.innerText = document.turn;
+   switchPlayer();
+  }
+  else {
+    displayMessage ("Choose a blank spot.")
+  }
 }
 
 function switchPlayer(){
