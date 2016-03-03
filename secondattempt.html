@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="secondattempt.css">
+  <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
+  <script>
+//start game function
+//for loop to loop through each index (square/box) on the board
+  function startGame() {
+    for(var i = 1; i <= 9; i++) {
+//clear the appropriate box/index on the board
+      clearBox(i);
+    }
+//we started with X being the first player...but...
+    document.turn = "X";
+//this function randomizes between X and O, permitting each to start at least half of the time (the 0.5)
+    if(Math.random() < 0.5) {
+      document.turn = "O";
+    }
+//set the winner to null up here...because we don't have a winner just yet
+    document.winner = null;
+    setMessage(document.turn + " gets to start.");
+  }
+//grabbing the ID message from my HTML and assigning it msg
+  function setMessage(msg) {
+    document.getElementById("message").innerHTML = msg;
+  }
+
+//next move function
+  function nextMove(square) {
+//this does not allow the losing player to continue after the other player has already won the game...
+//becase the winner is no longer null
+  if(document.winner != null) {
+//message the player that the other player has already won
+      setMessage(document.winner + " already won the game!");
+//otherwise, if there is no winner....
+    }else if(square.innerHTML == "") {
+      square.innerHTML = document.turn;
+//switch turn to the next player
+      switchTurn();
+//let that player know that that square has already been used. this isn't really necessary right now....maybe with a more advanced computer AI game
+  } else {
+      setMessage("That square is already used!");
+  }
+}
+
+//switch turn function
+  function switchTurn() {
+//after checking for a winner, if it's this player's turn...
+    if(checkForWinner(document.turn)) {
+//message them congratulations!
+      setMessage("Congratulations, " + document.turn + "! You win!");
+      document.winner = document.turn;
+//otherwise...continue with the game
+    }else if(document.turn == "X") {
+      document.turn = "O";
+      setMessage("It's " + document.turn + "'s turn!");
+    }else {
+      document.turn = "X";
+      setMessage("It's " + document.turn + "'s turn!");
+  }
+}
+//checking for winners. this accounts for winning rows, columns, and diagnols
+function checkForWinner(move) {
+  var result = false;
+  if(checkRow(1, 2, 3, move) ||
+     checkRow(4, 5, 6, move) ||
+     checkRow(7, 8, 9, move) ||
+     checkRow(1, 4, 7, move) ||
+     checkRow(2, 5, 8, move) ||
+     checkRow(3, 6, 9, move) ||
+     checkRow(1, 5, 9, move) ||
+     checkRow(3, 5, 7, move)) {
+
+    result = true;
+  }
+  return result;
+}
+
+//checking a row for a winning or losing combination of Xs and Os
+function checkRow(a, b, c, move) {
+  var result = false;
+  if(getBox(a) == move && getBox(b) == move && getBox(c) == move) {
+    result = true;
+  }
+  return result;
+}
+//retrieving the Id number of the box clicked on
+function getBox(number) {
+  return document.getElementById("s" + number).innerHTML;
+}
+//clearing the box by retrieving the Id number
+function clearBox(number) {
+  document.getElementById("s" + number).innerHTML = "";
+}
+
+  </script>
+</head>
+  <body onload="startGame();">
+    <h1>Brittany's Tic Tac Toe!</h1>
+    <div id="message">messages will go here</div>
+    <div class="play-again-button">
+      <a class="play-again-text" href="javascript:startGame();">Try Again?</a>
+    </div>
+    <table class="board" border="1">
+      <tr>
+          <td id="s1" class="square" onclick="nextMove(this);"></td>
+          <td id="s2" class="square" onclick="nextMove(this);"></td>
+          <td id="s3" class="square" onclick="nextMove(this);"></td>
+      </tr>
+      <tr>
+        <td id="s4" class="square" onclick="nextMove(this);"></td>
+        <td id="s5" class="square" onclick="nextMove(this);"></td>
+        <td id="s6" class="square" onclick="nextMove(this);"></td>
+      </tr>
+      <tr>
+        <td id="s7" class="square" onclick="nextMove(this);"></td>
+        <td id="s8" class="square" onclick="nextMove(this);"></td>
+        <td id="s9" class="square" onclick="nextMove(this);"></td>
+      </tr>
+    </table>
+
+  </body>
+</html>
