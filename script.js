@@ -59,10 +59,12 @@ $(document).ready(function() {
         lineOfThree.push(line[i].innerHTML);
       };
 
+      console.log(this.winner);
+
       if (lineOfThree[0] === lineOfThree[1] && lineOfThree[1] === lineOfThree[2]) {
         this.winner = lineOfThree[0];
 
-        alert("The winner is: " + this.winner)
+        alert("The winner is: " + this.winner);
       }
     },
     assessTie: function() {
