@@ -1,0 +1,13 @@
+* {
+  margin: 1em auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+td {
+  border: solid black 1px;
+  width: 10em;
+  height: 10em;
+}
