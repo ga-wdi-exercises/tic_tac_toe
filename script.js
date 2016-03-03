@@ -6,14 +6,21 @@
     this.board = $('.board');
     this.size = 3;
 
+    var ttt = this;
     for(var i = 0; i < this.size; i++) {
       for(var j = 0; j < this.size; j++) {
-        var square = $('<div class="square">A square</div>');
+        var square = $('<div class="square"><div class="xo">X</div></div>');
         square.appendTo(this.board);
+        square.on('click', function() {
+          ttt.makeAMark();
+        });
       }
     }
-
   }
+
+  TicTacToe.prototype.makeAMark = function () {
+    console.log('you clicked a div!')
+  };
 
 var game = new TicTacToe();
 

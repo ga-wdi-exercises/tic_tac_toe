@@ -10,7 +10,6 @@ header {
 }
 
 .board {
-  outline: 1px solid black;
   width: 500px;
   height: 500px;
 
@@ -18,10 +17,17 @@ header {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  align-content: center;
 }
 
 .square {
-  outline: 1px solid red;
+  outline: 5px solid red;
   width: 33%;
   height: 33%;
+}
+
+.xo {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 33%;
 }
