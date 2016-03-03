@@ -13,9 +13,11 @@ function clickSquare(event) {
     //add X into square when clicked
     event.target.innerHTML = "X";
     isO = true;
+    $("h2").html("O's Turn");
   } else if (isO === true) {
     //add O in square when clicked
     event.target.innerHTML = "O";
     isO = false;
+    $("h2").html("X's Turn");
   }
 }
