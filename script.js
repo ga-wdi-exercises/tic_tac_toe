@@ -7,10 +7,13 @@ function playTicTac() {
   $("button").on("click", clearBoard);
 }
 
+var allSquares = $("#one, #two, #three, #four, #five, #six, #seven, #eight, #nine");
+
 playTicTac();
 
 function clickSquare(event) {
   event.preventDefault();
+
   var colLeft = $("#one, #four, #seven");
   var colMid = $("#two, #five, #eight");
   var colRight = $("#three, #six, #nine");
@@ -19,6 +22,7 @@ function clickSquare(event) {
   var rowBot = $("#seven, #eight, #nine");
   var diagOne = $("#one, #five, #nine");
   var diagTwo = $("#three, #five, #seven");
+
   if (isO === false) {
     //add X into square when clicked
     event.target.innerHTML = "X";
@@ -38,6 +42,7 @@ function clickSquare(event) {
   getWin(rowBot);
   getWin(diagOne);
   getWin(diagTwo);
+  //noWin();
 }
 
 function clearBoard(event) {
@@ -54,3 +59,12 @@ function getWin(squares) {
     $("h2").html(squares.eq(0).html() + " is the winner!");
   }
 }
+
+// function noWin() {
+//   //if all nine squares have a value, return no winner
+//   for (i = 0; i < 9; i++) {
+//     if (allSquares.html(i) !== "") {
+//       $("h2").html("No Winner");
+//     }
+//   }
+// }
