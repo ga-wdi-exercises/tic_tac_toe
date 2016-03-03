@@ -39,7 +39,7 @@ function reset() {
 $('button').on("click", reset);
 
 
-//on click give values to box
+//on click give values to box 
 
 var counter = 0;
 function sendX() {
