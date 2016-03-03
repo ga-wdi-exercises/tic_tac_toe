@@ -83,8 +83,9 @@ var ticTacToe = {
     }
   },
   reset: function(){
-    this.xClicked = [];
-    this.oClicked = [];
+    ticTacToe.xClicked = [];
+    ticTacToe.oClicked = [];
+    clicks = 0;
     for(var i = 0; i < ticTacToe.boxSelector.length; i++){
       ticTacToe.boxSelector.eq(i).html(i + 1);
       ticTacToe.boxSelector.eq(i).css("color", "#282c37");
@@ -94,4 +95,5 @@ var ticTacToe = {
 };
 
 ticTacToe.eventListener();
+
 $('input[type=button]').on("click", ticTacToe.reset);
