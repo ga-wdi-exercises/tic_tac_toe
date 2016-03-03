@@ -1,0 +1,40 @@
+body{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: auto;
+  background-color: #554444;
+  margin: 0px;
+}
+
+div{
+  width: 700px;
+  margin: 20px;
+  background-color: #555555;
+}
+
+div.content{
+  height: 700px;
+}
+
+div.header{
+    height: 100px;
+}
+
+div.footer{
+    height: 100px;
+}
+
+div.wrapper {
+  margin: 0px;
+  height: auto;
+  width: auto;
+  background-color: #555544;
+}
+
+canvas {
+   border:1px solid #000000;
+}
