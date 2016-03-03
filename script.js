@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 // Psuedo Code
   //Create board - 3 rows of 3
     //[x] create funtion to append the div's in order to create the board
@@ -10,13 +12,30 @@
 
 // --> code <--
 
-click = 0
+var game = {
+  click: 0,
+  box: {
+    one: $(".box").eq(0),
+    two: $(".box").eq(1)
+  }
+  // threes: {
+  //   topRow: [$(".box").eq(0).css("background-image"), $(".box").eq(1).css("background-image"), $(".box").eq(2).css("background-image")]
+  // }
+}
+
+topRow = [$("#0"), $("#1"), $("#2")]
+
+rowTop = $("#0, #1, #2");
+
+one = $("#0")
+
 
 //builds board
 for (var i = 0; i < 9; i++){
   appendBox()
+  $(".box").eq(i).attr("id", i)
   $(".box").eq(i).on("click", function(){
-    click++
+    game.click++
     this.classList.add("active" + xo())
   })
 }
@@ -28,14 +47,21 @@ function appendBox() {
 }
 
 function xo(){
-  if (click % 2 === 0) {
+  if (game.click % 2 === 0) {
     return "X"
   } else return "O"
 }
 
-function threesCompany() {
+threesCompany = function(three) {
   // var box = $(".box")
-    if (($(".box").eq(0).css("background-image") ===    $(".box").eq(1).css("background-image")) && ($(".box").eq(0).css("background-image") === $(".box").eq(2).css("background-image"))) {
+    if ((three[0].css("background-image") === three[1].css("background-image")) && (three[0].css("background-image") === three[2].css("background-image"))) {
       alert("Winner")
-    } else null
+    } else {
+      alert("Loser")
 }
+}
+
+// (($(".box").eq(0).css("background-image") ===    $(".box").eq(1).css("background-image")) && ($(".box").eq(0).css("background-image") === $(".box").eq(2).css("background-image")))
+
+// topRow = [$(".box").eq(0), $(".box").eq(1), $(".box").eq(2)]
+});
