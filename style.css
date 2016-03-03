@@ -31,3 +31,11 @@ header {
   text-align: center;
   padding-top: 33%;
 }
+
+.X {
+  background-color: blue;
+}
+
+.O {
+  background-color: yellow;
+}
