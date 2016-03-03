@@ -1,18 +1,19 @@
 .board {
   color: black;
-  height: 25em;
-  width: 25em;
+  height: 35em;
+  width: 35em;
 }
 
-.X {
-  background-color: blue;
-}
-
-.O {
-  background-color: red;
-}
 td {
   background-color: #cce6ff;
   border: 5px solid black;
   text-align: center;
+  font-size: 12em;
+  font-family: tahoma;
+  height: 1em;
+  width: 1em;
+}
+
+body {
+  padding: 1px 1px 1px 1px;
 }

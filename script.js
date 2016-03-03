@@ -1,32 +1,7 @@
 //turn
 
-
-
-//grid square locations
-
-var grid = {
-  sq11: $("#sq11"),
-  sq12: $("#sq12"),
-  sq13: $("#sq13"),
-  sq21: $("#sq21"),
-  sq22: $("#sq22"),
-  sq23: $("#sq23"),
-  sq31: $("#sq31"),
-  sq32: $("#sq32"),
-  sq33: $("#sq33")
-};
-
 var turn = 0;
-
-//create function to add X and O
-
-var addX = function() {
-  grid.sq12.text("X");
-};
-
-var addO = function() {
-  grid.sq13.text("O");
-};
+var squares = $("td");
 
 addLetter = function() {
 
@@ -35,25 +10,44 @@ addLetter = function() {
     //click event should append X to appropriate square
     console.log(this);
     $(this).text("X");
+    winner();
   }
   //if turn = odd
   else {
     //click event should append O to appropriate square
+    console.log(this);
     $(this).text("O");
+    winner();
   }
   turn += 1;   //Even though this action is in the function scope, it is updating the value of a global variable.  So even thought turn = 0 in global scope, after you click, it refers to the global variable and updates it by one.
-
-  //after click event, turn variable should increase by one while turn < 9 (there will be no more than 9 turns)
 };
 
-//Experiment with for loop to assign eventlistners
+//For loop to assign eventlistners
 
-var squares = $("td");
+
 for(var i = 0; i < squares.length; i++ ){
   squares.eq(i).on("click", addLetter);
 }
 
-//create event listeners for each square
+//Determine winner and end game
+
+
+function winner() {
+  //row winner
+  console.log(squares.eq(0).text() + " zero");
+  console.log(squares.eq(1).text() + " one");
+  console.log(squares.eq(2).text() + " two");
+  if ((squares.eq(0).html() === squares.eq(1).html()) && (squares.eq(0).html() === squares.eq(2).html())) {
+    alert("Row 1 Winner!");
+  }
+  console.log("test");
+  //column winner
+  //diagonal winner
+  //cats game
+}
+
+
+//create event listeners for each square - explicitly (no loops)
 
 // grid.sq11.on("click", function() {
 //   grid.sq11.text("X");
@@ -86,15 +80,3 @@ for(var i = 0; i < squares.length; i++ ){
 // grid.sq33.on("click", function() {
 //   grid.sq33.text("X");
 // });
-
-// //Determine winner and end game
-// var winner = function() {
-//   //row winner
-//   if ()
-//   //column winner
-//   //diagonal winner
-// };
-//
-// for (i = 1; i < 4; i++) {
-//
-// }
