@@ -3,13 +3,19 @@ var disp = $("#display")[0]; // Needed to return native DOM object.
 $("#display").on("click", test);
 var d = disp.getContext("2d");
 
-var gameGrid = [[0, 0, 0],
-                [0, 0, 0],
-                [0, 0, 0]]
+var TILE_SIZE = 200;
 
-d.fillStyle = "rgba(255,0,0,0.5)";
+var curPlayer = "X";
+var curColor = "rgba(255,0,0,0.5)"
+
+d.fillStyle = curColor;
+
+var gameGrid = [[null, null, null],
+                [null, null, null],
+                [null, null, null]]
 
 // Draw Grid
+// TODO: Mathify this.
 d.beginPath();
 d.moveTo(0,200);
 d.lineTo(600,200);
@@ -25,7 +31,9 @@ d.stroke();
 // called by canvas click listener
 function test(e){
   var mouse = getDispPos(e);
-  fillTileAt(mouse.x,mouse.y);
+
+  updateGameGrid(mouse.x, mouse.y, toggleTurn());
+  fillTileAt(mouse.x,mouse.y, curColor);
 }
 
 //  returns coordinates of mouse position relative to canvas
@@ -36,10 +44,29 @@ function getDispPos(e){
   return {x:x, y:y};
 }
 
-// File the tile indicated by canvas pos
-function fillTileAt(x, y){
-  var row = Math.floor(x/200);
-  var col = Math.floor(y/200);
-  console.log("Tile row: " + row + ", col: " + col);
-  d.fillRect(row*200, col*200, 200, 200);
+// Fill the tile with color indicated by canvas pos
+function fillTileAt(x, y, color){
+  var t = pixToGrid(x, y);
+  d.fillStyle = color;
+  d.fillRect(t.row*TILE_SIZE, t.col*TILE_SIZE, TILE_SIZE, TILE_SIZE);
+}
+
+// Convert canvas x/y to gameGrid row/col
+function pixToGrid(x, y){
+  var row = Math.floor(x/TILE_SIZE);
+  var col = Math.floor(y/TILE_SIZE);
+  return {row:row, col:col};
+}
+
+// Updates game grid to value indicated by p, based on canvas coordinates.
+function updateGameGrid(x, y, p){
+  var t = pixToGrid(x, y);
+  gameGrid[t.row][t.col] = p;
+}
+
+// Returns current player, then switches turns.
+// Updates current color accordingly.
+function toggleTurn(){
+  if (curPlayer == "X"){ curPlayer = "O"; curColor = "rgba(0,0,255,0.5)"; return "X";}
+  else {curPlayer = "X"; curColor = "rgba(255,0,0,0.5)"; return "O";}
 }
