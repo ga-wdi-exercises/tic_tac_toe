@@ -1,0 +1,11 @@
+.box{
+    color: white;
+    background-color: green;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 4px 4px 0 rgb(0,0,0, 1);
+    padding:30px;
+}
+.container{
+    display:flex;
+}
