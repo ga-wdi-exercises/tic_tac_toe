@@ -31,10 +31,11 @@ d.stroke();
 // called by canvas click listener
 function test(e){
   var mouse = getDispPos(e);
-
-  updateGameGrid(mouse.x, mouse.y, curPlayer);
-  fillTileAt(mouse.x,mouse.y, curColor);
-  toggleTurn();
+  if(isValidMove(mouse.x, mouse.y)){ // check if move is valid before doing anything.
+    updateGameGrid(mouse.x, mouse.y, curPlayer);
+    fillTileAt(mouse.x,mouse.y, curColor);
+    toggleTurn();
+  }
 }
 
 //  returns coordinates of mouse position relative to canvas
@@ -69,4 +70,10 @@ function updateGameGrid(x, y, p){
 function toggleTurn(){
   if (curPlayer == "X"){ curPlayer = "O"; curColor = "rgba(0,0,255,0.5)";}
   else {curPlayer = "X"; curColor = "rgba(255,0,0,0.5)";}
+}
+
+// returns true if canvas coordinates translate to empty grid value.
+function isValidMove(x, y){
+  var t = pixToGrid(x, y);
+  return (gameGrid[t.row][t.col] == null);
 }
