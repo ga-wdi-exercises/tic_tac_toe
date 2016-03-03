@@ -1,19 +1,31 @@
+var square = document.querySelectorAll(".box");
+
 function startGame(){
   document.turn = "X";
   displayMessage(document.turn + " will start.")
 }
 
-function displayMessage(msg){
-  $("message").innerText = msg;
-}
-
 document.body.onload = startGame();
+
+function displayMessage(msg){
+  document.getElementById("message").innerText = msg;
+}
 
 function userMove(){
   this.innerText = document.turn;
+ switchPlayer();
 }
 
-var square = document.querySelectorAll(".box");
-for ( var i=0; i< square.length; i++){
+function switchPlayer(){
+  if (document.turn == "X"){
+    document.turn = "O"
+  }
+  else
+  {
+    document.turn = "X"
+  }
+}
+
+for( var i=0; i< square.length; i++){
   square[i].addEventListener("click", userMove);
 }
