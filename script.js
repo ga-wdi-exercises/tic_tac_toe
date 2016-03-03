@@ -15,7 +15,7 @@ var player2 = $("#o");
 // }
 
 function checkPlayed(td) {
-  if(td.hasClass('cross') || td.hasClass('circle')) {
+  if(td.hasClass("x") || td.hasClass("o")) {
     return 1;
   } else {
     return 0;
@@ -33,7 +33,7 @@ $('.reset').click(function() {
   displayNextPlayer(turn, player);
 });
 
-function pickCharacter(player[]) {
+function pickCharacter(player) {
   if(player == 1) {
     return "#x";
   } else {
@@ -41,7 +41,7 @@ function pickCharacter(player[]) {
   }
 }
 
-function setNextPlayer(player[]) {
+function setNextPlayer(player) {
   if(player == 1) {
     return player = 2;
   } else {
@@ -71,7 +71,7 @@ function setTurn(){
 }
 function checkIfWon(table, pattern) {
   var won = 0;
-  if(table.find("#col-1-row-1").hasClass(pattern) && table.find("#col-2-row-1").hasClass(pattern) && table.find(#"col-3-row-1").hasClass(pattern)) {
+  if(table.find("#col-1-row-1").hasClass(pattern) && table.find("#col-2-row-1").hasClass(pattern) && table.find("#col-3-row-1").hasClass(pattern)) {
     won = 1;
   } else if (table.find("#col-1-row-1").hasClass(pattern) && table.find("#col-1-row-2").hasClass(pattern) && table.find("#col-1-row-3").hasClass(pattern)) {
     won = 1;
