@@ -28,6 +28,12 @@ function clickSquare(event) {
     isO = false;
     $("h2").html("X's Turn");
   }
+  getWin(colLeft);
+  getWin(colMid);
+  getWin(colRight);
+  getWin(rowTop);
+  getWin(rowMid);
+  getWin(rowBot);
 }
 
 function clearBoard(event) {
@@ -37,4 +43,10 @@ function clearBoard(event) {
   }
   isO = false;
   $("h2").html("X's Turn");
+}
+
+function getWin(squares) {
+  if (squares.eq(0).html() !== "" && squares.eq(0).html() == squares.eq(1).html() && squares.eq(0).html() == squares.eq(2).html()) {
+    console.log("There was a winner");
+  }
 }
