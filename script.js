@@ -17,6 +17,11 @@ function Board(element) {
         addXorO($(this));
     });
 
+    $("#reset").on("click", function(){
+        $(".box").each(function(){
+            $(this).html("");
+        });
+    });
 
     function countMoves() {
         console.log("You clicked me!");
@@ -42,43 +47,40 @@ function Board(element) {
         if((boxArray.eq(0).html()=== boxArray.eq(1).html())&&
         (boxArray.eq(0).html()=== boxArray.eq(2).html())&&
         (boxArray.eq(1).html()=== boxArray.eq(2).html())){
-            console.log("you won in row 1!");
+            alert("you won in row 1!");
         }else if((boxArray.eq(3).html()=== boxArray.eq(4).html())&&
         (boxArray.eq(3).html()=== boxArray.eq(5).html())&&
         (boxArray.eq(4).html()=== boxArray.eq(5).html())){
-            console.log("you won in row 2!");
+            alert("you won in row 2!");
         }else if((boxArray.eq(6).html()=== boxArray.eq(7).html())&&
         (boxArray.eq(6).html()=== boxArray.eq(8).html())&&
         (boxArray.eq(7).html()=== boxArray.eq(8).html())){
-            console.log("you won in row 3!");
+            alert("you won in row 3!");
             //column winner
         }else if((boxArray.eq(0).html()=== boxArray.eq(3).html())&&
         (boxArray.eq(0).html()=== boxArray.eq(6).html())&&
         (boxArray.eq(3).html()=== boxArray.eq(6).html())){
-            console.log("you won in column 1!");
+            alert("you won in column 1!");
         }else if((boxArray.eq(1).html()=== boxArray.eq(4).html())&&
         (boxArray.eq(1).html()=== boxArray.eq(7).html())&&
         (boxArray.eq(4).html()=== boxArray.eq(7).html())){
-            console.log("you won in column 2!");
+            alert("you won in column 2!");
         }else if((boxArray.eq(2).html()=== boxArray.eq(5).html())&&
         (boxArray.eq(2).html()=== boxArray.eq(8).html())&&
         (boxArray.eq(5).html()=== boxArray.eq(8).html())){
-            console.log("you won in column 3!");
+            alert("you won in column 3!");
             //diagonal winner
         }else if((boxArray.eq(0).html()=== boxArray.eq(4).html())&&
         (boxArray.eq(0).html()=== boxArray.eq(8).html())&&
         (boxArray.eq(4).html()=== boxArray.eq(8).html())){
-            console.log("you won diagonally!");
+            alert("you won diagonally!");
         }else if((boxArray.eq(2).html()=== boxArray.eq(4).html())&&
         (boxArray.eq(2).html()=== boxArray.eq(6).html())&&
         (boxArray.eq(4).html()=== boxArray.eq(6).html())){
-            console.log("you won diagonally!");
+            alert("you won diagonally!");
         }
-
-        //diagnol winner
-        //cat: no winner
+        //FIXME: how to add cat
     }
-    // declareWinner();
 }
 
 //TODO: when done with js merge branch into anissa_solution
