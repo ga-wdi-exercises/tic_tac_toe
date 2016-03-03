@@ -6,7 +6,14 @@ for (var i = 0; i < 9; i++){
   $(".box").eq(i).attr("id", i);
   $(".box").eq(i).on("click", function(){
     game.click++
-    this.classList.add("active" + xo())
+    console.log(this.className)
+    console.log(game.click)
+    // this.classList.add("active" + xo())
+    if (this.className === "box") {
+      this.classList.add("active" + xo())
+    } else {
+      game.click--
+      }
   })
 }
 
@@ -24,9 +31,9 @@ game = {
     bottomRow: [$("#6"), $("#7"), $("#8")],
     leftColumn: [$("#0"), $("#3"), $("#6")],
     middleColumn: [$("#1"), $("#4"), $("#7")],
-    rightColumn: [$("#3"), $("#5"), $("#8")],
+    rightColumn: [$("#2"), $("#5"), $("#8")],
     diagonal1: [$("#0"), $("#4"), $("#8")],
-    diagonal2: [$("#3"), $("#4"), $("#6")]
+    diagonal2: [$("#2"), $("#4"), $("#6")]
   }
 }
 
@@ -36,7 +43,7 @@ function xo(){
   } else return "O"
 }
 
-$(".control").on("mouseover", function() {
+$(".control").on("click", function() {
   threesCompany(game.threes.topRow),
   threesCompany(game.threes.middleRow),
   threesCompany(game.threes.bottomRow),
@@ -54,13 +61,21 @@ threesCompany = function(check) {
   }
 }
 
+//if the winning click is the last pick, it is registering as a loser
 checkWinner = function(three) {
-  // var box = $(".box")
     if ((three[0].css("background-image") === three[1].css("background-image")) && (three[0].css("background-image") === three[2].css("background-image"))) {
       alert("Winner")
-    } else {
-      alert("Loser")
+    } else if ((game.click === 9) && ((three[0].css("background-image") !== three[1].css("background-image")) || (three[0].css("background-image") !== three[2].css("background-image")))) {
+        alert("loser")
+        clear()
     }
+  }
+
+clear = function() {
+  for (var i = 0; i < 9; i++){
+    $(".box").eq(i).prop("class", "box")
+    game.click = 0
+  }
 }
 
 
