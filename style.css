@@ -79,3 +79,30 @@ border: 1px solid red;
 background-image: url('LETTERO.PNG');
 
 }
+.squareOne {
+background-image: url('poop.jpg')
+}
+.squareTwo {
+background-image: url('poop1.jpg')
+}
+.squareThree {
+background-image: url('poop2.jpg')
+}
+.squareFour {
+background-image: url('poop3.jpg')
+}
+.squareFive {
+background-image: url('poop4.jpg')
+}
+.squareSix {
+background-image: url('poop5.jpg')
+}
+.squareSeven {
+background-image: url('poop6.jpg')
+}
+.squareEight {
+background-image: url('poop7.jpg')
+}
+.squareNine {
+background-image: url('poop8.jpg')
+}
