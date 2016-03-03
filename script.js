@@ -1,8 +1,10 @@
+//Global variables: change to local later
 var gameBoard = $("#gameBoard");
 var isO = false;
 
 function playTicTac() {
   gameBoard.on("click", clickSquare);
+  $("button").on("click", clearBoard);
 }
 
 playTicTac();
@@ -20,4 +22,13 @@ function clickSquare(event) {
     isO = false;
     $("h2").html("X's Turn");
   }
+}
+
+function clearBoard(event) {
+  event.preventDefault();
+  for (i = 0; i < 9; i++) {
+    $("td").html("");
+  }
+  isO = false;
+  $("h2").html("X's Turn");
 }
