@@ -16,27 +16,36 @@ var ticTacToe = {
   mouseClick: function(event) {
     event.preventDefault();
     var boxNumber = parseInt(this.getAttribute("data-index"));
-    clicks++;
-    ticTacToe.turnChecker(boxNumber);
+    if (clicks === 0 || ticTacToe.flipChecker(boxNumber)){
+      clicks++;
+      ticTacToe.turnChecker(boxNumber);
+    }
   },
   mouseOver: function(event) {
     event.preventDefault();
     var boxNumber = parseInt(this.getAttribute("data-index"));
     ticTacToe.boxSelector.eq(boxNumber).css("backgroundColor", "gray");
-    // console.log(ticTacToe.boxSelector.eq(boxNumber).css("color"));
-    // if(ticTacToe.boxSelector.eq(boxNumber).css("color") != "rgb(43, 144, 217)" || ticTacToe.boxSelector.eq(boxNumber).css("color") != "rgb(217, 225, 232)") {
-    //   if (clicks % 2 === 1) {
-    //     ticTacToe.boxSelector.eq(boxNumber).html("O");
-    //   } else if (clicks % 2 === 0) {
-    //     ticTacToe.boxSelector.eq(boxNumber).html("X");
-    //   }
-    // }
+    if(ticTacToe.flipChecker(boxNumber)) {
+      if (clicks % 2 === 1) {
+        ticTacToe.boxSelector.eq(boxNumber).html("O");
+      } else if (clicks % 2 === 0) {
+        ticTacToe.boxSelector.eq(boxNumber).html("X");
+      }
+    }
   },
   mouseOut: function(event) {
     event.preventDefault();
     var boxNumber = parseInt(this.getAttribute("data-index"));
     ticTacToe.boxSelector.eq(boxNumber).css("backgroundColor", "#282c37");
 
+  },
+  flipChecker: function(boxNumber){
+    var tileColor = ticTacToe.boxSelector.eq(boxNumber).css("color");
+    if(tileColor != "rgb(43, 144, 217)" && tileColor != "rgb(217, 225, 232)") {
+      return true;
+    } else {
+      return false;
+    }
   },
   turnChecker: function(boxNumber){
     if (clicks % 2 === 1) {
