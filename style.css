@@ -1,7 +1,9 @@
 <link href='https://fonts.googleapis.com/css?family=Architects+Daughter|Permanent+Marker|Gochi+Hand|Patrick+Hand|Neucha' rel='stylesheet' type='text/css'>
 
 body {
-  background: url("seamlesstexture29_1200.jpg");
+  background-image: url("seamlesstexture29_1200.jpg");
+  background-size: cover;
+  background-position: center;
   font-family: 'Gochi Hand', sans-serif;
   margin:auto;
   text-align: center;
