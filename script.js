@@ -24,6 +24,7 @@ function switchPlayer(){
   {
     document.turn = "X"
   }
+  displayMessage ("It's " + document.turn + "'s turn!")
 }
 
 for( var i=0; i< square.length; i++){
