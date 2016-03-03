@@ -6,14 +6,15 @@
   function TicTacToe() {
     this.board = $('.board');
     this.size = 9;
+    this.player = true;
 
     var ttt = this;
     for(var i = 0; i < this.size; i++) {
-      var square = $('<div class="square"><div class="xo">X</div></div>');
+      var square = $('<div class="square"><div class="xo"></div></div>');
       //square.attr('id', i);
       square.appendTo(this.board);
       square.on('click', function() {
-        ttt.makeAMark(this);
+        ttt.playGame(this);
       });
     }
   }
@@ -21,9 +22,21 @@
   // on click, add a character to the grid, x or o
     // click also changes color of cell
     // click freezes cell so it can't be clicked again
-  TicTacToe.prototype.makeAMark = function (square) {
-    $(square).children().html('O');
+  TicTacToe.prototype.playGame = function (square) {
+    if(this.player) {
+      this.makeAMark('X', square);
+    }
+    else {
+      this.makeAMark('O', square);
+    }
 
+  };
+
+  TicTacToe.prototype.makeAMark = function (player, position) {
+    var xo = $(position).children();
+    $(xo).html(player);
+    this.player = !this.player;
+    $(position).unbind('click');
 
   };
 
