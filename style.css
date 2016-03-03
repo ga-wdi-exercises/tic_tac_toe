@@ -1,0 +1,76 @@
+body{
+
+}
+
+header{
+
+}
+
+h1 {
+  font-family serif;
+  text-align: center;
+  font-size: 32px;
+}
+
+#x:before {
+
+}
+#o{
+
+}
+
+#overallgrid{
+  border: black;
+}
+
+table {
+  position: relative;
+  align-self: center;
+}
+.grid {
+  width:100px;
+  height:100px;
+  border:1px solid #555;
+  cursor:pointer;
+}
+row-1{
+
+}
+#col-1-row-1{
+
+}
+#col-2-row-1{
+
+}
+#col-3-row-1{
+
+}
+#row-2{
+
+}
+#col-1-row-2{
+
+}
+#col-2-row-2{
+
+}
+#col-3-row-2{
+
+}
+#row-3{
+
+}
+#col-2-row-3{
+
+}
+#col-1-row-3{
+
+}
+#col-3-row-3{
+
+}
+
+#resetButton{
+  border: red;
+  border-radius: 25px;
+}
