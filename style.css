@@ -4,11 +4,19 @@
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  font-size: 4em;
+  margin-bottom: 25px;
 }
 
 .play-area {
-  margin: auto;
+  margin-bottom: 25px;
+  justify-content: center;
+  align-content: flex-start;
   display: flex;
   flex-wrap: wrap;
   height: 400px;
@@ -16,15 +24,42 @@ body {
 }
 
 .tile {
-  margin: auto;
   display: flex;
-  height: 30%;
-  width: 30%;
-  border: 1px solid red;
+  height: 33.33333%;
+  width: 33.33333%;
+  border: 1px solid #353848;
+  /*box-shadow: 2px 2px 2px 1px rgba(53, 56, 72, .5);*/
   border-radius: 10px;
-  font-size: 2em;
+  font-size: 3em;
+  transition: height .8s, width .8s;
+}
+
+.tile:hover {
+  cursor: pointer;
 }
 
 .tile span {
   margin: auto;
+}
+
+.x {
+  background-color: #a3c9c7
+}
+
+.o {
+  background-color: #ef9e9f;
+}
+
+.reset {
+  text-align: center;
+  font-size: 1.5em;
+  height: 30px;
+  width: 400px;
+  border-radius: 10px;
+  background-color: #cb7575;
+}
+
+.reset:hover {
+  background-color: #c95050;
+  cursor: pointer;
 }
