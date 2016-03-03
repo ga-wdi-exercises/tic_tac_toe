@@ -6,7 +6,7 @@
   function TicTacToe() {
     this.board = $('.board');
     this.size = 9;
-    this.player = true;
+    this.player = true;  // true = X. false = O
 
     var ttt = this;
     for(var i = 0; i < this.size; i++) {
@@ -44,6 +44,11 @@ $('#reset').on('click', function() {
   $('.square').remove();
   $(this).html('Restart');
   var game = new TicTacToe();
+});
+
+// some other fun stuff
+$(document).ready(function() {
+  $(".festive").lettering();
 });
 
 
