@@ -23,3 +23,15 @@ table, th, td {
 body {
   background-image: url("white_carbon.png");
 }
+
+.wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.button{
+  background-color: rgb(131, 15, 144);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
