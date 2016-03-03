@@ -56,8 +56,8 @@ $(document).ready(function() {
     };
     Board.prototype.checkForWinner = function(self) {
         // Pass through the board to find a winner.
-        // Worst case: O(2/3N) - best case: O(1)
-        // where N is the total number of cells (9)
+        // This solution doesn't scale for larger square grids
+        // but shouldn't need much modification to do so.
         var winner, i;
         winner = self.verticalWin(self);
         if (winner) { return winner; }
