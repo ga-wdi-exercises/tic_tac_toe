@@ -9,6 +9,7 @@ table {
   height: 400px;
   width: 400px;
   border-collapse: collapse;
+  table-layout:fixed;
   border-spacing: 0px;
 }
 .cells {
