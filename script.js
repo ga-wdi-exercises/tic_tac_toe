@@ -39,18 +39,3 @@ $(document).ready(function() {
 //no third clicks
 //reset button
 });
-
-/*
-//when player clicks on a cell show X
-$(".cell").click(function(){
-  $(this.show());
-});
-*/
-
-//something easier...
-//when player clicks on a cell the color changes
-
-//when player clicks cell a second time, show O
-//keep track of clicks
-//no third clicks
-//reset button
