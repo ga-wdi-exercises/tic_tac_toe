@@ -13,10 +13,13 @@ table {
 tr {
   height: 200px;
   width: 33.3333%;
+  font-size: 90px;
+  font-family: fantasy;
 }
 table, tr, td {
     border: 10px solid black;
     text-align: center;
+    table-layout: fixed;
 }
 
 body {
@@ -24,7 +27,7 @@ body {
 }
 
 .x {
-  color: green;
+  color: purple;
 }
 .o {
   color: yellow;

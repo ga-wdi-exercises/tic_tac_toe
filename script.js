@@ -25,7 +25,16 @@
     }
 
     eventListener();
+
+    function disableClick(){
+     cells.click >= 2;
+     cell.disabled=true;
+     }
   });
+
+
+
+
   //
   //   function addLetter(){
   //   console.log(this);
