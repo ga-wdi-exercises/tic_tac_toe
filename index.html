@@ -1,16 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Tic-Tac-Toe</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+  //run the game
+  function runGame(){
+    document.turn = "X";
+    //randomize with sort function to alternate X and O
+    if(Math.random() < 0.5) {
+      document.turn = "O";
+    }
+    //no winner until after the game is played
+    document.winner = null;
+    //give message for who starts the game
+    giveMessage(document.turn + " starts the game.");
+  }
 
-  <body>
-    <h1>TIC TAC TOE - THREE IN A ROW!</h1>
-    <div class="messages"></div>
-    <div class="turn"></div>
-    <table class="board">
+  //tell user whose turn it is, winner, etc
+  //function giveMessage
+  function giveMessage(msg){
+    document.getElementbyClass("messages").innerhtml = msg;
+  }
+  //switchmoves
+  function switchMove(cell){
+    if(document.winner != null) {
+      //message the player that the other player has already won
+      setMessage(document.winner + " won the game!");
+      //otherwise, if there is no winner....
+    }else if(square.innerHTML == "") {
+      square.innerHTML = document.turn;
+      //switch turn to the next player
+      // switchTurn();
+      // //let that player know that that square has already been used. this isn't really necessary right now....maybe with a more advanced computer AI game
+    } else {
+      setMessage("That square is already used!");
+    }/switch turn function
+    function switchTurn() {
+      //after checking for a winner, if it's this player's turn...
+      if(checkForWinner(document.turn)) {
+        //message them congratulations!
+        setMessage("Congratulations, " + document.turn + "! You win!");
+        document.winner = document.turn;
+        //otherwise...continue with the game
+      }else if(document.turn == "X") {
+        document.turn = "O";
+        setMessage("It's " + document.turn + "'s turn!");
+      }else {
+        document.turn = "X";
+        setMessage("It's " + document.turn + "'s turn!");
+      }
+    }
+    //checking for winners. this accounts for winning rows, columns, and diagnols
+    function checkForWinner(move) {
+
+      </script>
+      <title>Tic-Tac-Toe</title>
+    </head>
+
+    <body onload = "runGame();">
+      <h1>TIC TAC TOE - THREE IN A ROW!</h1>
+      <div class="messages"></div>
+      <div class="turn"></div>
+      <table class="board">
         <tr class="row">
           <td class="cell" id="one" type="button"></td>
           <td class="cell" id="two" type="button"></td>
@@ -26,9 +78,9 @@
           <td class="cell" id="eight" type="button"></td>
           <td class="cell" id="nine" type="button"></td>
         </tr>
-    </table>
-    <script src = https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js>
-    </script>
-    <script type="text/javascript" href="script.js"></script>
-  </body>
-</html>
+      </table>
+      <script src = https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js>
+      </script>
+
+    </body>
+    </html>
