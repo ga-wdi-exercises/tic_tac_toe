@@ -1,0 +1,23 @@
+
+#board {
+   max-width: 900px;
+   height: 750px;
+   margin: 0 auto;
+   padding: 5% 12%;
+}
+
+.box {
+   width: 240px;
+   background-color: red;
+   height: 240px;
+   margin: auto 0;
+   display: inline-block;
+   vertical-align: top;
+   font-size: 187px;
+   text-align: center;
+}
+
+#header
+{
+ text-align: center;
+}
