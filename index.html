@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
 
-    <meta charset="utf-8">
+<head>
 
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
 
-    <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 
-    <title>Tic Tac Toe</title>
+  <script src="script.js"></script>
 
-  </head>
-  <body onload="startGame();">
+  <title>Tic Tac Toe</title>
 
-    <header id="header">
-      Let's play Tic Tac Toe!!
-    </header>
+</head>
 
-    <div id="message">
-      Messages will go here
-    </div>
+<body onload="startGame();">
 
-      <table>
-        <tr>
-          <td onclick="nextMove(this);"></td>
-          <td onclick="nextMove(this);"></td>
-          <td onclick="nextMove(this);"></td>
-        </tr>
-        <tr>
-          <td onclick="nextMove(this);"></td>
-          <td onclick="nextMove(this);"></td>
-          <td onclick="nextMove(this);"></td>
-        </tr>
-        <tr>
-          <td onclick="nextMove(this);"></td>
-          <td onclick="nextMove(this);"></td>
-          <td onclick="nextMove(this);"></td>
-        </tr>
-      </table>
+  <header id="header">
+    Let's play Tic Tac Toe!!
+  </header>
 
-  </body>
+  <div id="message">
+  </div>
+
+  <table>
+    <tr>
+      <td id="box1" onclick="nextMove(this);"></td>
+      <td id="box2" onclick="nextMove(this);"></td>
+      <td id="box3" onclick="nextMove(this);"></td>
+    </tr>
+    <tr>
+      <td id="box4" onclick="nextMove(this);"></td>
+      <td id="box5" onclick="nextMove(this);"></td>
+      <td id="box6" onclick="nextMove(this);"></td>
+    </tr>
+    <tr>
+      <td id="box7" onclick="nextMove(this);"></td>
+      <td id="box8" onclick="nextMove(this);"></td>
+      <td id="box9" onclick="nextMove(this);"></td>
+    </tr>
+  </table>
+
+  <button onclick="startGame();">Start Over</button>
+
+
+</body>
+
 </html>
