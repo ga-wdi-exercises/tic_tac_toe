@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js"></script>
+
+  <title>Tic Tac Toe</title>
+
+</head>
+
+<body onload="startGame();">
+
+  <header id="header">
+    Let's play Tic Tac Toe!!
+  </header>
+
+  <div id="message">
+  </div>
+
+  <table>
+    <tr>
+      <td id="box1" onclick="nextMove(this);"></td>
+      <td id="box2" onclick="nextMove(this);"></td>
+      <td id="box3" onclick="nextMove(this);"></td>
+    </tr>
+    <tr>
+      <td id="box4" onclick="nextMove(this);"></td>
+      <td id="box5" onclick="nextMove(this);"></td>
+      <td id="box6" onclick="nextMove(this);"></td>
+    </tr>
+    <tr>
+      <td id="box7" onclick="nextMove(this);"></td>
+      <td id="box8" onclick="nextMove(this);"></td>
+      <td id="box9" onclick="nextMove(this);"></td>
+    </tr>
+  </table>
+
+  <button onclick="startGame();">Start Over</button>
+
+
+</body>
+
+</html>
