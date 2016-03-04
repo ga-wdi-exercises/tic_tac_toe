@@ -12,11 +12,12 @@ function Game(element) {
       $('td').eq(i).click(function() {
         game.handleClick($(this));
       });
+      $('td').eq(i).prop('id', 'cell' + i);
     }
   };
   game.handleClick = function(cell) {
     if(game.status === 1) {
-      cell.html('<p>x</p>');
+      cell.html('X');
       //game.moves.push('X');
       game.status = 0;
     } else {
@@ -24,7 +25,6 @@ function Game(element) {
       //game.moves.push('o');
       game.status = 1;
     }
-    console.log(game.moves);
   };
   $('h2').click(function() {
     game.status = 1;
