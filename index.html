@@ -31,10 +31,9 @@
     }else if(square.innerHTML == "") {
       square.innerHTML = document.turn;
       //switch turn to the next player
-      // switchTurn();
-      // //let that player know that that square has already been used. this isn't really necessary right now....maybe with a more advanced computer AI game
+      switchTurn();
     } else {
-      setMessage("That square is already used!");
+      setMessage("Square already checked");
     }/switch turn function
     function switchTurn() {
       //after checking for a winner, if it's this player's turn...
@@ -53,6 +52,34 @@
     }
     //checking for winners. this accounts for winning rows, columns, and diagnols
     function checkForWinner(move) {
+      var result = false;
+      if(checkRow(1, 2, 3, move) ||
+      checkRow(4, 5, 6, move) ||
+      checkRow(7, 8, 9, move) ||
+      checkRow(1, 4, 7, move) ||
+      checkRow(2, 5, 8, move) ||
+      checkRow(3, 6, 9, move) ||
+      checkRow(1, 5, 9, move) ||
+      checkRow(3, 5, 7, move)) {
+        result = true;
+      }
+      return result;
+    }
+    //checking a row for a winning or losing combination of Xs and Os
+    function checkRow(a, b, c, move) {
+      var result = false;
+      if(getBox(a) == move && getBox(b) == move && getBox(c) == move) {
+        result = true;
+      }
+      return result;
+    }
+    //retrieving the Id number of the box clicked on
+    function getBox(number) {
+      return document.getElementById("cell" + number).innerHTML;
+    }
+    //clearing the box by retrieving the Id number
+    function clearBox(number) {
+      document.getElementById("cell" + number).innerHTML = "";
 
       </script>
       <title>Tic-Tac-Toe</title>
@@ -64,19 +91,19 @@
       <div class="turn"></div>
       <table class="board">
         <tr class="row">
-          <td class="cell" id="one" type="button"></td>
-          <td class="cell" id="two" type="button"></td>
-          <td class="cell" id="three" type="button"></td>
+          <td class="cell" id="cell1" type="button"></td>
+          <td class="cell" id="cell2" type="button"></td>
+          <td class="cell" id="cell3" type="button"></td>
         </tr>
         <tr class="row">
-          <td class="cell" id="four" type="button"></td>
-          <td class="cell" id="five" type="button"></td>
-          <td class="cell" id="six" type="button"></td>
+          <td class="cell" id="cell4" type="button"></td>
+          <td class="cell" id="cell5" type="button"></td>
+          <td class="cell" id="cell6" type="button"></td>
         </tr>
         <tr class="row">
-          <td class="cell" id="seven" type="button"></td>
-          <td class="cell" id="eight" type="button"></td>
-          <td class="cell" id="nine" type="button"></td>
+          <td class="cell" id="cell7" type="button"></td>
+          <td class="cell" id="cell8" type="button"></td>
+          <td class="cell" id="cell9" type="button"></td>
         </tr>
       </table>
       <script src = https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js>
