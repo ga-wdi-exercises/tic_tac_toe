@@ -2,9 +2,9 @@ $(document).ready(function() {
   var ticTacToe = new Game($('table'));
   ticTacToe.initCells();
 });
+
 function Game(element) {
   game = this;
-  game.element = element;
   game.status = 1;
   game.moves = []; // use to find a winner
   game.initCells = function() {
@@ -30,4 +30,4 @@ function Game(element) {
     game.status = 1;
     $('td').html('');
   })
-}
+};
