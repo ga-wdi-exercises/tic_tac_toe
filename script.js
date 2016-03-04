@@ -32,13 +32,14 @@ $(document).ready(function() {
 
           self.turns++;
         } else if (self.playerTurn === "O") {
-          square.innerHTML = "O";
-
-          square.classList.add("o");
-
-          self.playerTurn = "X";
-
-          self.turns++;
+          // square.innerHTML = "O";
+          //
+          // square.classList.add("o");
+          //
+          // self.playerTurn = "X";
+          //
+          // self.turns++;
+          self.computerTurn();
         };
       };
 
@@ -51,6 +52,9 @@ $(document).ready(function() {
 
         self.assessTie();
       }
+    },
+    computerTurn: function() {
+
     },
     assessWinner: function(line) {
       var lineOfThree = [];
