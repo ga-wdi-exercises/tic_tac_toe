@@ -22,9 +22,12 @@ $("#"+j+"cell").one('click',function(){
     event.preventDefault();
 $(this).text("X"); // display text in clicked cell
 $(this).css("background-color", "orange"); //change background color of clicked cells
+$(this).prop('disabled', true);
 
 })
 }
+
+
 
 
 });
