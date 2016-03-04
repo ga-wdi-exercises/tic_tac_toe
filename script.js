@@ -9,11 +9,6 @@ function Game(element) {
   game.moves = []; // use to find a winner
   game.initCells = function() {
     for(var i = 0; i < $('td').length; i++) {
-      if(i % 2 === 0) {
-        $('td').eq(i).addClass('orange');
-      } else {
-        $('td').eq(i).addClass('blue');
-      }
       $('td').eq(i).click(function() {
         game.handleClick($(this));
       });
@@ -23,10 +18,12 @@ function Game(element) {
   game.handleClick = function(cell) {
     if(game.status === 1) {
       cell.html('X');
+      cell.addClass('orange');
       //game.moves.push('X');
       game.status = 0;
     } else {
       cell.html('O');
+      cell.addClass('blue');
       //game.moves.push('o');
       game.status = 1;
     }
@@ -34,5 +31,7 @@ function Game(element) {
   $('h2').click(function() {
     game.status = 1;
     $('td').html('');
+    $('.cells.orange').removeClass('orange');
+    $('.cells.blue').removeClass('blue');
   })
 };
