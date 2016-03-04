@@ -13,7 +13,7 @@ h1 {
   .intro a {
     border: 2px solid #67D5B5;
     color: #67D5B5;
-    padding: 5px;
+    padding: 10px;
     text-decoration: none;
     text-transform: uppercase; }
   .intro a:hover {

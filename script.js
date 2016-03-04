@@ -42,7 +42,7 @@ $(document).ready(function() {
         };
       };
 
-      if (self.turns === 9) {
+      if (self.turns >= 3) {
         var winningCombos = [self.colLeft, self.colMid, self.colRight, self.rowTop, self.rowMid, self.rowBot, self.diagOne, self.diagTwo];
 
         for (var i= 0; i < winningCombos.length; i++) {
@@ -59,16 +59,16 @@ $(document).ready(function() {
         lineOfThree.push(line[i].innerHTML);
       };
 
-      console.log(this.winner);
+      console.log(lineOfThree);
 
-      if (lineOfThree[0] === lineOfThree[1] && lineOfThree[1] === lineOfThree[2]) {
+      if (lineOfThree[0] === lineOfThree[1] && lineOfThree[1] === lineOfThree[2] && lineOfThree[0] != 0) {
         this.winner = lineOfThree[0];
 
         alert("The winner is: " + this.winner);
       }
     },
     assessTie: function() {
-      if (this.winner === "") {
+      if (this.winner === "" && this.turns === 9) {
         alert("It's a tie!");
       };
     }
