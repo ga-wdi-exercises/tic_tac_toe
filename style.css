@@ -63,6 +63,18 @@ table:hover {
 #cell7 {
   border-bottom: 0;
 }
+.orange {
+  background: rgba(255, 100, 100, 0);
+}
+.blue {
+  background: rgba(0, 100, 100, 0);
+}
+.orange:hover {
+  background: rgba(255, 100, 10, .2);
+}
+.blue:hover {
+  background: rgba(0, 200, 200, .5);
+}
 footer {
   margin-top: 70px;
   text-align: right;

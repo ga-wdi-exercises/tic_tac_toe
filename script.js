@@ -9,6 +9,11 @@ function Game(element) {
   game.moves = []; // use to find a winner
   game.initCells = function() {
     for(var i = 0; i < $('td').length; i++) {
+      if(i % 2 === 0) {
+        $('td').eq(i).addClass('orange');
+      } else {
+        $('td').eq(i).addClass('blue');
+      }
       $('td').eq(i).click(function() {
         game.handleClick($(this));
       });
