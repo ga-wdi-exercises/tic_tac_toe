@@ -1,0 +1,30 @@
+body {
+	background: #F6B352;
+}
+
+#board {
+    width: 515px;
+    height: 515px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #754F44;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+		padding: 5px;
+    outline: 10px solid;
+    display: inline-block;
+    float: center;
+    background: #F68657;
+}
+
+.row {
+    width: auto;
+    height: auto;
+    background: #313131;
+}
