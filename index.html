@@ -36,12 +36,11 @@
       setMessage("Square already checked");
     }/switch turn function
     function switchTurn() {
-      //after checking for a winner, if it's this player's turn...
+    //check to see if there is a winner
       if(checkForWinner(document.turn)) {
-        //message them congratulations!
         setMessage("Congratulations, " + document.turn + "! You win!");
         document.winner = document.turn;
-        //otherwise...continue with the game
+        //continue game if no winner
       }else if(document.turn == "X") {
         document.turn = "O";
         setMessage("It's " + document.turn + "'s turn!");
@@ -50,7 +49,7 @@
         setMessage("It's " + document.turn + "'s turn!");
       }
     }
-    //checking for winners. this accounts for winning rows, columns, and diagnols
+    //checking for winners in various combinations. this accounts for winning rows, columns, and diagnols
     function checkForWinner(move) {
       var result = false;
       if(checkRow(1, 2, 3, move) ||
@@ -73,11 +72,11 @@
       }
       return result;
     }
-    //retrieving the Id number of the box clicked on
+    //retrieving the Id number of the box clicked
     function getBox(number) {
       return document.getElementById("cell" + number).innerHTML;
     }
-    //clearing the box by retrieving the Id number
+    //clear the cell to begin again
     function clearBox(number) {
       document.getElementById("cell" + number).innerHTML = "";
 
@@ -106,8 +105,5 @@
           <td class="cell" id="cell9" type="button"></td>
         </tr>
       </table>
-      <script src = https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js>
-      </script>
-
     </body>
     </html>
