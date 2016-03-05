@@ -5,9 +5,9 @@ $(document).ready(function() {
   var winner = $("#winner");
   var board = $("#board");
   var clickCounter = 0;
-  var xScore = [[]];
-  var oScore = [[]];
-  var triples = [
+  var xOwned = [];
+  var oOwned = [];
+  var winners = [
     ["1", "2", "3"],
     ["4", "5", "6"],
     ["7", "8", "9"],
@@ -23,40 +23,36 @@ $(document).ready(function() {
       clickCounter++;
       if ((clickCounter % 2 === 0) && ($(this).hasClass("clicked")) === false){
         $(this).html("<img class='o' src='o.png'/>");
-        oScore.push.eq(0)(this.id);
+        oOwned.push(this.id);
+        console.log(oOwned);
       }
       else if ((clickCounter % 2 > 0) && ($(this).hasClass("clicked")) === false){
         $(this).html("<img class='x' src='x.png'/>");
-        xScore.push.eq(0)(this.id);
+        xOwned.push(this.id);
+        console.log(xOwned);
       }
       $(this).addClass("clicked");
       game.score();
     },
 
     score: function(){
-      // if (xScore.length >= 3){
-      // // for (var i = 0; i <= xScore.length; i++) {
-      //   for (var j = 0; j < 3; j++)
-        if($.each(xScore, triples) === true) {
-          winner.html("X wins!");
-          winner.css("backgroundColor", "red");
-      }
-    if (oScore.length >= 3){
-      // for (var k = 0; k <= oScore.length; k++) {
-        // for (var l = 0; l < 3; l++)
-        if($.each(oScore, triples) === true) {
-          winner.html("O wins!");
-          winner.css("backgroundColor", "red");
-        }
-      }
-
-},
+      for(var i=0; i<winners.length; i++) {
+         // It's only 3 elements do you really need to loop?
+         if (xOwned.indexOf(winners[i][0]) > -1 && xOwned.indexOf(winners[i][1]) > -1  && xOwned.indexOf(winners[i][2]) > -1) {
+             winner.html("X wins!");
+             break;
+         } else if (oOwned.indexOf(winners[i][0]) > -1 && oOwned.indexOf(winners[i][1]) > -1 && oOwned.indexOf(winners[i][2]) > -1) {
+             winner.html("O wins!");
+             break;
+         }
+       }
+    },
 
     resetGame: function() {
       square.html("");
       square.removeClass("clicked");
-      xScore = 1;
-      oScore = 1;
+      xOwned = 1;
+      oOwned = 1;
       game.play();
     }
   };
