@@ -37,22 +37,25 @@ $(document).ready(function() {
 
     score: function(){
       for(var i=0; i<winners.length; i++) {
-         // It's only 3 elements do you really need to loop?
-         if (xOwned.indexOf(winners[i][0]) > -1 && xOwned.indexOf(winners[i][1]) > -1  && xOwned.indexOf(winners[i][2]) > -1) {
-             winner.html("X wins!");
-             break;
-         } else if (oOwned.indexOf(winners[i][0]) > -1 && oOwned.indexOf(winners[i][1]) > -1 && oOwned.indexOf(winners[i][2]) > -1) {
-             winner.html("O wins!");
-             break;
-         }
-       }
+        if (xOwned.indexOf(winners[i][0]) > -1 && xOwned.indexOf(winners[i][1]) > -1  && xOwned.indexOf(winners[i][2]) > -1) {
+          winner.html("X wins!");
+          winner.css("background", "red");
+          break;
+        } else if (oOwned.indexOf(winners[i][0]) > -1 && oOwned.indexOf(winners[i][1]) > -1 && oOwned.indexOf(winners[i][2]) > -1) {
+          winner.html("O wins!");
+          winner.css("background", "red");
+          break;
+        }
+      }
     },
 
     resetGame: function() {
       square.html("");
       square.removeClass("clicked");
-      xOwned = 1;
-      oOwned = 1;
+      xOwned = [];
+      oOwned = [];
+      winner.html("");
+      winner.css("background", "");
       game.play();
     }
   };
