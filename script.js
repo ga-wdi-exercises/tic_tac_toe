@@ -12,11 +12,14 @@ function Game() {
     console.log(self.click)
       self.click++;
     if (self.click % 2 !== 0) {
-      $(this).css("backgroundColor", "blue")
+      $(this).css("backgroundColor", "lemonchiffon")
+      $(this).html("X")
     }
     else if (self.click % 2 == 0) {
-      $(this).css("backgroundColor", "red")
+      $(this).css("backgroundColor", "lightblue")
+      $(this).html("O")
     }
+    $(this).off()
   })
 
 };
