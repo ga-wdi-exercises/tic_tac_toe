@@ -1,0 +1,29 @@
+.row, .column {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  border: 2px solid rebeccapurple;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  height: 200px;
+  line-height: 200px;
+
+}
+
+
+.column-1 { width: 8.33%; }
+.column-2 { width: 16.66%; }
+.column-3 { width: 25%; }
+.column-4 { width: 33.33%; }
+.column-5 { width: 41.66%; }
+.column-6 { width: 50%; }
+.column-7 { width: 58.33%; }
+.column-8 { width: 66.66%; }
+.column-9 { width: 75%; }
+.column-10 { width: 83.33%; }
+.column-11 { width: 91.66%; }
+.column-12 { width: 100%; }
