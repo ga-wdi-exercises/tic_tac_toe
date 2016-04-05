@@ -22,7 +22,7 @@ playBlock();
 
 boardReset = function(){
   $("#reset").click(function(){
-    $('.block').html("");
+    $('.block').html("T");
   })
 };
 boardReset();
