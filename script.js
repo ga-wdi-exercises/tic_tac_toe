@@ -1,11 +1,22 @@
-$(document).ready(function(){
-  var box1 =$("#one")
-  box1.on("click", function(){
-  box1.css("background-color", "red")
-  box1.html("X")
-  })
+$(document).ready(function() {
+ var game = new Game()
+})
 
-$('.flip').click(function(){
-  $(this).find('.box1').addClass('flipped');
-});
-});
+function Game() {
+ var self = this;
+ this.click = 0
+ this.squares = $(".square");
+ this.squares.html("");
+ this.squares.on("click", function(){
+   console.log("hello");
+   console.log(self.click);
+     self.click++;
+   if (self.click % 2 !== 0) {
+     $(this).css("backgroundColor", "blue");
+   }
+   else if (self.click % 2 == 0) {
+     $(this).css("background-color", "red")
+   }
+ })
+
+};
