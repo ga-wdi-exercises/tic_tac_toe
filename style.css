@@ -35,10 +35,9 @@ button {
 
 .player-one {
   background-color: red;
-  content: "X";
 }
+
 
 .player-two {
   background-color: blue;
-    content: "O";
 }
