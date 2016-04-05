@@ -1,0 +1,21 @@
+/**box sizing: border-box*/
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  width: 630px;
+  height: 630px;
+  border: 5px solid black;
+  }
+
+.square {
+  padding:
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  float:left;
+  border: 5px solid black;
+}
