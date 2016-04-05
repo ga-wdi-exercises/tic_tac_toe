@@ -1,23 +1,27 @@
-.body{
-  font-size: 50px;
+button {
+  background-color: pink;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: block;
+  /*margin-right: 200px;
+  margin-left: 450px;*/
 }
+
 
 .row, .column {
   box-sizing: border-box;
 }
 
-
 .column {
   float: left;
-  border: 2px solid rebeccapurple;
+  border: 2px solid green;
   border-radius: 20px;
   text-align: center;
   position: relative;
   height: 200px;
   line-height: 200px;
-
 }
-
 
 .column-1 { width: 8.33%; }
 .column-2 { width: 16.66%; }

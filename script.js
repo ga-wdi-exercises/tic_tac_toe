@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  var game = new Game()
+  happy = new Game()
+
 })
 
 function Game() {
@@ -7,8 +8,11 @@ function Game() {
   this.click = 0
   this.squares = $(".square")
   this.squares.html("")
+  this.button =$(".resetButton")
+  this.button.on("click", function() {console.log("pizza")})
+
+
   this.squares.on("click", function(){
-    console.log("hello")
     console.log(self.click)
       self.click++;
     if (self.click % 2 !== 0) {
@@ -20,6 +24,76 @@ function Game() {
       $(this).html("O")
     }
     $(this).off()
+    self.checkVictory()
   })
 
 };
+Game.prototype.checkVictory = function() {
+       //top row check
+        if ($('#board').find('#1').html() !== ''){
+            if ($('#board').find('#1').html() == $('#board').find('#2').html()) {
+                if ($('#board').find('#1').html() == $('#3').html()) {
+                    alert('Game over! Someone is the winner!');
+                }
+            }
+
+        //left column check
+            if ($('#board').find('#1').html() == $('#board').find('#4').html()) {
+                if ($('#board').find('#1').html() == $('#7').html()) {
+                    alert('Game over! Someone is the winner!');
+                }
+            }
+
+        //left diagonal check
+            if ($('#board').find('#1').html() == $('#board').find('#5').html()) {
+                if ($('#board').find('#1').html() == $('#9').html()) {
+                    alert('Game over! Someone is the winner!');
+                }
+            }
+        }
+
+       //middle column check
+        if ($('#board').find('#2').html() !== ''){
+            if ($('#board').find('#2').html() == $('#board').find('#5').html()) {
+                if ($('#board').find('#2').html() == $('#8').html()) {
+                    alert('Game over! Someone is the winner!');
+                }
+            }
+        }
+
+        //right column check
+        if ($('#board').find('#3').html() !== ''){
+            if ($('#board').find('#3').html() == $('#board').find('#6').html()) {
+                if ($('#board').find('#3').html() == $('#9').html()) {
+                    alert('Game over! Someone is the winner!');
+                }
+            }
+
+            //right diag check
+            if ($('#board').find('#3').html() == $('#board').find('#5').html()) {
+                if ($('#board').find('#3').html() == $('#7').html()) {
+                    alert('Game over! Someone is the winner!');
+                }
+            }
+        }
+
+        //middle row check
+
+        if ($('#board').find('#4').html() !== ''){
+            if ($('#board').find('#4').html() == $('#board').find('#5').html()) {
+                if ($('#board').find('#4').html() == $('#6').html()) {
+                    alert('Game over! Someone is the winner!');
+                }
+            }
+        }
+
+        //bottom row check
+        if ($('#board').find('#7').html() !== ''){
+            if ($('#board').find('#7').html() == $('#board').find('#8').html()) {
+                if ($('#board').find('#7').html() == $('#9').html()) {
+                    alert('Game over! Someone is the winner!');
+                }
+            }
+        }
+
+    }
