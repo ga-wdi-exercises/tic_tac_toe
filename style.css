@@ -1,11 +1,15 @@
+body {
+  text-align: center;
+  font-size: 12px;
+  display: block;
+}
 button {
   background-color: pink;
   padding: 20px;
   border-radius: 20px;
   margin: 0 auto;
   display: block;
-  /*margin-right: 200px;
-  margin-left: 450px;*/
+  margin-bottom: 10px;
 }
 
 

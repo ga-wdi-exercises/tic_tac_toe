@@ -22,13 +22,13 @@ function Game() {
       $(this).html("O")
       self.checkVictory('O')
     }
-    $(this).off()
+    // $(this).off()
   })
 
   this.reset.on("click", function() {
     $(".square").html("")
     $(".square").css("backgroundColor", "white")
-    oneMoreTime = new Game()
+    // oneMoreTime = new Game()
   })
 
 
