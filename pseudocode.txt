@@ -1,0 +1,18 @@
+h1.hidden{
+visibility: hidden;
+}
+
+
+add event listener to all boxes
+
+on.click
+  function: check if card used
+  function: whose turn
+  function: put X or O in box
+  function: check winner
+
+$(".block").click()
+
+$('.block').click(function(){
+    alert(this.id);
+});

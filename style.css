@@ -1,0 +1,24 @@
+/*li {
+  display: inline-block;
+}*/
+body {
+  text-align: center;
+}
+
+
+.block {
+  background-color: #6C9A74;
+  border: 1px solid #295A33;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  width: 120px;
+  height: 120px;
+  font-size: 7em;
+  /*overflow: visible;*/
+}
+/*
+#block1{
+  visibility: hidden;
+}*/
