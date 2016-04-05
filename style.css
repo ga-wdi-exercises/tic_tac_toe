@@ -35,10 +35,10 @@ button {
 
 .player-one {
   background-color: red;
-  content: "X";
+  /*content: "X";*/
 }
 
 .player-two {
   background-color: blue;
-    content: "O";
+  /*content: "O";*/
 }
