@@ -16,9 +16,11 @@ playBlock = function(){
         $(this).addClass("clicked");
         if (clickCounter % 2 == 0){
           $(this).html("X");
+          $("p").html("Player O's turn!");
         }
         else {
-        $(this).html("O");
+          $(this).html("O");
+          $("p").html("Player X's turn!");
         }
         checkWinner();
         clickCounter++;
@@ -33,6 +35,8 @@ boardReset = function(){
   $("#reset").click(function(){
     $('.block').html("T");
     $('.block').removeClass("clicked")
+    $("p").html("Player X goes first. Click a square to begin!");
+    clickCounter = 0;
   })
 };
 boardReset();
