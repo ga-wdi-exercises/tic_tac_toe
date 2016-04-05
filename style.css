@@ -13,9 +13,12 @@ h1 {
 
 .square {
   padding:
-  display: inline-block;
+  display: block;
   width: 200px;
   height: 200px;
   float:left;
   border: 5px solid black;
+  padding: 20px
+  margin: auto;
+  text-align: center;
 }
