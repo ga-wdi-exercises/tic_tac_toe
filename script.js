@@ -6,19 +6,25 @@ clickCounter = 0;
 
 playBlock = function(){
   $('.block').click(function(){
-      console.log(this.id);
       var clickBlock = this.id;
       console.log(clickBlock);
-      $(this).addClass("clicked");
-      if (clickCounter % 2 == 0){
-        $(this).html("X");
-      }
-      else {
+      if ($(this).hasClass("clicked")){
+        console.log("nope");
+        return;
+        }
+      else{
+        $(this).addClass("clicked");
+        if (clickCounter % 2 == 0){
+          $(this).html("X");
+        }
+        else {
         $(this).html("O");
-      }
-      clickCounter++;
+        }
+        clickCounter++;
+      };
     });
-}
+};
+
 playBlock();
 
 boardReset = function(){
