@@ -1,0 +1,16 @@
+body {
+   padding: 6em;
+}
+
+.column {
+   float: left;
+}
+
+.row, .column {
+   border-style: solid;
+   border-width: 10px;
+   padding: 30px;
+   box-sizing: border-box;
+   width: 10em;
+   background-color: lightblue;
+}
