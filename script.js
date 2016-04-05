@@ -55,7 +55,7 @@ if (($("#block1").html() == $("#block4").html()) && ($("#block4").html() == $("#
     return;
   }
   else{
-   alert($("#block1").html() + " wins 58");
+   alert($("#block1").html() + " wins");
   }
 }
 //check horizontal 4-6
@@ -66,7 +66,7 @@ if (($("#block4").html() == $("#block5").html()) && ($("#block5").html() == $("#
    }
    else{
      console.log("line 67");
-    alert($("#block4").html() + " wins 69");
+    alert($("#block4").html() + " wins");
    }
  }
  //check horizontal 7-9
@@ -76,9 +76,10 @@ if (($("#block7").html() == $("#block8").html()) && ($("#block8").html() == $("#
      return;
    }
    else{
-    alert($("#block7").html() + " wins 79");
+    alert($("#block7").html() + " wins");
    }
  }
+ // check vertical 2-5-8
 if (($("#block2").html() == $("#block5").html()) && ($("#block5").html() == $("#block8").html())){
    console.log($("#block2").html() + " wins");
    if ($("#block2").html() == "T"){
@@ -88,6 +89,7 @@ if (($("#block2").html() == $("#block5").html()) && ($("#block5").html() == $("#
     alert($("#block2").html() + " wins 88");
    }
  }
+ // check vertical 3-6-9
 if (($("#block3").html() == $("#block6").html()) && ($("#block6").html() == $("#block9").html())){
    console.log($("#block3").html() + " wins");
    if ($("#block3").html() == "T"){
@@ -95,25 +97,27 @@ if (($("#block3").html() == $("#block6").html()) && ($("#block6").html() == $("#
      return;
    }
    else{
-    alert($("#block3").html() + " wins 97");
+    alert($("#block3").html() + " wins");
    }
  }
+ // check diagonal 1-5-9
 if (($("#block1").html() == $("#block5").html()) && ($("#block5").html() == $("#block9").html())){
    console.log($("#block1").html() + " wins");
    if ($("#block1").html() == "T"){
      return;
    }
    else{
-    alert($("#block1").html() + " wins 106");
+    alert($("#block1").html() + " wins");
    }
  }
+ // check diagonal 3-5-7
 if (($("#block3").html() == $("#block5").html()) && ($("#block5").html() == $("#block7").html())){
    console.log($("#block3").html() + " wins");
    if ($("#block3").html() == "T"){
      return;
    }
    else{
-    alert($("#block3").html() + " wins 115");
+    alert($("#block3").html() + " wins");
    }
  }
 };
