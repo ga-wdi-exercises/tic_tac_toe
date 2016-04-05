@@ -1,4 +1,12 @@
-row, .column {
+button {
+  background-color: pink;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
+}
+
+.row, .column {
  box-sizing: border-box;
 }
 
@@ -7,6 +15,8 @@ row, .column {
  border: 2px solid rebeccapurple;
  border-radius: 20px;
  text-align: center;
+ font-size: 400%;
+ font-family: cursive;
  position: relative;
  height: 200px;
  line-height: 200px;
