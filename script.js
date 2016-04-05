@@ -4,25 +4,28 @@ $("document").ready(function(){
 
 clickCounter = 0;
 
-$('.block').click(function(){
-    console.log(this.id);
-    var clickBlock = this.id;
-    console.log(clickBlock);
-    // clickCounter++;
-    // if (clickCounter % 2 = 0){
-      $(this).html("x");
-    // }
-    // else {
-    //   $(clickBlock).html(O);
-    // }
-});
+playBlock = function(){
+  $('.block').click(function(){
+      console.log(this.id);
+      var clickBlock = this.id;
+      console.log(clickBlock);
+      if (clickCounter % 2 == 0){
+        $(this).html("X");
+      }
+      else {
+        $(this).html("O");
+      }
+      clickCounter++;
+    });
+}
+playBlock();
 
-
-
-
-
-
-
+boardReset = function(){
+  $("#reset").click(function(){
+    $('.block').html("");
+  })
+};
+boardReset();
 
 
 
