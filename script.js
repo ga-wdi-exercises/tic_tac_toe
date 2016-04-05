@@ -9,6 +9,7 @@ playBlock = function(){
       console.log(this.id);
       var clickBlock = this.id;
       console.log(clickBlock);
+      $(this).addClass("clicked");
       if (clickCounter % 2 == 0){
         $(this).html("X");
       }
@@ -23,6 +24,7 @@ playBlock();
 boardReset = function(){
   $("#reset").click(function(){
     $('.block').html("T");
+    $('.block').removeClass("clicked")
   })
 };
 boardReset();

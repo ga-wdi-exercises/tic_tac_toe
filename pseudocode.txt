@@ -13,6 +13,7 @@ on.click
 
 $(".block").click()
 
+modify this to work with our html:
 $('.block').click(function(){
     alert(this.id);
 });
