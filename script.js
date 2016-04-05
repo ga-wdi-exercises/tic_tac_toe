@@ -20,7 +20,9 @@ playBlock = function(){
         else {
         $(this).html("O");
         }
+        checkWinner();
         clickCounter++;
+        console.log($(this).html());
       };
     });
 };
@@ -36,6 +38,32 @@ boardReset = function(){
 boardReset();
 
 
+checkWinner = function(){
+if (($("#block1").html() == $("#block2").html()) && ($("#block2").html() == $("#block3").html())){
+   console.log($("#block1").html() + " wins");
+ };
+if (($("#block1").html() == $("#block4").html()) && ($("#block1").html() == $("#block7").html())){
+   console.log($("#block1").html() + " wins");
+ };
+if (($("#block4").html() == $("#block5").html()) && ($("#block4").html() == $("#block6").html())){
+   console.log($("#block4").html() + " wins");
+ };
+if (($("#block7").html() == $("#block8").html()) && ($("#block7").html() == $("#block9").html())){
+   console.log($("#block7").html() + " wins");
+ };
+if (($("#block2").html() == $("#block5").html()) && ($("#block2").html() == $("#block8").html())){
+   console.log($("#block2").html() + " wins");
+ };
+if (($("#block3").html() == $("#block6").html()) && ($("#block3").html() == $("#block9").html())){
+   console.log($("#block3").html() + " wins");
+ };
+if (($("#block1").html() == $("#block5").html()) && ($("#block1").html() == $("#block9").html())){
+   console.log($("#block1").html() + " wins");
+ };
+if (($("#block3").html() == $("#block5").html()) && ($("#block1").html() == $("#block7").html())){
+   console.log($("#block3").html() + " wins");
+ };
+};
 
 
 

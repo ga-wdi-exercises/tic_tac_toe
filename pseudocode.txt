@@ -17,3 +17,12 @@ modify this to work with our html:
 $('.block').click(function(){
     alert(this.id);
 });
+
+if block1 == block2 && block1 == block3 -> winner
+if block1 == block4 && block1 == block7 -> winner
+if block4 == block5 && block4 == block6 -> winner
+if block7 == block8 && block7 == block9 -> winner
+if block2 == block5 && block2 == block8 -> winner
+if block3 == block6 && block3 == block9 -> winner
+if block1 == block5 && block1 == block9 -> winner
+if block3 == block5 && block1 == block7 -> winner
