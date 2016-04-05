@@ -21,6 +21,8 @@ button {
   position: relative;
   height: 200px;
   line-height: 200px;
+  font-size: 200%;
+  /*font-family: cursive;*/
 }
 
 .column-1 { width: 8.33%; }
