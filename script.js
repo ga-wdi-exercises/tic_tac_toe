@@ -1,9 +1,14 @@
 $("document").ready(function(){
 
+table = [
+["#a","#b","#c"],
+["#d","#e","#f"],
+["#g","#h", "#i"],
+]
 
 
-var click = 0
-  // for (var i = 0; i < 9; i++){
+var click = 0;
+
   $(".square").each(function(){
 
     $(this).on("click",(function(){
@@ -20,6 +25,8 @@ var click = 0
         }
     }));
   })
-
+//If there are 3 x's in a row the x wins
+//
+//if there are 3 o's in a row the o wins
 
 })
