@@ -13,4 +13,10 @@ body {
    box-sizing: border-box;
    width: 10em;
    background-color: lightblue;
+   border-color: black;
+}
+
+.eventListener {
+   background-color: pink;
+   text-decoration-color: lightgreen;
 }
