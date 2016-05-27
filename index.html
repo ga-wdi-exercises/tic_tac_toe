@@ -10,15 +10,15 @@
     <p><span id="player">skyblue</span>'s turn</p>
 
     <div class="board">
-      <div id="a" onclick="$('#a').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}"></div>
-      <div id="b" onclick="$('#b').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}"></div>
-      <div id="c" onclick="$('#c').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}"></div>
-      <div id="d" onclick="$('#d').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}"></div>
-      <div id="e" onclick="$('#e').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}"></div>
-      <div id="f" onclick="$('#f').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}"></div>
-      <div id="g" onclick="$('#g').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}"></div>
-      <div id="h" onclick="$('#h').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}"></div>
-      <div id="i" onclick="$('#i').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}"></div>
+      <div id="a" onclick="if($('#a').hasClass('played')){}else{$('#a').addClass('played'); $('#a').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
+      <div id="b" onclick="if($('#b').hasClass('played')){}else{$('#b').addClass('played'); $('#b').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
+      <div id="c" onclick="if($('#c').hasClass('played')){}else{$('#c').addClass('played'); $('#c').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
+      <div id="d" onclick="if($('#d').hasClass('played')){}else{$('#d').addClass('played'); $('#d').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
+      <div id="e" onclick="if($('#e').hasClass('played')){}else{$('#e').addClass('played'); $('#e').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
+      <div id="f" onclick="if($('#f').hasClass('played')){}else{$('#f').addClass('played'); $('#f').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
+      <div id="g" onclick="if($('#g').hasClass('played')){}else{$('#g').addClass('played'); $('#g').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
+      <div id="h" onclick="if($('#h').hasClass('played')){}else{$('#h').addClass('played'); $('#h').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
+      <div id="i" onclick="if($('#i').hasClass('played')){}else{$('#i').addClass('played'); $('#i').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
     </div>
   </body>
 </html>
