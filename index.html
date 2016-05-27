@@ -6,19 +6,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 onclick="$('.board div').removeClass('played').css('background-color', '');">Tic Tac Toe</h1>
-    <p><span id="player">skyblue</span>'s turn</p>
+    <h1 onclick="reset()">Tic Tac Toe</h1>
+    <p><span id="player"></span>'s turn</p>
 
     <div class="board">
-      <div id="a" onclick="if($('#a').hasClass('played')){}else{$('#a').addClass('played'); $('#a').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
-      <div id="b" onclick="if($('#b').hasClass('played')){}else{$('#b').addClass('played'); $('#b').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
-      <div id="c" onclick="if($('#c').hasClass('played')){}else{$('#c').addClass('played'); $('#c').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
-      <div id="d" onclick="if($('#d').hasClass('played')){}else{$('#d').addClass('played'); $('#d').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
-      <div id="e" onclick="if($('#e').hasClass('played')){}else{$('#e').addClass('played'); $('#e').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
-      <div id="f" onclick="if($('#f').hasClass('played')){}else{$('#f').addClass('played'); $('#f').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
-      <div id="g" onclick="if($('#g').hasClass('played')){}else{$('#g').addClass('played'); $('#g').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
-      <div id="h" onclick="if($('#h').hasClass('played')){}else{$('#h').addClass('played'); $('#h').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
-      <div id="i" onclick="if($('#i').hasClass('played')){}else{$('#i').addClass('played'); $('#i').css('background-color', $('#player').text()); if($('#player').text() == 'skyblue'){$('#player').text('pink')}else{$('#player').text('skyblue')}}"></div>
+      <div id="a" onclick="playerMove('#a')"></div>
+      <div id="b" onclick="playerMove('#b')"></div>
+      <div id="c" onclick="playerMove('#c')"></div>
+      <div id="d" onclick="playerMove('#d')"></div>
+      <div id="e" onclick="playerMove('#e')"></div>
+      <div id="f" onclick="playerMove('#f')"></div>
+      <div id="g" onclick="playerMove('#g')"></div>
+      <div id="h" onclick="playerMove('#h')"></div>
+      <div id="i" onclick="playerMove('#i')"></div>
     </div>
+    
+    
+    <script>
+var p1Color = 'lemonchiffon';
+var p2Color = 'burlywood';
+var playedClass = 'played';
+
+$('#player').text(p1Color);
+
+function alternatePlayer(){
+  if($('#player').text() == p1Color){
+    $('#player').text(p2Color)
+  }else{
+    $('#player').text(p1Color)
+  }
+}
+
+function playerMove(id){
+  if($(id).hasClass(playedClass) == false){
+    $(id).addClass(playedClass);
+    $(id).css('background-color', $('#player').text());
+    alternatePlayer()
+  }
+}
+
+function reset(){
+  $('.board div').removeClass(playedClass).css('background-color', '');
+}
+    </script>
   </body>
 </html>
