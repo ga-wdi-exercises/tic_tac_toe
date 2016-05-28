@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+  //run the game
+  function runGame(){
+    document.turn = "X";
+    //randomize with sort function to alternate X and O
+    if(Math.random() < 0.5) {
+      document.turn = "O";
+    }
+    //no winner until after the game is played
+    document.winner = null;
+    //give message for who starts the game
+    giveMessage(document.turn + " starts the game.");
+  }
+
+  //tell user whose turn it is, winner, etc
+  //function giveMessage
+  function giveMessage(msg){
+    document.getElementbyClass("messages").innerhtml = msg;
+  }
+  //switchmoves
+  function switchMove(cell){
+    if(document.winner != null) {
+      //message the player that the other player has already won
+      setMessage(document.winner + " won the game!");
+      //otherwise, if there is no winner....
+    }else if(square.innerHTML == "") {
+      square.innerHTML = document.turn;
+      //switch turn to the next player
+      switchTurn();
+    } else {
+      setMessage("Square already checked");
+    }/switch turn function
+    function switchTurn() {
+    //check to see if there is a winner
+      if(checkForWinner(document.turn)) {
+        setMessage("Congratulations, " + document.turn + "! You win!");
+        document.winner = document.turn;
+        //continue game if no winner
+      }else if(document.turn == "X") {
+        document.turn = "O";
+        setMessage("It's " + document.turn + "'s turn!");
+      }else {
+        document.turn = "X";
+        setMessage("It's " + document.turn + "'s turn!");
+      }
+    }
+    //checking for winners in various combinations. this accounts for winning rows, columns, and diagnols
+    function checkForWinner(move) {
+      var result = false;
+      if(checkRow(1, 2, 3, move) ||
+      checkRow(4, 5, 6, move) ||
+      checkRow(7, 8, 9, move) ||
+      checkRow(1, 4, 7, move) ||
+      checkRow(2, 5, 8, move) ||
+      checkRow(3, 6, 9, move) ||
+      checkRow(1, 5, 9, move) ||
+      checkRow(3, 5, 7, move)) {
+        result = true;
+      }
+      return result;
+    }
+    //checking a row for a winning or losing combination of Xs and Os
+    function checkRow(a, b, c, move) {
+      var result = false;
+      if(getBox(a) == move && getBox(b) == move && getBox(c) == move) {
+        result = true;
+      }
+      return result;
+    }
+    //retrieving the Id number of the box clicked
+    function getBox(number) {
+      return document.getElementById("cell" + number).innerHTML;
+    }
+    //clear the cell to begin again
+    function clearBox(number) {
+      document.getElementById("cell" + number).innerHTML = "";
+
+      </script>
+      <title>Tic-Tac-Toe</title>
+    </head>
+
+    <body onload = "runGame();">
+      <h1>TIC TAC TOE - THREE IN A ROW!</h1>
+      <div class="messages"></div>
+      <div class="turn"></div>
+      <table class="board">
+        <tr class="row">
+          <td class="cell" id="cell1" type="button"></td>
+          <td class="cell" id="cell2" type="button"></td>
+          <td class="cell" id="cell3" type="button"></td>
+        </tr>
+        <tr class="row">
+          <td class="cell" id="cell4" type="button"></td>
+          <td class="cell" id="cell5" type="button"></td>
+          <td class="cell" id="cell6" type="button"></td>
+        </tr>
+        <tr class="row">
+          <td class="cell" id="cell7" type="button"></td>
+          <td class="cell" id="cell8" type="button"></td>
+          <td class="cell" id="cell9" type="button"></td>
+        </tr>
+      </table>
+    </body>
+    </html>
