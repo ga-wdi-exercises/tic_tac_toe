@@ -1,0 +1,73 @@
+body {
+  box-sizing: border-box;
+}
+
+.rainbow-wordmark {
+  position: relative;
+  max-width: 1000px;
+}
+
+.rainbow-wordmark__canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; /* canvas is 1100px, img is 1000 */
+}
+
+.rainbow-wordmark__image {
+  display: block;
+  width: 50%;
+  position: relative;
+}
+
+.container{
+ width: 50vw;
+ height: 50vw;
+ margin-left: 25vw;
+}
+
+.tttBox {
+ background-color: rgb(255, 255, 255);
+ float: left;
+ width: 30%;
+ height: 30%;
+ border: .01vw solid rgb(255, 77, 0);
+ text-align: center;
+}
+
+/*to add, plus add row in html*/
+.turn {
+ margin-top: 10vh;
+ font-size: 30px;
+}
+
+.winner {
+ font-size: 30px;
+}
+
+.row {
+ float: left;
+}
+
+.row:before,
+.row:after {
+   content: " ";
+   display: table;
+}
+
+.row:after {
+   clear: both;
+}
+
+.column {
+   position: relative;
+   float: left;
+   display: none;
+}
+
+.startInput {
+  position: relative;
+  left:30vw;
+  top: 40vh;
+  width: 30vw;
+}
