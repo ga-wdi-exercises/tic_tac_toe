@@ -1,0 +1,95 @@
+body {
+  background:rgb(0,0,0);
+}
+
+header {
+  position: relative;
+  margin-right:auto;
+  margin-left:auto;
+  top:0px;
+  left:0px;
+  width:100vw;
+  text-align:center;
+  justify-content:center;
+}
+
+p {
+  font-size: 9vw;
+  font-family: raleway;
+  letter-spacing:2.5vw;
+  padding:0px;
+  margin:0px;
+  font-weight: lighter;
+  color:seashell;
+  margin:2vh;
+}
+
+button:focus {
+  outline:0;
+}
+
+button {
+  border: 1.5px solid seashell;
+  border-radius:7px;
+  background:transparent;
+  padding:0.8em;
+  font-size: 2vw;
+  letter-spacing:0.5vw;
+  margin:0px;
+  font-family: raleway;
+  font-weight: lighter;
+  color:seashell;
+}
+
+.container {
+  position:inherit;
+  display:flex;
+  height:70vh;
+  width:70vw;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top:3vh;
+  bottom:5vh:
+  padding:0;
+  flex-wrap:wrap;
+  box-sizing: border-box;
+}
+
+.square {
+  width:30.33%;
+  height:30.33%;
+  margin:1.5%;
+  box-sizing: border-box;
+  background: seashell;
+  border-radius:7px;
+  border:5px double rgb(60,60,60);
+  text-align:center;
+  justify-content:center;
+  font-size: 15vh;
+  font-family: raleway;
+  font-weight:bold;
+  color:seashell;
+  padding:1vh;
+  lineheight:15vh;
+}
+
+.pulse:hover {
+  animation-name: pulse_animation;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;;
+}
+
+@keyframes pulse_animation {
+  0% {border-color: deeppink; color:deeppink}
+  10% {border-color:darkorange; color:darkorange}
+  20% {border-color: gold; color:gold}
+  30% {border-color:yellow; color:yellow}
+  40% {border-color:green; color:green}
+  50% {border-color: lightblue; color:lightblue}
+  60% {border-color: turquoise; color:turquoise}
+  70% {border-color: navy; color:navy}
+  80% {border-color: purple; color:purple}
+  90% {border-color: violet; color:violet}
+  100% {border-color: pink; color:pink}
+}
