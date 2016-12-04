@@ -1,0 +1,44 @@
+tr {
+  height: 200px;
+  border: 1px solid purple;
+}
+
+td {
+  width: 200px;
+  border: 1px solid purple;
+}
+
+table {
+  margin: 0 auto;
+}
+
+button {
+ margin: 20px auto;
+ display: block;
+ border: 1px solid #888888;
+ height: 30px;
+ width: 200px;
+ font-size: 20px;
+ cursor: pointer;
+}
+
+#turn {
+  height: 50px;
+  width: 30%;
+  background-color: gray;
+  text-align: center;
+  margin: 10px auto;
+  padding: 25px 0px 0px 0px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.player-one {
+  background-color: red;
+  /*content: "X";*/
+}
+
+.player-two {
+  background-color: blue;
+  /*content: "O";*/
+}
