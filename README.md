@@ -37,3 +37,12 @@
   opponent. If you really need a challenge, write some code that will
   play a game of Tic Tac Toe against you. (Hint: look into the minimax
   algorithm).
+
+
+  function winner() {
+    // console.log($(waysToWin[0]).text())
+    var currentWayToWin = waysToWin[0];
+    for (currntWayToWin = 0; currentWayToWin <currentWayToWin.length; currentWayToWin++){
+      console.log(currentWayToWin);
+    //   // if $(waysToWin[0][0]).text("X")))
+  };
